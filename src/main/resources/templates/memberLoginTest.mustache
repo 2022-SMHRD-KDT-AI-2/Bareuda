@@ -1,0 +1,13 @@
+{{>layouts/header}}
+<!-- 회원 로그인 form 작성시 주의사항
+action="/member/login"
+name="mem_id"
+name="mem_pw"
+-->
+<form action="/member/login" method="POST">
+    <input type="text" name="mem_id">
+    <input type="text" name="mem_pw">
+    <button type="submit">제출</button>
+</form>
+
+{{>layouts/footer}}

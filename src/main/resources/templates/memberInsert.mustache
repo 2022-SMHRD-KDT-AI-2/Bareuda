@@ -1,10 +1,16 @@
 {{>layouts/header}}
-
+<!-- 회원 가입 form 작성시 주의사항
+action="/member/create"
+name="mem_id"
+name="mem_pw"
+name="mem_name"
+name="mem_email"
+-->
 <form action="/member/create" method="POST">
-    <input type="text" name="mbID">
-    <input type="text" name="mbPW">
-    <input type="text" name="mbName">
-    <input type="text" name="mbEmail">
+    <input type="text" name="mem_id">
+    <input type="text" name="mem_pw">
+    <input type="text" name="mem_name">
+    <input type="text" name="mem_email">
     <button type="submit">제출</button>
 </form>
 
