@@ -9,4 +9,9 @@
         SELECT * FROM tbl_member
     </select>
 
+    <insert id="memberInsert" parameterType="com.example.bareuda.entity.Member">
+        INSERT INTO tbl_member (mb_id, mb_pw, mb_name, mb_email)
+        values (#{mbID}, #{mbPW}, #{mbEmail}, #{mbName})
+    </insert>
+
 </mapper>

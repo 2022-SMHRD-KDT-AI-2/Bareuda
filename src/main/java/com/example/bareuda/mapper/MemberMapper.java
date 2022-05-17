@@ -8,4 +8,5 @@ import java.util.List;
 @Component
 public interface MemberMapper {
     public List<Member> memberList();
+    public String memberInsert(Member member);
 }
