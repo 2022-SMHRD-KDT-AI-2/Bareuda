@@ -1,0 +1,110 @@
+/*로그인 창을 옮기고 싶다면*/
+#wrapper_signUp {
+    position: absolute;
+    top:33%;
+    left:48%;
+}
+
+#content {
+    position: absolute;
+    transform: translate(-50%,0%);
+    width: 380px;
+}
+
+/* 입력폼 */
+
+input:focus {
+    outline: none;
+}
+
+
+h3 {
+    margin: 15px 0 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.box {
+    display: block;
+    align-items: center;
+    width: 80%;
+    height: 51px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    border-radius: 9.8px;
+    margin-left: 70px;
+}
+
+.int {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 29px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+}
+
+input {
+    font-family: 'IBMPlexSansKR-Regular';
+}
+
+.idImg{
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+
+.pswdImg{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -15px;
+    cursor: pointer;
+}
+
+/* 버튼 */
+
+.btn_area1 {
+    margin: 20px 0 10px;
+}
+
+
+
+#btnJoin{
+    width: 80%;
+    padding: 5px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    background-color: #A2B7EB;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+    font-family: 'IBMPlexSansKR-Bold';
+    margin-left: 70px;
+}
+
+#btnJoin div{
+    text-align:center;
+    margin-top: 3%;
+}
+
+#btnJoin:hover{
+    opacity: 0.5;
+  transition: 0.5s;
+}
+
+
