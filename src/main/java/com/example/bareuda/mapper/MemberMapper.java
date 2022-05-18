@@ -1,5 +1,6 @@
 package com.example.bareuda.mapper;
 
+import com.example.bareuda.entity.Answer;
 import com.example.bareuda.entity.Member;
 import org.springframework.stereotype.Component;
 
@@ -12,4 +13,5 @@ public interface MemberMapper {
     public int memberLogin(Member member);
 
     public Member findById(String mbID);
+    public void baumanScoreInsert(Answer answer);
 }

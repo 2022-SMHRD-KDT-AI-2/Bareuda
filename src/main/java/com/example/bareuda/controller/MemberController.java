@@ -2,6 +2,7 @@ package com.example.bareuda.controller;
 
 import com.example.bareuda.dto.BaumanTestForm;
 import com.example.bareuda.dto.MemberForm;
+import com.example.bareuda.entity.Answer;
 import com.example.bareuda.entity.Member;
 import com.example.bareuda.mapper.MemberMapper;
 import com.example.bareuda.service.MemberService;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 @Slf4j
@@ -61,9 +63,9 @@ public class MemberController {
             log.info(login_member.toString());
             HttpSession session = request.getSession();
             session.setAttribute("member", login_member);
-            return "redirect:/memberList.do"; // 바꾸기. 로그인 성공. (메인페이지로)
+            return "index"; // 바꾸기. 로그인 성공. (메인페이지로)
         }else{
-            return "redirect:/member/new"; // 바꾸기. 로그인 실패화면. (로그인 화면 그대로)
+            return "redirect:/member/loginForm"; // 바꾸기. 로그인 실패화면. (로그인 화면 그대로)
         }
     }
 
@@ -72,9 +74,14 @@ public class MemberController {
         return "baumanTest";
     } // 바우만 테스트 폼
     @RequestMapping("/member/baumanTest")
-    public void baumanTest(BaumanTestForm form){
+    public void baumanTest(BaumanTestForm form, HttpServletRequest request){
+        HttpSession session=request.getSession();
+        Member member = (Member)session.getAttribute("member");
         int[] scores = form.calScore();
+        String type = form.getType(scores);
         System.out.println("점수:"+scores+"// tostring:"+form.toString());
+        Answer answer = new Answer(scores[0], scores[1], scores[2], scores[3], member.getMb_id(), type);
+        memberMapper.baumanScoreInsert(answer);
         // 바꾸기. return 타입 string으로. 바우만 테스트 결과 페이지로.
     }
 }
