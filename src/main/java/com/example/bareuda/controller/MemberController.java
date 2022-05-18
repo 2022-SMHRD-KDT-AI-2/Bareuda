@@ -50,7 +50,6 @@ public class MemberController {
     }
     @RequestMapping("/member/login")
     public String memberLogin(Model model, MemberForm form, HttpSession session){
-        model.addAttribute("name", "도연");
         log.info(form.toString());
         Member member = form.toLogin();
         int isMember = memberMapper.memberLogin(member);
@@ -64,6 +63,11 @@ public class MemberController {
             //return "redirect:/member/loginForm"; // 바꾸기. 로그인 실패화면. (로그인 화면 그대로)
             return "index";
         }
+    }
+    @RequestMapping("/member/logout")
+    public String memberLogout(Model model, MemberForm form, HttpSession session){
+        session.invalidate();
+        return "index";
     }
 
     @GetMapping("/member/baumannTestForm")
