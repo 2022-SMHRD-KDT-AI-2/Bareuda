@@ -10,4 +10,6 @@ public interface MemberMapper {
     public List<Member> memberList();
     public void memberInsert(Member member);
     public int memberLogin(Member member);
+
+    public Member findById(String mbID);
 }
