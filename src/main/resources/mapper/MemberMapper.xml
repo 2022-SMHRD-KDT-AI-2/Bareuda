@@ -25,4 +25,9 @@
         WHERE mb_id = #{mb_id}
     </select>
 
+    <insert id="baumannScoreInsert" parameterType="com.example.bareuda.entity.Answer">
+        INSERT INTO tbl_answer (A_NUM, A_PART1, A_PART2, A_PART3, A_PART4, MB_ID, MB_RESULT)
+        values (TBL_ANSWER_SEQ.nextval, #{a_part1}, #{a_part2}, #{a_part3}, #{a_part4}, #{mb_id}, #{mb_result})
+    </insert>
+
 </mapper>
