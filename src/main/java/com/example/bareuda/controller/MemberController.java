@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 @Slf4j
 @Controller
@@ -49,11 +51,16 @@ public class MemberController {
         return "memberLoginTest";
     }
     @RequestMapping("/member/login")
-    public String memberLogin(MemberForm form){
+    public String memberLogin(MemberForm form, HttpServletRequest request){
         log.info(form.toString());
         Member member = form.toLogin();
         int isMember = memberMapper.memberLogin(member);
         if(isMember == 1){
+            String mbID = member.getMbID();
+            Member login_member = memberMapper.findById(mbID);
+            System.out.println("로그인 멤버:"+login_member.toString());
+            HttpSession session = request.getSession();
+            session.setAttribute("member", login_member);
             return "redirect:/memberList.do"; // 바꾸기. 로그인 성공. (메인페이지로)
         }else{
             return "redirect:/member/new"; // 바꾸기. 로그인 실패화면. (로그인 화면 그대로)

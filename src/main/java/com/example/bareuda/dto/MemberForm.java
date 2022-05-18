@@ -3,10 +3,12 @@ package com.example.bareuda.dto;
 import com.example.bareuda.entity.Board;
 import com.example.bareuda.entity.Member;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.ToString;
 
 @AllArgsConstructor
 @ToString
+@Getter
 public class MemberForm {
     private String mem_id;
     private String mem_pw;

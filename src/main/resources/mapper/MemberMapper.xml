@@ -20,4 +20,9 @@
         AND mb_pw = #{mbPW}
     </select>
 
+    <select id="findById" parameterType="string" resultType="com.example.bareuda.entity.Member">
+        SELECT * FROM tbl_member
+        WHERE mb_id = #{mbID}
+    </select>
+
 </mapper>
