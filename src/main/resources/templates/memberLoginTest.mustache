@@ -15,31 +15,28 @@ name="mem_pw"
     {{>layouts/header}}
     <!-- content -->
     <div id="body_wrapper">
-
-
         <div id="body_content">
+            <form action="/member/login" method="post">
             <div id="wrapper_login">
                 <div id="content">
                     <!-- ID -->
                     <div>
                         <h3 class="join_title">
-                            <label for="id"></lab el>
+                            <label for="id"></label>
                         </h3>
                         <span class="box int_id">
-                        <input type="text" id="memId" name="memId" class="int" maxlength="20" placeholder="아이디">
-                        <img src="./img/id.jpg" id="id_img1" class="idImg">
-                    </span>
-
+                                <input type="text" id="memId" name="mem_id"   class="int" maxlength="20" placeholder="아이디">
+                            <img src="./img/id.jpg" id="id_img1" class="idImg">
+                        </span>
 
                         <!-- PW -->
                         <div>
                             <h3 class="join_title"><label for="pswd1"></label></h3>
                             <span class="box int_pass">
-                        <input type="password" id="memPwd" name="memPwd" class="int" maxlength="20" placeholder="비밀번호">
-                        <img src="./img/pw.svg" id="pswd1_img1" class="pswdImg">
-                    </span>
+                                <input type="password" id="memPwd" name="mem_pw" action="/member/login" class="int" maxlength="20" placeholder="비밀번호">
+                                <img src="./img/pw.svg" id="pswd1_img1" class="pswdImg">
+                            </span>
                         </div>
-
 
                         <!-- LOGIN BTN-->
                         <div class="btn_area1">
@@ -47,7 +44,6 @@ name="mem_pw"
                                 <a>Login</a>
                             </button>
                         </div>
-
                         <!-- 회원가입 BTN-->
                         <div class="btn_area1">
                             <button type="button" id="btnJoin"  onclick ="location.href='${context}/signUp.do'">
