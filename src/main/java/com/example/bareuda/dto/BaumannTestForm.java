@@ -7,7 +7,7 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class BaumanTestForm {
+public class BaumannTestForm {
 
     private int[] part1;
     private int[] part2;

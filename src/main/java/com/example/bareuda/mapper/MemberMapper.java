@@ -13,5 +13,5 @@ public interface MemberMapper {
     public int memberLogin(Member member);
 
     public Member findById(String mbID);
-    public void baumanScoreInsert(Answer answer);
+    public void baumannScoreInsert(Answer answer);
 }
