@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.bareuda.mapper.BaumannMapper">
+
+    <select id="findById" parameterType="string" resultType="com.example.bareuda.entity.Member">
+        SELECT mb_id, mb_pw, mb_name, mb_email FROM tbl_member
+        WHERE mb_id = #{mb_id}
+    </select>
+
+    <select id="getResult" parameterType="com.example.bareuda.entity.Answer" resultType="com.example.bareuda.entity.Result">
+        SELECT RESULT_TYPE, RESULT_COMMENT FROM tbl_result
+        WHERE mb_id = #{mb_id}
+    </select>
+
+</mapper>

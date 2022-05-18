@@ -5,7 +5,7 @@ import com.example.bareuda.dto.MemberForm;
 import com.example.bareuda.entity.Answer;
 import com.example.bareuda.entity.Member;
 import com.example.bareuda.mapper.MemberMapper;
-import com.example.bareuda.service.MemberService;
+import com.example.bareuda.service.MemberServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,8 +21,8 @@ import java.util.List;
 public class MemberController {
     @Autowired
     private MemberMapper memberMapper;
-
-    private MemberService memberService;
+    @Autowired
+    private MemberServiceImpl memberServiceImpl;
 
     @RequestMapping("/memberList.do")
     public String boardList(Model model){
@@ -39,11 +39,9 @@ public class MemberController {
 
     @RequestMapping("/member/create")
     public String memberInsert(MemberForm form){
-        log.info(form.toString());
         Member member = form.toEntity();
-        memberMapper.memberInsert(member);
-
-        return "redirect:/memberList.do"; // 바꾸기. 회원가입 성공화면. (바우만 테스트)
+        memberServiceImpl.memberInsert(member);
+        return "redirect:/member/loginForm"; // 바꾸기. 회원가입 성공화면. (바우만 테스트)
     }
 
     @GetMapping("/member/loginForm")
@@ -51,7 +49,8 @@ public class MemberController {
         return "memberLogin";
     }
     @RequestMapping("/member/login")
-    public String memberLogin(MemberForm form, HttpServletRequest request){
+    public String memberLogin(Model model, MemberForm form, HttpSession session){
+        model.addAttribute("name", "도연");
         log.info(form.toString());
         Member member = form.toLogin();
         int isMember = memberMapper.memberLogin(member);
@@ -59,11 +58,11 @@ public class MemberController {
             String mb_id = member.getMb_id();
             Member login_member = memberMapper.findById(mb_id);
             log.info(login_member.toString());
-            HttpSession session = request.getSession();
-            session.setAttribute("member", login_member);
+            session.setAttribute("sessionMember", login_member);
             return "index"; // 바꾸기. 로그인 성공. (메인페이지로)
         }else{
-            return "redirect:/member/loginForm"; // 바꾸기. 로그인 실패화면. (로그인 화면 그대로)
+            //return "redirect:/member/loginForm"; // 바꾸기. 로그인 실패화면. (로그인 화면 그대로)
+            return "index";
         }
     }
 
@@ -83,4 +82,6 @@ public class MemberController {
         // 바꾸기. return 타입 string으로. 바우만 테스트 결과 페이지로.
         // return "redirect:/baumannResult.do";
     }
+
+
 }
