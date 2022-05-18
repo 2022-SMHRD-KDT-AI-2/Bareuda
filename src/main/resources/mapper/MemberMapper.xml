@@ -11,18 +11,18 @@
 
     <insert id="memberInsert" parameterType="com.example.bareuda.entity.Member">
         INSERT INTO tbl_member (mb_id, mb_pw, mb_name, mb_email)
-        values (#{mbID}, #{mbPW}, #{mbName}, #{myEmail})
+        values (#{mb_id}, #{mb_pw}, #{mb_name}, #{mb_email})
     </insert>
 
     <select id="memberLogin" parameterType="com.example.bareuda.entity.Member" resultType="int">
         SELECT count(*) FROM tbl_member
-        WHERE mb_id = #{mbID}
-        AND mb_pw = #{mbPW}
+        WHERE mb_id = #{mb_id}
+        AND mb_pw = #{mb_pw}
     </select>
 
     <select id="findById" parameterType="string" resultType="com.example.bareuda.entity.Member">
-        SELECT * FROM tbl_member
-        WHERE mb_id = #{mbID}
+        SELECT mb_id, mb_pw, mb_name, mb_email FROM tbl_member
+        WHERE mb_id = #{mb_id}
     </select>
 
 </mapper>

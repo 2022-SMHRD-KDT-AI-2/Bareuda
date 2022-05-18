@@ -48,7 +48,7 @@ public class MemberController {
 
     @GetMapping("/member/loginForm")
     public String memberLoginForm(){
-        return "memberLoginTest";
+        return "memberLogin";
     }
     @RequestMapping("/member/login")
     public String memberLogin(MemberForm form, HttpServletRequest request){
@@ -56,9 +56,9 @@ public class MemberController {
         Member member = form.toLogin();
         int isMember = memberMapper.memberLogin(member);
         if(isMember == 1){
-            String mbID = member.getMbID();
-            Member login_member = memberMapper.findById(mbID);
-            System.out.println("로그인 멤버:"+login_member.toString());
+            String mb_id = member.getMb_id();
+            Member login_member = memberMapper.findById(mb_id);
+            log.info(login_member.toString());
             HttpSession session = request.getSession();
             session.setAttribute("member", login_member);
             return "redirect:/memberList.do"; // 바꾸기. 로그인 성공. (메인페이지로)

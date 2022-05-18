@@ -9,9 +9,9 @@ import lombok.*;
 @Data
 @ToString
 public class Member {
-    private String mbID;
-    private String mbPW;
-    private String mbName;
-    private String myEmail;
+    private String mb_id;
+    private String mb_pw;
+    private String mb_name;
+    private String mb_email;
 
 }
