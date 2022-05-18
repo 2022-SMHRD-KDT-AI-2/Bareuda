@@ -1,6 +1,5 @@
 package com.example.bareuda.dto;
 
-import com.example.bareuda.entity.Board;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
 

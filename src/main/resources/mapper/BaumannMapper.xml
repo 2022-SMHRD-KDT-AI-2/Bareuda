@@ -5,14 +5,19 @@
 
 <mapper namespace="com.example.bareuda.mapper.BaumannMapper">
 
-    <select id="findById" parameterType="string" resultType="com.example.bareuda.entity.Member">
-        SELECT mb_id, mb_pw, mb_name, mb_email FROM tbl_member
+    <select id="findById" parameterType="string" resultType="com.example.bareuda.entity.Answer">
+        SELECT * FROM tbl_answer
         WHERE mb_id = #{mb_id}
     </select>
 
     <select id="getResult" parameterType="com.example.bareuda.entity.Answer" resultType="com.example.bareuda.entity.Result">
         SELECT RESULT_TYPE, RESULT_COMMENT FROM tbl_result
-        WHERE mb_id = #{mb_id}
+        WHERE RESULT_TYPE = #{mb_result}
     </select>
+
+    <insert id="baumannScoreInsert" parameterType="com.example.bareuda.entity.Answer">
+        INSERT INTO tbl_answer (A_NUM, A_PART1, A_PART2, A_PART3, A_PART4, MB_ID, MB_RESULT)
+        values (TBL_ANSWER_SEQ.nextval, #{a_part1}, #{a_part2}, #{a_part3}, #{a_part4}, #{mb_id}, #{mb_result})
+    </insert>
 
 </mapper>

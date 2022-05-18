@@ -9,6 +9,7 @@ import lombok.*;
 @Data
 @ToString
 public class Answer {
+    private int a_num;
     private int a_part1;
     private int a_part2;
     private int a_part3;
