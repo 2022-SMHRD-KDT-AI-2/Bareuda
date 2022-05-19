@@ -85,5 +85,4 @@ public class MemberController {
             return "redirect:/member/removeForm";
         }
     }
-
 }
