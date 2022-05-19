@@ -18,8 +18,8 @@ public class BaumannServiceImpl implements BaumannService{
     public void createBaumannResult(Member member, BaumannTestForm form) {
         int part_num = Integer.parseInt(form.getPart_num());
         if(part_num == 1){
-            System.out.println("생성함");
-            baumannMapper.createAnswer(member.getMb_id());
+            if (baumannMapper.findById(member.getMb_id()) == null)
+                baumannMapper.createAnswer(member.getMb_id());
         }
         int score = 0;
 

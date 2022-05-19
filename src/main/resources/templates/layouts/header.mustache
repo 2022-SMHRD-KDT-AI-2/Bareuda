@@ -12,7 +12,8 @@
                         {{#sessionMember}}<a href="/member/logout">로그아웃</a>{{/sessionMember}}
                     </li>
                     <li>
-                        <a href="">마이페이지</a>
+                        {{^sessionMember}}<a href="">마이페이지</a>{{/sessionMember}}
+                        {{#sessionMember}}<a href="">마이페이지</a>{{/sessionMember}}
                     </li>
                 </ul>
                 <div class="logo">
@@ -20,13 +21,16 @@
                 </div>
                 <ul class="h_menu">
                     <li>
-                        <a href="">추천제품</a>
+                        {{^sessionMember}}<a href="">추천제품</a>{{/sessionMember}}
+                        {{#sessionMember}}<a href="">추천제품</a>{{/sessionMember}}
                     </li>
                     <li>
-                        <a href="">제품비교</a>
+                        {{^sessionMember}}<a href="">제품비교</a>{{/sessionMember}}
+                        {{#sessionMember}}<a href="">제품비교</a>{{/sessionMember}}
                     </li>
                     <li>
-                        <a href="">설문조사</a>
+                        {{^sessionMember}}<a href="">설문조사</a>{{/sessionMember}}
+                        {{#sessionMember}}<a href="/baumann/testForm">설문조사</a>{{/sessionMember}}
                     </li>
                     </li>
                 </ul>
