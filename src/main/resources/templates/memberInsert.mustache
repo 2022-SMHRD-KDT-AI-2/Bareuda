@@ -16,9 +16,7 @@ name="mem_email"
 </head>
     {{>layouts/header}}
     <!-- content -->
-    <div id="body_wrapper">
-        <div id="body_content">
-            <form action="/member/create" method="post">
+    <form action="/member/create" method="post">
                 <div id="wrapper_signUp">
                     <div id="content">
                         <!-- ID -->
@@ -27,30 +25,30 @@ name="mem_email"
                                 <label for="id"></label>
                             </h3>
                             <span class="box int_id">
-                                <input type="text" id="memId" name="mem_id" class="int" maxlength="20" placeholder="아이디">
+                                <input type="text" id="mem_id" name="mem_id" class="int" maxlength="20" placeholder="아이디">
                             </span>
 
                               <!-- PW -->
                             <div>
-                                <h3 class="join_title"><label for="pswd1"></label></h3>
+                                <h3 class="join_title"><label for="mem_pw"></label></h3>
                                 <span class="box int_pass">
-                                <input type="password" id="memPwd" name="mem_pw" class="int" maxlength="20" placeholder="비밀번호">
+                                <input type="password" id="mem_pw" name="mem_pw" class="int" maxlength="20" placeholder="비밀번호">
                             </span>
                             </div>
 
                             <!-- 이름 -->
                             <div>
-                                <h3 class="join_title"><label for="pswd1"></label></h3>
+                                <h3 class="join_title"><label for="mem_name"></label></h3>
                                 <span class="box int_pass">
-                                <input type="text" id="memPwd" name="mem_name" class="int" maxlength="20" placeholder="이름">
+                                <input type="text" id="mem_name" name="mem_name" class="int" maxlength="20" placeholder="이름">
                             </span>
                             </div>
 
                             <!-- 이메일 -->
                             <div>
-                                <h3 class="join_title"><label for="pswd1"></label></h3>
+                                <h3 class="join_title"><label for="mem_email"></label></h3>
                                 <span class="box int_pass">
-                                <input type="text" id="memPwd" name="mem_email" class="int" maxlength="20" placeholder="이메일">
+                                <input type="text" id="mem_eamil" name="mem_email" class="int" maxlength="20" placeholder="이메일">
                             </span>
                             </div>
 
@@ -63,9 +61,7 @@ name="mem_email"
                         </div>
                     </div>
                 </div>
-            </form>
-        </div>
-    </div>
+    </form>
     <!-- /content -->
     {{>layouts/footer}}
 </body>
