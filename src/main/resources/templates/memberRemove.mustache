@@ -1,0 +1,25 @@
+<!-- 회원 로그인 form 작성시 주의사항
+action="/member/login"
+name="mem_id"
+name="mem_pw"
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+</head>
+{{>layouts/header}}
+<!-- content -->
+<form action="/member/remove" method="post">
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <input type="hidden" name="mem_id" class="int" maxlength="20" value="{{sessionMember.mb_id}}">
+    <input type="password" name="mem_pw" class="int" maxlength="20" placeholder="비밀번호">
+    <button type="submit"> <a>탈퇴</a> </button>
+</form>
+<!-- /content -->
+{{>layouts/footer}}
+</body>
+</html>

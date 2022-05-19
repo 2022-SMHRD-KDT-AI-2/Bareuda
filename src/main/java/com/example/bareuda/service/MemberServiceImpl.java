@@ -33,4 +33,16 @@ public class MemberServiceImpl implements MemberService{
             return null;
         }
     }
+
+    @Override
+    public int memberRemove(Member member) {
+        int isMember = memberMapper.memberLogin(member);
+        if(isMember == 1){
+            String mb_id = member.getMb_id();
+            memberMapper.memberRemove(mb_id);
+            return 1;
+        }else{
+            return 0;
+        }
+    }
 }

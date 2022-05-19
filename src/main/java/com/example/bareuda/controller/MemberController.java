@@ -54,11 +54,8 @@ public class MemberController {
     @RequestMapping("/member/login")
     public String memberLogin(Model model, MemberForm form, HttpSession session){
         Member member = form.toLogin();
-        int isMember = memberMapper.memberLogin(member);
-        if(isMember == 1){
-            String mb_id = member.getMb_id();
-            Member login_member = memberMapper.findById(mb_id);
-            log.info("로그인 성공. 로그인 멤버 = " + login_member.toString());
+        Member login_member = memberServiceImpl.memberLogin(member);
+        if(login_member != null){
             session.setAttribute("sessionMember", login_member);
             return "index"; // 바꾸기. 로그인 성공. (메인페이지로)
         }else{
@@ -69,6 +66,24 @@ public class MemberController {
     public String memberLogout(Model model, MemberForm form, HttpSession session){
         session.invalidate();
         return "index";
+    }
+    @GetMapping("/member/removeForm")
+    public String memberRemoveForm(){
+        return "memberRemove";
+    }
+
+    @RequestMapping("/member/remove")
+    public String memberRemove(Model model, MemberForm form, HttpSession session){
+        Member member = form.toLogin();
+        int isRemoved = memberServiceImpl.memberRemove(member);
+        if (isRemoved == 1){
+            // 성공
+            session.invalidate();
+            return "index";
+        }else {
+            // 비번 다름
+            return "redirect:/member/removeForm";
+        }
     }
 
 }

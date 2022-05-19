@@ -25,6 +25,9 @@
         WHERE mb_id = #{mb_id}
     </select>
 
-
+    <delete id = "memberRemove" parameterType="string">
+        DELETE FROM tbl_member
+        WHERE mb_id = #{mb_id}
+    </delete>
 
 </mapper>
