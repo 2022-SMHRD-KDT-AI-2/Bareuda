@@ -9,9 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 public class BaumannTestForm {
 
-    private int[] part1;
-    private int[] part2;
-    private int[] part3;
-    private int[] part4;
+    private String part_num;
+    private int[] part;
 
 }

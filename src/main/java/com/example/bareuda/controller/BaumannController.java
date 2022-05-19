@@ -32,12 +32,18 @@ public class BaumannController {
 
     @GetMapping("/baumann/testForm")
     public String baumannTestForm(){
-        return "baumannTest";
+        return "baumannTest1";
     } // 바우만 테스트 폼
     @RequestMapping("/baumann/test")
     public String baumannTest(BaumannTestForm form, HttpSession session){
+        log.info("form= "+form.toString());
+        int part_num = Integer.parseInt(form.getPart_num());
         Member member = (Member)session.getAttribute("sessionMember");
         baumannService.createBaumannResult(member, form);
-        return "redirect:/baumann/result";
+        if(part_num == 4){
+            return "redirect:/baumann/result";
+        }else{
+            return "baumannTest"+(part_num+1);
+        }
     }
 }

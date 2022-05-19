@@ -16,51 +16,43 @@ public class BaumannServiceImpl implements BaumannService{
 
     @Override
     public void createBaumannResult(Member member, BaumannTestForm form) {
-        int[] scores = new int[4];
+        int part_num = Integer.parseInt(form.getPart_num());
+        if(part_num == 1){
+            System.out.println("생성함");
+            baumannMapper.createAnswer(member.getMb_id());
+        }
+        int score = 0;
 
-        for(int i=0; i<form.getPart1().length; i++){
-            scores[0] += form.getPart1()[i];
-        }
-        for(int i=0; i<form.getPart2().length; i++){
-            scores[1] += form.getPart2()[i];
-        }
-        for(int i=0; i<form.getPart3().length; i++){
-            scores[2] += form.getPart3()[i];
-        }
-        for(int i=0; i<form.getPart4().length; i++) {
-            scores[3] += form.getPart4()[i];
+        for(int i=0; i<form.getPart().length; i++){
+            score += form.getPart()[i];
         }
 
-        String type = "";
-        // part1
-        if(scores[0] <= 26){
-            type += 'D';
+        char type;
+
+        int[] parts = {26, 29, 30, 40};
+        char[] types1 = {'D', 'R', 'N', 'T'};
+        char[] types2 = {'O', 'S', 'P', 'W'};
+
+        // part
+        if(score <= parts[part_num-1]){
+            type = types1[part_num-1];
         }else{
-            type += 'O';
+            type = types2[part_num-1];
         }
-
-        // part2
-        if(scores[1] <= 29){
-            type += 'R';
+        Answer answer = baumannMapper.findById(member.getMb_id());
+        StringBuilder builder = new StringBuilder(answer.getMb_result());
+        if(part_num==1){
+            answer.setA_part1(score);
+        }else if(part_num==2){
+            answer.setA_part2(score);
+        }else if(part_num==3){
+            answer.setA_part3(score);
         }else{
-            type += 'S';
+            answer.setA_part4(score);
         }
-
-        // part3
-        if(scores[2] <= 30){
-            type += 'N';
-        }else{
-            type += 'P';
-        }
-
-        // part4
-        if(scores[3] <= 40){
-            type += 'T';
-        }else{
-            type += 'W';
-        }
-        Answer answer = new Answer(0, scores[0], scores[1], scores[2], scores[3], member.getMb_id(), type);
-        log.info(member.getMb_id()+" 계정에 들어가는 answer = "+answer.toString());
+        builder.setCharAt(part_num-1, type);
+        answer.setMb_result(builder.toString());
+        log.info("answer : "+answer.toString());
         baumannMapper.baumannScoreInsert(answer);
     }
 

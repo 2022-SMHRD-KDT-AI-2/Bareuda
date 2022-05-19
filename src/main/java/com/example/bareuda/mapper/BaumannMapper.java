@@ -10,4 +10,6 @@ public interface BaumannMapper {
     public Answer findById(String mb_id);
     public void baumannScoreInsert(Answer answer);
     public Result getResult(Answer answer);
+
+    public void createAnswer(String mb_id);
 }
