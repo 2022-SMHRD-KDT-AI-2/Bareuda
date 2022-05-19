@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.bareuda.mapper.BaumannMapper">
+
+    <select id="findById" parameterType="string" resultType="com.example.bareuda.entity.Answer">
+        SELECT * FROM tbl_answer
+        WHERE mb_id = #{mb_id}
+    </select>
+
+    <select id="getResult" parameterType="com.example.bareuda.entity.Answer" resultType="com.example.bareuda.entity.Result">
+        SELECT RESULT_TYPE, RESULT_COMMENT FROM tbl_result
+        WHERE RESULT_TYPE = #{mb_result}
+    </select>
+
+    <update id="baumannScoreInsert" parameterType="com.example.bareuda.entity.Answer">
+        update tbl_answer
+        set A_PART1 = #{a_part1}, A_PART2 = #{a_part2}, A_PART3 = #{a_part3}, A_PART4 = #{a_part4}, MB_RESULT = #{mb_result}
+        WHERE mb_id = #{mb_id}
+    </update>
+
+    <insert id="createAnswer" parameterType="string">
+        INSERT INTO tbl_answer (A_NUM, MB_ID)
+        values (TBL_ANSWER_SEQ.nextval, #{mb_id})
+    </insert>
+
+</mapper>

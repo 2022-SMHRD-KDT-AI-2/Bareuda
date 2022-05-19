@@ -1,0 +1,32 @@
+{{>layouts/header}}
+<!-- 바우만테스트 form 작성시 주의사항
+action="/member/baumanTest"
+name="part1[0]" (파트1의 첫번째 질문!)
+name="part2[0]" 이런 식으로
+value는 점수 넣기!
+-->
+<form action="/baumann/test" method="POST">
+    <input type="hidden" name="part_num" value="2">
+    질문1번<br>
+    <input type='radio' name='part[0]' value='1' checked/>1번보기
+    <input type='radio' name='part[0]' value='2' />2번보기
+    <input type='radio' name='part[0]' value='3' />3번보기
+    <br>
+    질문2번<br>
+    <input type='radio' name='part[0]' value='1' checked/>1번보기
+    <input type='radio' name='part[0]' value='2' />2번보기
+    <input type='radio' name='part[0]' value='3' />3번보기
+    <br>
+    질문3번<br>
+    <input type='radio' name='part[0]' value='1' checked/>1번보기
+    <input type='radio' name='part[0]' value='2' />2번보기
+    <input type='radio' name='part[0]' value='3' />3번보기
+    <br>
+    질문4번<br>
+    <input type='radio' name='part[0]' value='1' checked/>1번보기
+    <input type='radio' name='part[0]' value='2' />2번보기
+    <input type='radio' name='part[0]' value='3' />3번보기
+    <button type="submit">제출</button>
+</form>
+
+{{>layouts/footer}}
