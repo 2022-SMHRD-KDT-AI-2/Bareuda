@@ -1,19 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSS -->
-    <link rel="stylesheet" href="/CSS/baumannTest.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바우만테스트1</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/baumann.css">
 </head>
-{{>layouts/header}}
-<!-- 바우만테스트 form 작성시 주의사항
-action="/member/baumanTest"
-name="part1[0]" (파트1의 첫번째 질문!)
-name="part2[0]" 이런 식으로
-value는 점수 넣기!
--->
+<body style="overflow-x:hidden">
+
 <form action="/baumann/test" method="POST">
     <input type="hidden" name="part_num" value="1">
     <div id="wrapper">
@@ -159,7 +156,8 @@ value는 점수 넣기!
             </div>
         </div>
     </div>
-
 </form>
 
-{{>layouts/footer}}
+</div>
+</body>
+</html>
