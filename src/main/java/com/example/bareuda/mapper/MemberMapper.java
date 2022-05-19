@@ -12,5 +12,5 @@ public interface MemberMapper {
     public void memberInsert(Member member);
     public int memberLogin(Member member);
     public Member findById(String mb_id);
-
+    public void memberRemove(String mb_id);
 }
