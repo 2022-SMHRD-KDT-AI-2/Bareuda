@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+       function myajax(product_num){
+    $.ajax({
+          type : 'post',
+          url : 'http://211.227.114.104:5023/test', // 플라스크 주소
+          data : product_num,
+          dataType : 'json',
+          success : function(res) {
+            $("#result").text(res);
+          },
+          error:
+          function (request, status, error){
+          alert("ajax실패. code:"+request.status+"\n"+"message:"+request.reponseText+"\n"+"error:"+error);
+          }
+        })
+    }
+    </script>
+</head>
+<body>
+<button type="button" onclick="myajax(12)" id="trg">여기를 클릭하면</button>
+<br>
+<p id="result">이곳에 데이터를 받아서 출력하자</p>
+</body>
+</html>
