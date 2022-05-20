@@ -37,8 +37,8 @@
     background-color: #A2B7EB;
     border-radius: 20px;
     position: absolute;
-    top: 69%;
-    left: 63%;
+    top: 65%;
+    left: 62%;
 }
 .a4{
     width: 21vw;
@@ -46,25 +46,25 @@
     background-color: #A2B7EB;
     border-radius: 20px;
     position: absolute;
-    left: 64%;
+    left: 63%;
     top: 27%;
 }
 .type{
     position: absolute;
-    top:40%;
+    top:41%;
     left: 23%;
     font-size: 3rem;
 
 }
 h1{
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
-    padding-top: 22px;
+    padding-top: 28px;
 }
 h3{
     text-align: center;
-    font-size: 21px;
+    font-size: 26px;
     color: white;
     padding-top: 21px;
 }
@@ -80,13 +80,13 @@ li{
 }
 .p1{
     position: absolute;
-    top: 49%;
+    top: 50%;
     text-align: center;
-    left: 12%;
+    left: 11%;
     font-size: 2rem;
     width: 31%;
     height: 22%;
-    border: 1px solid;
+
 }
 .info{
     position: absolute;
@@ -141,9 +141,7 @@ li{
     font-size: 2rem;
     display: flex;
 }
-h1{
-    text-align: center;
-}
+
 .scroll-down{
     z-index: 11;
     position: fixed;
@@ -199,8 +197,8 @@ li{
     margin-left: 7%;
 }
 .pageTitle2{
-    width: 24vw;
-    height: 8vh;
+    width: 24%;
+    height: 11%;
     background-color: #A2B7EB;
     border-radius: 20px;
     position: absolute;
