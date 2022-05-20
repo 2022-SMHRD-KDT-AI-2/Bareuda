@@ -32,9 +32,9 @@
     background:rgb(0, 255, 47);}
 .graph_containers{
     position: absolute;
-    width: 39vw;
+    width: 37%;
     height: 4vh;
-    top: 19%;
+    top: 41%;
     left: 55%;
 }
 @keyframes stack{
