@@ -4,16 +4,111 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
+<body>
 <!-- CSS -->
+
 {{>layouts/header}}
 <!-- content -->
-<div id="body_wrapper">
-    <h1>바우만 결과</h1>
-    {{result}}
-    {{answer}}
-    <!-- /content -->
-    {{>layouts/footer}}
+<div class="container">
+    <div class="container_1">
+        <div>
+            <div class="a1">
+                <h1> 분석 안내표 </h1>
+            </div>
+            <div class="type"><strong>DSPW</strong></div>
+            <div>
+                    <span class="p1">
+                        <strong>UNO님</strong> <br>
+                        DSPW 피부타입으로 경미한 건성과,심한 민감성, <br>비색소성, 탄력적인 피부입니다.
+                    </span>
+                <div>
+                    <div class="a2">
+                        <h3>추천 성분</h3>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>어린 쑥 <br> 피부진정/수분</li>
+                            <li>히알루론산<br>수분 효과 </li>
+                            <li>트리플 리뉴 <br>피부활력/탄력공급</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div class="scroll-down">
+    <div class="container_2">
+        <div class="a3">
+            <h3>바우만 설문 조사 피부 타입</h3>
+        </div>
+        <div class="graph_containers">
+            <div class="graph stack1">
+                <span style="width: 75%;">75%</span>
+            </div>
+            <div class="graph stack2">
+                <span style="width: 60%;">60%</span>
+            </div>
+            <div class="graph stack3">
+                <span style="width: 25%;">25%</span>
+            </div>
+            <div class="graph stack4">
+                <span style="width: 55%;">55%</span>
+            </div>
+        </div>
+        <div class="a4">
+            <h3>모든 피부타입별 분포도</h3>
+        </div>
+        <div>
+
+        </div>
+
+    </div>
 </div>
+</div>
+
+
+<div class="containers_2">
+
+    <div class="pageTitle2">
+        <h1>피부 타입 안내</h1>
+    </div>
+    <div class="cotainerWrap">
+        <div class="container1">
+            <div class="imgbox1">
+                <img src="./img/Oily.jpeg" alt="">
+                <img src="./img/Dry.jpeg" alt="">
+                <img src="./img/Non_Pigment.jpeg" alt="">
+                <img src="./img/Pigment.jpeg" alt="">
+
+            </div>
+            <div class="conInfo1">
+                <p>Oily(지성)피지 분비량이 많아 번들거리고 여드름이 자주 생기는 타입</p>
+                <p>Dry(건성)피지 분비량과 수분 보유량 모두 적어 거칠고 각질과 주름이 잘 생기는 타입</p>
+                <p>Non-Pigment(비색소성)메라린 활성도가 낮아 눈에 보이는 색소가 적은 타입</p>
+                <p>Pigment(색소성)멜라닌 활성도가 높아 기미, 주근깨 혹은 잡티 등 본이는 색소가 많은 타입</p>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="imgbox2">
+                <img src="./img/Wrinkle.jpeg" alt="">
+                <img src="./img/Tight.jpeg" alt="">
+                <img src="./img/Resistant.jpeg" alt="">
+                <img src="./img/Sensitive.jpeg" alt="">
+            </div>
+            <div class="conInfo2">
+                <p>Wrinkle(주름)피부 결이 고르지 않고 주름이 많은 타입</p>
+                <p>Tight(탄력성)피부 결이 고르고 주름이 적어 탄력이 있는 타입</p>
+                <p>Resistant(저항성)피부 장벽이 견고해 외부적인 스트레스에 대해 견디는 힘이 강한 타입</p>
+                <p>Sensitive(민감성)피부가 얇고 섬세해 외부 자극에 쉽게 반응하는 타입</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /content -->
+{{>layouts/footer}}
+
 </body>
 </html>
