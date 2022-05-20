@@ -1,7 +1,8 @@
 package com.example.bareuda.controller;
 
-import com.example.bareuda.dto.TestForm;
+import com.example.bareuda.dto.CategoryForm;
 import com.example.bareuda.entity.Answer;
+import com.example.bareuda.entity.Like;
 import com.example.bareuda.entity.Member;
 import com.example.bareuda.entity.Product;
 import com.example.bareuda.service.BaumannServiceImpl;
@@ -16,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.net.http.HttpResponse;
 import java.util.List;
 
 @Slf4j
@@ -48,7 +48,7 @@ public class ProductController {
 //    }
 
     @RequestMapping("/product/test.do")
-    public String productsTest(Model model, HttpSession session, TestForm form, HttpServletResponse response) throws IOException {
+    public String productsTest(Model model, HttpSession session, CategoryForm form, HttpServletResponse response) throws IOException {
         Member member = (Member) session.getAttribute("sessionMember");
         JSONObject obj = new JSONObject();
         String category = form.getCategory();
@@ -65,5 +65,27 @@ public class ProductController {
         response.getWriter().print(obj);
 
         return null;
+    }
+
+    @RequestMapping("/product/like.do")
+    public String productLike(Model model, HttpSession session, int p_id, HttpServletResponse response) throws IOException {
+        Member member = (Member) session.getAttribute("sessionMember");
+        JSONObject obj = new JSONObject();
+        Like like = new Like(0, member.getMb_id(), p_id);
+        productServiceImpl.productLike(like);
+        obj.put("like",like);
+
+        response.setContentType("application/x-json; charset=UTF-8");
+        response.getWriter().print(obj);
+
+        return null;
+    }
+
+    @RequestMapping("/mypage/likeList")
+    public String productLikeList(Model model, HttpSession session) throws IOException {
+        Member member = (Member) session.getAttribute("sessionMember");
+        List<Product> list = productServiceImpl.getlikeList(member.getMb_id());
+        model.addAttribute("list", list);
+        return "likeList";
     }
 }

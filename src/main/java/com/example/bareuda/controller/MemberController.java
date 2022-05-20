@@ -67,12 +67,12 @@ public class MemberController {
         session.invalidate();
         return "index";
     }
-    @GetMapping("/member/removeForm")
+    @GetMapping("/mypage/removeForm")
     public String memberRemoveForm(){
         return "memberRemove";
     }
 
-    @RequestMapping("/member/remove")
+    @RequestMapping("/mypage/remove")
     public String memberRemove(Model model, MemberForm form, HttpSession session){
         Member member = form.toLogin();
         int isRemoved = memberServiceImpl.memberRemove(member);
@@ -82,7 +82,7 @@ public class MemberController {
             return "index";
         }else {
             // 비번 다름
-            return "redirect:/member/removeForm";
+            return "redirect:/mypage/removeForm";
         }
     }
 }
