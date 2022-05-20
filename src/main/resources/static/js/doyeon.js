@@ -7,7 +7,7 @@ function categorySort(category){
     data: {"category":category},
     success:
     function(data){ //ajax통신 성공시 넘어오는 데이터 통째 이름 =data
-        alert("post_seq:"+data.post_seq+"// like:"+data.like)
+        alert("like:"+data.like)
     },
     error:
     function (request, status, error){
