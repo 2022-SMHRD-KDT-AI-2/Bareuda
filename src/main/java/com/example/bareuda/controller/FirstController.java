@@ -9,7 +9,7 @@ public class FirstController {
 
     @GetMapping("/hi")
     public String niceToMeetYou(Model model) {
-        return "baumannTest4";
+        return "index";
     }
 
     @GetMapping("/bye")
