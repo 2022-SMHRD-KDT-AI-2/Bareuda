@@ -70,4 +70,10 @@ public class BaumannServiceImpl implements BaumannService{
         return answer;
     }
 
+    @Override
+    public Answer findById(String mb_id) {
+        Answer answer = baumannMapper.findById(mb_id);
+        return answer;
+    }
+
 }

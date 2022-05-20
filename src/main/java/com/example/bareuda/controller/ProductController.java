@@ -1,8 +1,10 @@
 package com.example.bareuda.controller;
 
 import com.example.bareuda.dto.TestForm;
+import com.example.bareuda.entity.Answer;
 import com.example.bareuda.entity.Member;
 import com.example.bareuda.entity.Product;
+import com.example.bareuda.service.BaumannServiceImpl;
 import com.example.bareuda.service.ProductServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONObject;
@@ -22,12 +24,15 @@ import java.util.List;
 public class ProductController {
     @Autowired
     private ProductServiceImpl productServiceImpl;
+    @Autowired
+    private BaumannServiceImpl baumannService;
 
-    @RequestMapping("/product/recommended.do")
+    @RequestMapping("/product/recommended")
     public String getRecommended(Model model, HttpSession session){
         Member member = (Member) session.getAttribute("sessionMember");
         List<Product> products = productServiceImpl.getRecommended(member);
-
+        Answer answer = baumannService.findById(member.getMb_id());
+        model.addAttribute("answer", answer);
         model.addAttribute("products", products);
         return "recommended";
     }
