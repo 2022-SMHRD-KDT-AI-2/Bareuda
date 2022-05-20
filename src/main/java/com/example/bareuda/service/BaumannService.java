@@ -9,4 +9,5 @@ public interface BaumannService {
     public void createBaumannResult(Member member, BaumannTestForm form);
     public Result getBaumannResult(Member member);
     public Answer getAnswer(String mb_id);
+    public Answer findById(String mb_id);
 }

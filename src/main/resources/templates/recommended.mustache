@@ -5,181 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="/css/products copy.css">
+    <link rel="stylesheet" href="/css/products.css">
     <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
     <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
 
     {{>layouts/header}}
     <!-- /content -->
-    <form action="/member/products" method="post">
-        <div id="wrapper">
-            <div class="container1">
-                <div class="type_result">
-                    <div class="type_name"><p><span class="real_name">doby</span>님의 피부타입</p></div>
-                    <div class="type_prd"><p><span class="real_type"><strong>DWSP</strong></span> 추천제품</p></div>
+    <div id="wrapper">
+        <div class="container1">
+            <div class="type_result">
+                <div class="type_name"><p><span class="real_name">{{sessionMember.mb_name}}</span>님의 피부타입</p></div>
+                <div class="type_prd"><p><span class="real_type"><strong>{{answer.mb_result}}</strong></span> 추천제품</p></div>
 
-                    <hr class="line">
-                </div>
-            </div>
-            <div class="container2">
-                <div class="item">
-                    <a href="https://google.com" class="prd_img">
-                        <img src="/img/cosmetic.jpg">
-                    </a>
-                    <div class="prd_content">
-                        <div class="prd">
-                            <a>
-                                <div id="heart-container">
-                                    <div class="heart-like-button" onclick="generateClones()"></div>
-                                </div>
-                                <div class="c_brand"><p><span class="tx_barnd">아이디얼포맨</span></p></div>
-                                <div class="c_name"><p><span class="tx_name">닥터지 로얄 블랙 스네일 스페셜 세트 (퍼스트에센스165ml+크림50ml+아이크림10ml+마스크팩1ea)</span></p></div>
-                                <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://google.com" class="prd_img">
-                        <img src="/img/cosmetic.jpg">
-                    </a>
-                    <div class="prd_content">
-                        <div class="prd">
-                            <a>
-                                <div id="heart-container">
-                                    <div class="heart-like-button" onclick="generateClones()"></div>
-                                </div>
-                                <div class="c_brand"><p><span class="tx_barnd">아이디얼포맨</span></p></div>
-                                <div class="c_name"><p><span class="tx_name">닥터지 로얄 블랙 스네일 스페셜 세트 (퍼스트에센스165ml+크림50ml+아이크림10ml+마스크팩1ea)</span></p></div>
-                                <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://google.com" class="prd_img">
-                        <img src="/img/cosmetic.jpg">
-                    </a>
-                    <div class="prd_content">
-                        <div class="prd">
-                            <a>
-                                <div id="heart-container">
-                                    <div class="heart-like-button" onclick="generateClones()"></div>
-                                </div>
-                                <div class="c_brand"><p><span class="tx_barnd">아이디얼포맨</span></p></div>
-                                <div class="c_name"><p><span class="tx_name">닥터지 로얄 블랙 스네일 스페셜 세트 (퍼스트에센스165ml+크림50ml+아이크림10ml+마스크팩1ea)</span></p></div>
-                                <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://google.com" class="prd_img">
-                        <img src="/img/cosmetic.jpg">
-                    </a>
-                    <div class="prd_content">
-                        <div class="prd">
-                            <a>
-                                <div id="heart-container">
-                                    <div class="heart-like-button" onclick="generateClones()"></div>
-                                </div>
-                                <div class="c_brand"><p><span class="tx_barnd">아이디얼포맨</span></p></div>
-                                <div class="c_name"><p><span class="tx_name">닥터지 로얄 블랙 스네일 스페셜 세트 (퍼스트에센스165ml+크림50ml+아이크림10ml+마스크팩1ea)</span></p></div>
-                                <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://google.com" class="prd_img">
-                        <img src="/img/cosmetic.jpg">
-                    </a>
-                    <div class="prd_content">
-                        <div class="prd">
-                            <a>
-                                <div id="heart-container">
-                                    <div class="heart-like-button" onclick="generateClones()"></div>
-                                </div>
-                                <div class="c_brand"><p><span class="tx_barnd">아이디얼포맨</span></p></div>
-                                <div class="c_name"><p><span class="tx_name">닥터지 로얄 블랙 스네일 스페셜 세트 (퍼스트에센스165ml+크림50ml+아이크림10ml+마스크팩1ea)</span></p></div>
-                                <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://google.com" class="prd_img">
-                        <img src="/img/cosmetic.jpg">
-                    </a>
-                    <div class="prd_content">
-                        <div class="prd">
-                            <a>
-                                <div id="heart-container">
-                                    <div class="heart-like-button" onclick="generateClones()"></div>
-                                </div>
-                                <div class="c_brand"><p><span class="tx_barnd">아이디얼포맨</span></p></div>
-                                <div class="c_name"><p><span class="tx_name">닥터지 로얄 블랙 스네일 스페셜 세트 (퍼스트에센스165ml+크림50ml+아이크림10ml+마스크팩1ea)</span></p></div>
-                                <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://google.com" class="prd_img">
-                        <img src="/img/cosmetic.jpg">
-                    </a>
-                    <div class="prd_content">
-                        <div class="prd">
-                            <a>
-                                <div id="heart-container">
-                                    <div class="heart-like-button" onclick="generateClones()"></div>
-                                </div>
-                                <div class="c_brand"><p><span class="tx_barnd">아이디얼포맨</span></p></div>
-                                <div class="c_name"><p><span class="tx_name">닥터지 로얄 블랙 스네일 스페셜 세트 (퍼스트에센스165ml+크림50ml+아이크림10ml+마스크팩1ea)</span></p></div>
-                                <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://google.com" class="prd_img">
-                        <img src="/img/cosmetic.jpg">
-                    </a>
-                    <div class="prd_content">
-                        <div class="prd">
-                            <a>
-                                <div id="heart-container">
-                                    <div class="heart-like-button" onclick="generateClones()"></div>
-                                </div>
-                                <div class="c_brand"><p><span class="tx_barnd">아이디얼포맨</span></p></div>
-                                <div class="c_name"><p><span class="tx_name">닥터지 로얄 블랙 스네일 스페셜 세트 (퍼스트에센스165ml+크림50ml+아이크림10ml+마스크팩1ea)</span></p></div>
-                                <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="https://google.com" class="prd_img">
-                        <img src="/img/cosmetic.jpg">
-                    </a>
-                    <div class="prd_content">
-                        <div class="prd">
-                            <a>
-                                <div id="heart-container">
-                                    <div class="heart-like-button" onclick="generateClones()"></div>
-                                </div>
-                                <div class="c_brand"><p><span class="tx_barnd">아이디얼포맨</span></p></div>
-                                <div class="c_name"><p><span class="tx_name">닥터지 로얄 블랙 스네일 스페셜 세트 (퍼스트에센스165ml+크림50ml+아이크림10ml+마스크팩1ea)</span></p></div>
-                                <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <hr class="line">
             </div>
         </div>
-        <script type="text/javascript" src="/js/hart.js"></script>
-
-    </form>
+        <div class="container2">
+            {{#products}}
+            <div class="item">
+                <a href="#" class="prd_img">
+                    <img src="/img/products/{{p_img}}">
+                </a>
+                <div class="prd_content">
+                    <div class="prd">
+                        <a>
+                            <div id="heart-container">
+                                <div class="heart-like-button" onclick="generateClones()"></div>
+                            </div>
+                            <div class="c_brand"><p><span class="tx_barnd">{{p_brand}}</span></p></div>
+                            <div class="c_name"><p><span class="tx_name">{{p_name}}</span></p></div>
+                            <div class="c_type"><p><span class="type_result">{{p_result}}</span></p></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{/products}}
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/hart.js"></script>
 
     {{>layouts/footer}}
 
