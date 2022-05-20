@@ -5,27 +5,37 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/js/doyeon.js"></script>
     <script>
-       function myajax(product_num){
-    $.ajax({
-          type : 'post',
-          url : 'http://211.227.114.104:5023/test', // 플라스크 주소
-          data : product_num,
-          dataType : 'json',
-          success : function(res) {
-            $("#result").text(res);
-          },
-          error:
-          function (request, status, error){
-          alert("ajax실패. code:"+request.status+"\n"+"message:"+request.reponseText+"\n"+"error:"+error);
-          }
-        })
-    }
+        let check_dic = {"나이":12}
+        function myajax() {
+            $.ajax({
+                url : 'http://211.227.114.104:5023/',
+                type : 'POST',
+                data : check_dic,
+                dataType : 'json',
+                success : function(res) {
+                    alert('성공!');
+                    $("#result").text(res['name']);
+                },
+                error:
+                function (request, status, error){
+                alert("ajax실패. code:"+request.status+"\n"
+                    +"message:"+request.reponseText+"\n"
+                    +"error:"+error);
+                }
+            })
+        }
     </script>
 </head>
 <body>
-<button type="button" onclick="myajax(12)" id="trg">여기를 클릭하면</button>
+<button type="button" onclick="myajax()" id="trg">여기를 클릭하면</button>
 <br>
 <p id="result">이곳에 데이터를 받아서 출력하자</p>
+    <form id="like_form12" class="hide_form">
+        <input type="text" name="category" value="12"> <!-- 게시글넘버 -->
+        <input type="button" onclick="return like(12)" class="hide_input">클릭클릭</form>
+
 </body>
 </html>

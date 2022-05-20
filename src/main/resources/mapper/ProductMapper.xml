@@ -5,4 +5,21 @@
 
 <mapper namespace="com.example.bareuda.mapper.ProductMapper">
 
+    <select id="getRecommended" parameterType="string" resultType="com.example.bareuda.entity.Product">
+        <![CDATA[
+        select distinct * from tbl_products
+        where (P_RESULT LIKE #{type1} or P_RESULT LIKE #{type2} or P_RESULT LIKE #{type3} or P_RESULT LIKE #{type4})
+        and ROWNUM <= 21
+        ]]>
+    </select>
+
+    <select id="getRecommendedCategory" parameterType="string" resultType="com.example.bareuda.entity.Product">
+        <![CDATA[
+        select distinct * from tbl_products
+        where (P_RESULT LIKE #{type1} or P_RESULT LIKE #{type2} or P_RESULT LIKE #{type3} or P_RESULT LIKE #{type4})
+        and (ROWNUM <= 21)
+        and (p_category = #{category})
+        ]]>
+    </select>
+
 </mapper>
