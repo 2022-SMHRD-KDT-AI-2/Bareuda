@@ -13,7 +13,7 @@ public interface ProductMapper {
     public List<Product> getRecommended(@Param("type1") String type1, @Param("type2") String type2, @Param("type3") String type3, @Param("type4") String type4);
     public List<Product> getRecommendedCategory(@Param("type1") String type1, @Param("type2") String type2, @Param("type3") String type3, @Param("type4") String type4, @Param("category") String category);
 
-    public int selectLike(Like like);
+    public Like selectLike(Like like);
     public void deleteLike(Like like);
     public void insertLike(Like like);
     public List<Product> getlikeList(String mb_id);

@@ -22,8 +22,8 @@
         ]]>
     </select>
 
-    <select id="selectLike" parameterType="int" resultType="com.example.bareuda.entity.Like">
-        SELECT count(*) FROM tbl_like
+    <select id="selectLike" parameterType="com.example.bareuda.entity.Like" resultType="com.example.bareuda.entity.Like">
+        SELECT * FROM tbl_like
         WHERE P_ID = #{p_id} and MB_ID = #{mb_id}
     </select>
 

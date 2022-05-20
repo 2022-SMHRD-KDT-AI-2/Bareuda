@@ -73,7 +73,7 @@ public class ProductController {
         JSONObject obj = new JSONObject();
         Like like = new Like(0, member.getMb_id(), p_id);
         productServiceImpl.productLike(like);
-        obj.put("like",like);
+        obj.put("p_id",p_id);
 
         response.setContentType("application/x-json; charset=UTF-8");
         response.getWriter().print(obj);
