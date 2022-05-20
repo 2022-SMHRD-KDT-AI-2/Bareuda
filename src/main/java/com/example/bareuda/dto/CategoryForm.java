@@ -7,6 +7,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Getter
-public class TestForm {
+public class CategoryForm {
     private String category;
 }

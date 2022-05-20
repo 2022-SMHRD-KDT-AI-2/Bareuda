@@ -7,7 +7,8 @@ import lombok.*;
 @AllArgsConstructor
 @Data
 @ToString
-public class Result {
-    private String result_type;
-    private String result_comment;
+public class Like {
+    private int like_id;
+    private String m_id;
+    private int p_id;
 }

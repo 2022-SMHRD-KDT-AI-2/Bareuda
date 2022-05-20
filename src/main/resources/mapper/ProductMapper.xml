@@ -22,4 +22,25 @@
         ]]>
     </select>
 
+    <select id="selectLike" parameterType="int" resultType="com.example.bareuda.entity.Like">
+        SELECT count(*) FROM tbl_like
+        WHERE P_ID = #{p_id} and MB_ID = #{mb_id}
+    </select>
+
+    <delete id = "deleteLike" parameterType="com.example.bareuda.entity.Like">
+        DELETE FROM tbl_like
+        WHERE P_ID = #{p_id} and MB_ID = #{mb_id}
+    </delete>
+
+    <insert id="insertLike" parameterType="com.example.bareuda.entity.Like">
+        INSERT INTO tbl_like
+        values (TBL_LIKE_SEQ.NEXTVAL, #{mb_id}, #{p_id})
+    </insert>
+
+    <select id="getlikeList" parameterType="string" resultType="com.example.bareuda.entity.Product">
+        SELECT  * from tbl_products
+        WHERE P_ID IN (select p_id from tbl_like where mb_id = #{mb_id})
+    </select>
+
+
 </mapper>

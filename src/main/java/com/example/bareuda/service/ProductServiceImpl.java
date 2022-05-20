@@ -1,11 +1,13 @@
 package com.example.bareuda.service;
 
 import com.example.bareuda.entity.Answer;
+import com.example.bareuda.entity.Like;
 import com.example.bareuda.entity.Member;
 import com.example.bareuda.entity.Product;
 import com.example.bareuda.mapper.BaumannMapper;
 import com.example.bareuda.mapper.ProductMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,5 +43,22 @@ public class ProductServiceImpl implements ProductService {
         }
         List<Product> products = productMapper.getRecommendedCategory(types[0], types[1], types[2], types[3], category);
         return products;
+    }
+
+    @Override
+    public void productLike(Like like) {
+        int isLike = productMapper.selectLike(like);
+        if(isLike != 0) {
+            productMapper.deleteLike(like);
+        }
+        else {
+            productMapper.insertLike(like);
+        }
+    }
+
+    @Override
+    public List<Product> getlikeList(String mb_id) {
+        List<Product> list = productMapper.getlikeList(mb_id);
+        return list;
     }
 }
