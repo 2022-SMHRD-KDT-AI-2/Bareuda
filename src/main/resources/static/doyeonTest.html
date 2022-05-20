@@ -33,9 +33,12 @@
 <button type="button" onclick="myajax()" id="trg">여기를 클릭하면</button>
 <br>
 <p id="result">이곳에 데이터를 받아서 출력하자</p>
-    <form id="like_form12" class="hide_form">
-        <input type="text" name="category" value="12"> <!-- 게시글넘버 -->
-        <input type="button" onclick="return like(12)" class="hide_input">클릭클릭</form>
 
+<select id="fruits" onchange="categorySort(this.value);">
+    <option value='' selected>-- 선택 --</option>
+    <option value='apple'>사과</option>
+    <option value='banana'>바나나</option>
+    <option value='lemon'>레몬</option>
+</select>
 </body>
 </html>
