@@ -7,7 +7,6 @@ import com.example.bareuda.entity.Product;
 import com.example.bareuda.mapper.BaumannMapper;
 import com.example.bareuda.mapper.ProductMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +29,7 @@ public class ProductServiceImpl implements ProductService {
             types[i] = "%"+type.charAt(i)+"%";
         }
         List<Product> products = productMapper.getRecommended(types[0], types[1], types[2], types[3]);
+
         return products;
     }
 
@@ -47,8 +47,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void productLike(Like like) {
-        int isLike = productMapper.selectLike(like);
-        if(isLike != 0) {
+        if (productMapper.selectLike(like) != null){
             productMapper.deleteLike(like);
         }
         else {

@@ -95,6 +95,7 @@ li{
     width: 35vw;
     height: 12vh;
     border: 2px solid;
+    font-size:22px;
 }
 .container_2{
     width: 100vw;
@@ -122,22 +123,24 @@ li{
 
 .container1{
 
-    width: 48vw;
+    width: 39%;
     height: 70vh;
-    border-radius: 20px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
     margin-top: 14%;
-    background-color: orange;
+    background-color: white;
     font-size: 2rem;
     display: flex;
-    margin-left: 1%;
+    margin-left: 6%;
 }
 .container2{
 
     width: 48vw;
     height: 70vh;
-    border-radius: 20px;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
     margin-top: 14%;
-    background-color: yellow;
+    background-color: white;
     font-size: 2rem;
     display: flex;
 }
@@ -209,42 +212,49 @@ li{
 
 img{
     border-radius: 100%;
-    width: 6vw;
-    margin-top: 32%;
+    width: 5vw;
+    margin-top: 10%;
     margin-left: 23%;
 }
 .imgbox1{
     width: 10vw;
-    height: 70vh;
-    background-color: white;
+    height: 51vh;
+
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-
+    margin-top: 7%;
 }
 .imgbox2{
     width: 10vw;
-    height: 70vh;
-    background-color: white;
+    height: 52vh;
+
+    margin-top:5%;
 }
 .conInfo1{
-    background-color: white;
+
     width: 40vw;
-    height: 70vh;
+    height: 52vh;
+    margin-top: 6%;
 
 }
 
 .conInfo2{
-    background-color: white;
+
     width: 40vw;
-    height: 70vh;
+    height: 51vh;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    margin-top: 5%
 
 }
-p{
-    padding-top: 11%;
-    font-size: 23px;
-}
+ .conInfo1>p{ padding-top: 0%;
+    font-size: 26px;
+    margin-top: 10%;
+    margin-left: -1%;
+    }
 .conInfo2>p{
-    margin-top: 6%;
+    margin-top: 7%;
+    margin-left: -4%;
+    font-size: 26px;
+    padding-top:3%
 }
