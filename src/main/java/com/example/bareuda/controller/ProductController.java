@@ -50,9 +50,10 @@ public class ProductController {
         System.out.println("category:"+category);
         Product product = new Product(3, "dd", "dd", "dd", "dd", "dd", "dd", "dd",  "dd", "dd", "dd", "dd", "dd", 3);
         if(category==""){
-            obj.put("like",222);
+            obj.put("like",111);
         }else{
-            obj.put("like",product);
+            obj.put("like",222);
+            model.addAttribute("products", product);
         }
 
         response.setContentType("application/x-json; charset=UTF-8");
