@@ -38,16 +38,6 @@ public class ProductController {
         return "recommended";
     }
 
-//    @RequestMapping("/product/recommended/category.do")
-//    public String getRecommendedCategory(Model model, HttpSession session){
-//        Member member = (Member) session.getAttribute("sessionMember");
-//        String category = (String) model.getAttribute("category");
-//        List<Product> products = productServiceImpl.getRecommendedCategory(member, category);
-//
-//        model.addAttribute("products", products);
-//        return null;
-//    }
-
     @RequestMapping("/product/category.do")
     public String productsTest(Model model, HttpSession session, CategoryForm form, HttpServletResponse response) throws IOException {
         Member member = (Member) session.getAttribute("sessionMember");
@@ -66,6 +56,7 @@ public class ProductController {
             jsonProducts = gson.toJson(products);
             obj.put("products", jsonProducts);
         }
+        obj.put("category", category);
 
         response.setContentType("application/x-json; charset=UTF-8");
         response.getWriter().print(obj);
