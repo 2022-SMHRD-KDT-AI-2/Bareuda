@@ -19,11 +19,11 @@
                 <div class="a1">
                     <h1> 분석 안내표 </h1>
                 </div>
-                <div class="type"><strong>DSPW</strong></div>
+                <div class="type"><strong>{{answer.mb_result}}</strong></div>
                 <div>
                     <span class="p1">
-                        <strong>UNO님</strong> <br>
-                        DSPW 피부타입으로 경미한 건성과,심한 민감성, <br>비색소성, 탄력적인 피부입니다.
+                        <strong>{{sessionMember.mb_name}}님</strong> <br>
+                        {{result.result_type}} 피부타입으로 {{result.result_comment}}
                     </span>
                     <div>
                         <div class="a2">
@@ -49,16 +49,16 @@
             </div>
             <div class="graph_containers">
                 <div class="graph stack1">
-                    <span style="width: 75%;">75%</span>
+                    <span style="width: 75%;">{{answer.a_part1}}</span>
                 </div>
                 <div class="graph stack2">
-                    <span style="width: 60%;">60%</span>
+                    <span style="width: 60%;">{{answer.a_part2}}</span>
                 </div>
                 <div class="graph stack3">
-                    <span style="width: 25%;">25%</span>
+                    <span style="width: 25%;">{{answer.a_part3}}</span>
                 </div>
                 <div class="graph stack4">
-                    <span style="width: 55%;">55%</span>
+                    <span style="width: 55%;">{{answer.a_part4}}</span>
                 </div>
             </div>
             <div class="a4">
