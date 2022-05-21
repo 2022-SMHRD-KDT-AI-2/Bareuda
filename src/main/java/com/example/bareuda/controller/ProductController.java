@@ -7,6 +7,7 @@ import com.example.bareuda.entity.Member;
 import com.example.bareuda.entity.Product;
 import com.example.bareuda.service.BaumannServiceImpl;
 import com.example.bareuda.service.ProductServiceImpl;
+import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,18 +48,23 @@ public class ProductController {
 //        return null;
 //    }
 
-    @RequestMapping("/product/test.do")
+    @RequestMapping("/product/category.do")
     public String productsTest(Model model, HttpSession session, CategoryForm form, HttpServletResponse response) throws IOException {
         Member member = (Member) session.getAttribute("sessionMember");
         JSONObject obj = new JSONObject();
+        Gson gson = new Gson();
         String category = form.getCategory();
-        System.out.println("category:"+category);
-        Product product = new Product(3, "dd", "dd", "dd", "dd", "dd", "dd", "dd",  "dd", "dd", "dd", "dd", "dd", 3);
-        if(category==""){
-            obj.put("like",111);
-        }else{
-            obj.put("like",222);
-            model.addAttribute("products", product);
+        log.info("selected category : "+category);
+        List<Product> products;
+        String jsonProducts;
+        if(category==""){ // 카테고리 - 전체보기
+            products = productServiceImpl.getRecommended(member);
+            jsonProducts = gson.toJson(products);
+            obj.put("products",jsonProducts);
+        }else{ // 카테고리별 보기
+            products = productServiceImpl.getRecommendedCategory(member, category);
+            jsonProducts = gson.toJson(products);
+            obj.put("products", jsonProducts);
         }
 
         response.setContentType("application/x-json; charset=UTF-8");
