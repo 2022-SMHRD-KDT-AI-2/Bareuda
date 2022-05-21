@@ -34,7 +34,9 @@ body {
     margin-top: 15%;
     margin-left: 19%;
 }
-
+#memberRemove{
+   font-weight: bold;
+}
 .boxLeft>ul>li {
     padding-top: 14%;
     list-style: none;
