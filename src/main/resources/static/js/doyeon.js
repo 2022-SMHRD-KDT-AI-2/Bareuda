@@ -12,12 +12,14 @@ function categorySort(category){
 
         //$('.item').remove();
         alert("products:"+products.length)
-        if(data.category == ''){
-            $('.item').hide();
-            $('.'+category).show();
-        }else{
-            $('.item').show();
-        }
+        $('.item').hide();
+        $('.'+data.category).show();
+//        if(data.category == ''){
+//            $('.item').hide();
+//            $('.'+data.category).show();
+//        }else{
+//            $('.item').show();
+//        }
 //        alert("products:"+products.length)
 //        for (var i = 0; i <products.length; i++) {
 //            $('.container2').append('<div class="item">');
@@ -45,6 +47,10 @@ function categorySort(category){
 }
 
 function categorySort2(category){
-
-
+    if(category != '전체'){
+        $('.item').hide();
+        $('.'+category).show();
+    }else{
+        $('.item').show();
+    }
 }
