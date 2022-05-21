@@ -42,7 +42,9 @@ body {
     list-style: none;
     float: left;
 }
-
+a{
+font-size:21px;
+}
 .container2 {
     width: 80%;
     height: 84%;
