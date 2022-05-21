@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UNOController {
     @GetMapping("/uno")
     public String niceToMeetYou(Model model) {
-        return "myPage";
+        return "memberRemove";
     }
 }
