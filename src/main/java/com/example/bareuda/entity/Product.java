@@ -3,7 +3,6 @@ package com.example.bareuda.entity;
 import lombok.*;
 
 @Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

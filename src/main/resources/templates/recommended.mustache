@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/products.css">
     <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
     <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     {{>layouts/header}}
     <!-- /content -->
     <div id="wrapper">
@@ -30,7 +30,7 @@
                     <div class="prd">
                         <a>
                             <div id="heart-container">
-                                <div class="heart-like-button" onclick="generateClones()"></div>
+                                <div class="heart-like-button"  id="p{{p_id}}" onclick="generateClones({{p_id}})"></div>
                             </div>
                             <div class="c_brand"><p><span class="tx_barnd">{{p_brand}}</span></p></div>
                             <div class="c_name"><p><span class="tx_name">{{p_name}}</span></p></div>
@@ -43,6 +43,7 @@
         </div>
     </div>
     <script type="text/javascript" src="/js/like.js"></script>
+    <script type="text/javascript" src="/js/doyeon.js"></script>
 
     {{>layouts/footer}}
 

@@ -1,6 +1,7 @@
 package com.example.bareuda.service;
 
 import com.example.bareuda.entity.Answer;
+import com.example.bareuda.entity.Like;
 import com.example.bareuda.entity.Member;
 import com.example.bareuda.entity.Product;
 import com.example.bareuda.mapper.BaumannMapper;
@@ -28,6 +29,7 @@ public class ProductServiceImpl implements ProductService {
             types[i] = "%"+type.charAt(i)+"%";
         }
         List<Product> products = productMapper.getRecommended(types[0], types[1], types[2], types[3]);
+
         return products;
     }
 
@@ -41,5 +43,21 @@ public class ProductServiceImpl implements ProductService {
         }
         List<Product> products = productMapper.getRecommendedCategory(types[0], types[1], types[2], types[3], category);
         return products;
+    }
+
+    @Override
+    public void productLike(Like like) {
+        if (productMapper.selectLike(like) != null){
+            productMapper.deleteLike(like);
+        }
+        else {
+            productMapper.insertLike(like);
+        }
+    }
+
+    @Override
+    public List<Product> getlikeList(String mb_id) {
+        List<Product> list = productMapper.getlikeList(mb_id);
+        return list;
     }
 }
