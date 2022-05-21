@@ -150,3 +150,8 @@ a{
     font-size: 57px;
 
 }
+.imgBox{
+    position: absolute;
+    top: 31%;
+    left: 35%;
+}
