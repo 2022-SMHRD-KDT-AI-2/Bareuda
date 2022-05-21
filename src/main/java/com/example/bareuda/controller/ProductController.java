@@ -85,4 +85,21 @@ public class ProductController {
         model.addAttribute("list", list);
         return "likeList";
     }
+
+    @RequestMapping("/product/search.do")
+    public String productsSearch(Model model, HttpSession session, String search, HttpServletResponse response) throws IOException {
+        Member member = (Member) session.getAttribute("sessionMember");
+        JSONObject obj = new JSONObject();
+        Gson gson = new Gson();
+
+        List<Product> list = productServiceImpl.autocomplete(search);
+
+        String products = gson.toJson(list);
+        obj.put("products",products);
+
+        response.setContentType("application/x-json; charset=UTF-8");
+        response.getWriter().print(obj);
+
+        return null;
+    }
 }
