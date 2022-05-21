@@ -9,17 +9,50 @@ name="mem_pw"
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/memberRemove.css">
     <!-- CSS -->
 </head>
 {{>layouts/header}}
 <!-- content -->
 <form action="/member/remove" method="post">
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <input type="hidden" name="mem_id" class="int" maxlength="20" value="{{sessionMember.mb_id}}">
-    <input type="password" name="mem_pw" class="int" maxlength="20" placeholder="비밀번호">
-    <button type="submit"> <a>탈퇴</a> </button>
+    <div class="containers">
+        <div class="container1">
+            <div class="box1">
+                <div class="boxLeft">
+                    <ul>
+                        <li>My Page</li>
+                        <li>좋아요 제품</li>
+                        <li>회원 탈퇴</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="box2">
+
+
+
+                <div class="delateBox">
+                    <h3 class="join_title"><label for="pswd1"></label></h3>
+                    <span class="box int_pass">
+                    <input type="hidden" name="mem_id" class="int" maxlength="20" >
+                    <input type="password" name="mem_pw" class="int" maxlength="20" placeholder="비밀번호">
+                    </span>
+                </div>
+
+
+                <div class="btn_area1">
+                    <button type="submit" id="btnDelate">
+                        <a>탈퇴</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>
 <!-- /content -->
 {{>layouts/footer}}
 </body>
 </html>
+
+
