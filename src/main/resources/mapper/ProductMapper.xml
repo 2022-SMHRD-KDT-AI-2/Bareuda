@@ -41,6 +41,11 @@
         SELECT  * from tbl_products
         WHERE P_ID IN (select p_id from tbl_like where mb_id = #{mb_id})
     </select>
+    <select id="autocomplete" parameterType="string" resultType="com.example.bareuda.entity.Product">
+        SELECT *
+        FROM tbl_products
+        WHERE p_name LIKE  '%'|| #{search} || '%'
+    </select>
 
 
 </mapper>

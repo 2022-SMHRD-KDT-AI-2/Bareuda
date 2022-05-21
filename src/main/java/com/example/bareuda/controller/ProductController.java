@@ -87,12 +87,12 @@ public class ProductController {
     }
 
     @RequestMapping("/product/search.do")
-    public String productsSearch(Model model, HttpSession session, HttpServletResponse response) throws IOException {
+    public String productsSearch(Model model, HttpSession session, String search, HttpServletResponse response) throws IOException {
         Member member = (Member) session.getAttribute("sessionMember");
         JSONObject obj = new JSONObject();
         Gson gson = new Gson();
 
-        List<Product> list = productServiceImpl.getRecommended(member);
+        List<Product> list = productServiceImpl.autocomplete(search);
 
         String products = gson.toJson(list);
         obj.put("products",products);

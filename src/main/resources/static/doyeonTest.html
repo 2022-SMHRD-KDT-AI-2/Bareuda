@@ -17,6 +17,7 @@
                         type: 'get',
                         url: "/product/search.do",
                         dataType: "json",
+                        data : {search: request.term},
                         success: function(data) {
                         var products = JSON.parse(data.products);
                             response(

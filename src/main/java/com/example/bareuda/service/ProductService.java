@@ -10,7 +10,7 @@ public interface ProductService {
     public List<Product> getRecommended(Member member);
     public List<Product> getRecommendedCategory(Member member, String category);
     public void productLike(Like like);
-
+    public List<Product> autocomplete(String search);
     public List<Product> getlikeList(String mb_id);
 
 }
