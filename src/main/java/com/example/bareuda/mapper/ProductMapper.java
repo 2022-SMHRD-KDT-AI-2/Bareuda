@@ -17,6 +17,7 @@ public interface ProductMapper {
     public void deleteLike(Like like);
     public void insertLike(Like like);
     public List<Product> getlikeList(String mb_id);
+    public List<Product> autocomplete(String search);
 
 
 }

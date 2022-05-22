@@ -6,8 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="/js/doyeon.js"></script>
     <script>
+        $(function() {    //화면 다 뜨면 시작
+        $(".searchInput").autocomplete({
+            source : function( request, response ) {
+                 $.ajax({
+                        type: 'get',
+                        url: "/product/search.do",
+                        dataType: "json",
+                        data : {search: request.term},
+                        success: function(data) {
+                        var products = JSON.parse(data.products);
+                            response(
+                                $.map(products, function(item) {    //json[i] 번째 에 있는게 item 임.
+                                    return {
+                                        label: item.p_name,    // 자동 완성으로 보여주려는 값 (상품 이름)
+                                        value: item.p_name,
+                                        p_id : item.p_id
+                                    }
+                                })
+                            );
+                        }
+                   });
+                }, // source를 ajax로 받아온 거임. source 끝.
+            select : function(event, ui) {
+                console.log(ui);
+                console.log(ui.item.label);
+                console.log(ui.item.value);
+                console.log(ui.item.p_id);
+                if($(this).attr('class').match("search1")){
+                    $("#search1").val(ui.item.p_id);
+                }else{
+                    $("#search2").val(ui.item.p_id);
+                }
+
+            },
+            focus : function(event, ui) {    //포커스 가면
+                return false;//한글 에러 잡기용도로 사용됨
+            },
+            minLength: 1
+        });
+    });
+
+
+
         let check_dic = {"나이":12}
         function myajax() {
             $.ajax({
@@ -27,6 +72,7 @@
                 }
             })
         }
+
     </script>
 </head>
 <body>
@@ -45,5 +91,39 @@
     <option value='올인원'>올인원</option>
     <option value='오일'>오일</option>
 </select>
+
+
+<div class="container2">
+    <div class="item">
+        <a href="#" class="prd_img">
+            <img src="/img/products/{{p_img}}">
+        </a>
+        <div class="prd_content">
+            <div class="prd">
+                <a>
+                    <div id="heart-container">
+                        <div class="heart-like-button"  id="p{{p_id}}" onclick="generateClones({{p_id}})"></div>
+                    </div>
+                    <div class="c_brand"><p><span class="tx_barnd">{{p_brand}}</span></p></div>
+                    <div class="c_name"><p><span class="tx_name">{{p_name}}</span></p></div>
+                    <div class="c_type"><p><span class="type_result">{{p_result}}</span></p></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <input class="searchInput search1">
+
+    <input class="searchInput search2">
+<form>
+    <input id="search1" type="hidden" value="">
+    <input id="search2" type="hidden" value="">
+    <button type="button" onclick="">버튼이름</button>
+</form>
+
+
+
 </body>
 </html>

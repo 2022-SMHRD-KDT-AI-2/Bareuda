@@ -56,6 +56,12 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public List<Product> autocomplete(String search) {
+        List<Product> list = productMapper.autocomplete(search);
+        return list;
+    }
+
+    @Override
     public List<Product> getlikeList(String mb_id) {
         List<Product> list = productMapper.getlikeList(mb_id);
         return list;
