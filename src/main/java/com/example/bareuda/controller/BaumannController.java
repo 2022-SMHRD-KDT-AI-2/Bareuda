@@ -30,6 +30,16 @@ public class BaumannController {
         return "baumannResult";
     }
 
+    @RequestMapping("/mypage/result")
+    public String mypageResult(Model model, HttpSession session){
+        Member member = (Member)session.getAttribute("sessionMember");
+        Result result = baumannService.getBaumannResult(member);
+        model.addAttribute("result", result);
+        Answer answer = baumannService.getAnswer(member.getMb_id());
+        model.addAttribute("answer", answer);
+        return "myPage";
+    }
+
     @GetMapping("/baumann/testForm")
     public String baumannTestForm(){
         return "baumannTest1";

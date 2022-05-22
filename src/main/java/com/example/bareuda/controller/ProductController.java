@@ -83,7 +83,7 @@ public class ProductController {
         Member member = (Member) session.getAttribute("sessionMember");
         List<Product> list = productServiceImpl.getlikeList(member.getMb_id());
         model.addAttribute("list", list);
-        return "likeList";
+        return "likeProducts";
     }
 
     @RequestMapping("/product/search.do")
