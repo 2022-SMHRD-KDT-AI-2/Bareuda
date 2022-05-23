@@ -156,7 +156,8 @@ a {
 #header > div > div > a{
     font-size: 60px;
     font-family: 'Italiana', serif;
+    text-decoration: none;
+    color: black;
 }
-
 
 
