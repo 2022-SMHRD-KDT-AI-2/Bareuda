@@ -1,0 +1,109 @@
+body{
+  margin: 0;
+}
+.containers {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+
+}
+
+.container1 {
+    margin-top: 8%;
+    margin-left: 6%;
+    width: 34%;
+    height: 84%;
+    background-color: orange;
+}
+.research1>input{
+   width: 11vw;
+   height: 3vh;
+
+}
+.research1{
+    position: absolute;
+    top: 28%;
+    left: 18%;
+}
+.img1{
+    width: 55%;
+    height: 55%;
+    border: 2px solid;
+    margin-top: 42%;
+    margin-left: 23%;
+
+}
+.container2 {
+    width: 20%;
+    height: 84%;
+    background-color: yellow;
+    margin-top: 8%;
+}
+.a1{
+    background-color: #A2B7EB;
+    width: 42%;
+    height: 6%;
+    border-radius: 20px;
+    margin-top: 7%;
+    text-align: center;
+    margin-left: 27%;
+
+}
+.a1>h3{
+    color: white;
+    font-size: 35px;
+    padding-top: 3%;
+
+}
+.btn_area1{
+     margin: 11px 0 10px;
+}
+#btnComparison{
+    width: 28%;
+    padding: 5px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    background-color: #A2B7EB;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 8px;
+    font-family: 'IBMPlexSansKR-Bold';
+    margin-left: 34%;
+    margin-top: 26%;
+}
+#btnComparison div{
+    text-align:center;
+    margin-top: 7px;
+}
+
+#btnComparison:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.container3 {
+    width: 34%;
+    height: 84%;
+    background-color: yellowgreen;
+    margin-top: 8%;
+
+}
+.research2{
+    position: absolute;
+    top: 28%;
+    left: 72%;
+}
+.img2{
+    width: 55%;
+    height: 55%;
+    border: 2px solid;
+    margin-top: 42%;
+    margin-left: 23%;
+
+}
+.research2>input{
+   width: 11vw;
+   height: 3vh;
+
+}
