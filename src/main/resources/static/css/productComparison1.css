@@ -1,0 +1,27 @@
+.containers1 {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+
+}
+.container_1{
+
+    margin-left: 6%;
+    width: 34%;
+    height: 99%;
+    background-color: orange;
+}
+.container_2 {
+    width: 20%;
+    height: 99%;
+    background-color: yellow;
+
+}
+.container_3 {
+    width: 34%;
+    height: 99%;
+    background-color: yellowgreen;
+
+
+}
