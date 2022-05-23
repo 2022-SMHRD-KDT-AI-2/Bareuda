@@ -27,6 +27,11 @@ public class BaumannController {
         model.addAttribute("result", result);
         Answer answer = baumannService.getAnswer(member.getMb_id());
         model.addAttribute("answer", answer);
+// 점수 계산된걸 총점으로 삼아야하니까 나중에.
+//        model.addAttribute("type1", answer);
+//        model.addAttribute("type2", answer);
+//        model.addAttribute("type3", answer);
+//        model.addAttribute("type4", answer);
         return "baumannResult";
     }
 
