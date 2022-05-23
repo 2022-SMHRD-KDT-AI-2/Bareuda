@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/baumannTest.css">
-</head>
 {{>layouts/header}}
 <!-- 바우만테스트 form 작성시 주의사항
 action="/member/baumanTest"
@@ -14,83 +13,82 @@ name="part1[0]" (파트1의 첫번째 질문!)
 name="part2[0]" 이런 식으로
 value는 점수 넣기!
 -->
-<form action="/baumann/test" method="POST">
-    <input type="hidden" name="part_num" value="4">
-    <div id="wrapper">
-        <div id="wrapper_content">
-            <div id="container">
-
-                <div id="content">
-                    <div id="part">
-                        <h1>part4</h1>
+    <form action="/baumann/test" method="POST">
+        <input type="hidden" name="part_num" value="4">
+        <div id="b_content">
+            <div id="b_wrapper">
+                <div id="part">
+                    <h1>part4</h1>
+                </div>
+                <div class="wrapper_section">
+                    <div class="section">
+                        <div class="title"><strong>
+                            1. 얼굴에 주름이 있습니까?</strong>
+                        </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[0]" value="1"> 아니오 웃거나 찡그리거나 눈썹을 들어올려도 주름이 생기지
+                                않습니다.</label></div>
+                            <div><label><input type="radio" name="part[0]" value="2"> 표정을 지을 때만 생깁니다.</label></div>
+                            <div><label><input type="radio" name="part[0]" value="3"> 표정을 지을 때도 생기고 표정을 짓지 않아도 주름이 있습니
+                                다.</label></div>
+                            <div><label><input type="radio" name="part[0]" value="4"> 별다른 표정을 짓고 있지 않아도 주름이 많이 있습니다.</label></div>
+                            <!-- <label><input type="checkbox" name="option" value="2"> </label> -->
+                        </div>
                     </div>
                     <div class="section">
-                        <div id="section">
-                            <div id="title"><strong>
-                                1. 얼굴에 주름이 있습니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[0]" value="1"> 아니오 웃거나 찡그리거나 눈썹을 들어올려도 주름이 생기지
-                                    않습니다.</label></div>
-                                <div><label><input type="radio" name="part[0]" value="2"> 표정을 지을 때만 생깁니다.</label></div>
-                                <div><label><input type="radio" name="part[0]" value="3"> 표정을 지을 때도 생기고 표정을 짓지 않아도 주름이 있습니
-                                    다.</label></div>
-                                <div><label><input type="radio" name="part[0]" value="4"> 별다른 표정을 짓고 있지 않아도 주름이 많이 있습니다.</label></div>
-                                <!-- <label><input type="checkbox" name="option" value="2"> </label> -->
-                            </div>
+                        <div class="title"><strong>
+                            2. 거주지를 기준으로 하루에 얼마나 많이 태양에 노출됩니까?
+                        </strong>
                         </div>
-                        <div id="section">
-                            <div id="title"><strong>
-                                2. 거주지를 기준으로 하루에 얼마나 많이 태양에 노출됩니까?
+                        <div class="option">
+                            <div><label><input type="radio" name="part[1]" value="1"> 거의 없습니다. 대부분 실내에 머물고 햇빛을 많이 보는 곳이
+                                아닙니다.</label></div>
+                            <div><label><input type="radio" name="part[1]" value="2"> 약간 그렇습니다. 햇빛이 강하지는 않으나 일반적으로 해를
+                                보고 삽니다.</label></div>
+                            <div><label><input type="radio" name="part[1]" value="3"> 적당히 그렇습니다. 꽤 햇빛 노출되어 지냅니다.</label></div>
+                            <div><label><input type="radio" name="part[1]" value="4"> 꽤 많습니다. 적도 인근 국가로 햇빛이 쨍쨍한 지역에 삽니다.</label></div>
+                        </div>
+                        <div class="section">
+                            <div class="title"><strong>
+                                3. 본인은 겉보기에 나이가 어느 정도 되어 보입니까?
                             </strong>
                             </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[1]" value="1"> 거의 없습니다. 대부분 실내에 머물고 햇빛을 많이 보는 곳이
-                                    아닙니다.</label></div>
-                                <div><label><input type="radio" name="part[1]" value="2"> 약간 그렇습니다. 햇빛이 강하지는 않으나 일반적으로 해를
-                                    보고 삽니다.</label></div>
-                                <div><label><input type="radio" name="part[1]" value="3"> 적당히 그렇습니다. 꽤 햇빛 노출되어 지냅니다.</label></div>
-                                <div><label><input type="radio" name="part[1]" value="4"> 꽤 많습니다. 적도 인근 국가로 햇빛이 쨍쨍한 지역에 삽니다.</label></div>
+                            <div class="option">
+                                <div><label><input type="radio" name="part[2]" value="1"> 나이보다 1~5년 정도 젊어 보입니다.</label></div>
+                                <div><label><input type="radio" name="part[2]" value="2"> 나이 그대로 보입니다.</label></div>
+                                <div><label><input type="radio" name="part[2]" value="3"> 5년 정도 더 나이 들어 보입니다.</label></div>
+                                <div><label><input type="radio" name="part[2]" value="4"> 5년 이상 더 나이 들어 보입니다.</label></div>
                             </div>
-                            <div id="section">
-                                <div id="title"><strong>
-                                    3. 본인은 겉보기에 나이가 어느 정도 되어 보입니까?
-                                </strong>
-                                </div>
-                                <div id="option">
-                                    <div><label><input type="radio" name="part[2]" value="1"> 나이보다 1~5년 정도 젊어 보입니다.</label></div>
-                                    <div><label><input type="radio" name="part[2]" value="2"> 나이 그대로 보입니다.</label></div>
-                                    <div><label><input type="radio" name="part[2]" value="3"> 5년 정도 더 나이 들어 보입니다.</label></div>
-                                    <div><label><input type="radio" name="part[2]" value="4"> 5년 이상 더 나이 들어 보입니다.</label></div>
-                                </div>
-                            </div>
+                        </div>
 
-                            <div id="section">
-                                <div id="title"><strong>
-                                    4. 최근 5년 동안 실외 스포츠 활동 등으로 피부를 햇빛에 오래도록 노출한 적이 있습니까?
-                                </strong>
-                                </div>
-                                <div id="option">
-                                    <div><label><input type="radio" name="part[3]" value="1"> 없습니다.</label></div>
-                                    <div><label><input type="radio" name="part[3]" value="2"> 한 달에 한 번 있습니다.</label></div>
-                                    <div><label><input type="radio" name="part[3]" value="3"> 일주일에 한 번 있습니다.</label></div>
-                                    <div><label><input type="radio" name="part[3]" value="4"> 매일 그렇습니다.</label></div>
-
-                                </div>
+                        <div class="section">
+                            <div class="title"><strong>
+                                4. 최근 5년 동안 실외 스포츠 활동 등으로 피부를 햇빛에 오래도록 노출한 적이 있습니까?
+                            </strong>
                             </div>
+                            <div class="option">
+                                <div><label><input type="radio" name="part[3]" value="1"> 없습니다.</label></div>
+                                <div><label><input type="radio" name="part[3]" value="2"> 한 달에 한 번 있습니다.</label></div>
+                                <div><label><input type="radio" name="part[3]" value="3"> 일주일에 한 번 있습니다.</label></div>
+                                <div><label><input type="radio" name="part[3]" value="4"> 매일 그렇습니다.</label></div>
+
+                            </div>
+                        </div>
 
 
-                            <div class="section">
-                                <button type="submit" onclick="reload" id="btnSubmit">
-                                    <div><strong>SUBMIT</strong></div>
-                                </button>
-                            </div>
+                        <div class=b_section">
+                            <button type="button" onclick="reload" id="btnSubmit">
+                                <div><strong>NEXT</strong></div>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</form>
+        </div>
+        </div>
+        </div>
+    </form>
+
 
 {{>layouts/footer}}

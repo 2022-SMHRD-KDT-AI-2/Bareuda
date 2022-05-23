@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/baumannTest.css">
-</head>
 {{>layouts/header}}
 <!-- 바우만테스트 form 작성시 주의사항
 action="/member/baumanTest"
@@ -14,152 +13,149 @@ name="part1[0]" (파트1의 첫번째 질문!)
 name="part2[0]" 이런 식으로
 value는 점수 넣기!
 -->
-<form action="/baumann/test" method="POST">
-    <input type="hidden" name="part_num" value="1">
-    <div id="wrapper">
-        <div id="wrapper_content">
-            <div id="container">
-                <div id="content">
-                    <div id="part">
-                        <h1>part1</h1>
+    <form action="/baumann/test" method="POST">
+        <input type="hidden" name="part_num" value="1">
+        <div id="b_content">
+            <div id="b_wrapper">
+                <div id="part">
+                    <h1>part1</h1>
+                </div>
+                <div class="wrapper_section">
+                    <div class="section">
+                        <div class="title"><strong>
+                            1.클렌징 후에 아무것도 바르지 않고 2~3시간 후에 밝은 빛 아래서 거울을 보세요.
+                            이마와 볼이 어떻게 보이고 느껴집니까?</strong>
+                        </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[0]" value="1"> 매우 거칠고, 버석거리고 각질이 들떠 보입니다.</label></div>
+                            <div><label><input type="radio" name="part[0]" value="2"> 당깁니다.</label></div>
+                            <div><label><input type="radio" name="part[0]" value="3"> 당기지 않고 건조해 보이지 않고 번들거리지 않습니다.</label></div>
+                            <div><label><input type="radio" name="part[0]" value="4"> 밝은 빛에 반사되는 듯이 번들거립니다.</label></div>
+                            <!-- <label><input type="checkbox" name="option" value="2"> </label> -->
+                        </div>
                     </div>
                     <div class="section">
-                        <div id="section">
-                            <div id="title"><strong>
-                                1.클렌징 후에 아무것도 바르지 않고 2~3시간 후에 밝은 빛 아래서 거울을 보세요.
-                                이마와 볼이 어떻게 보이고 느껴집니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[0]" value="1"> 매우 거칠고, 버석거리고 각질이 들떠 보입니다.</label></div>
-                                <div><label><input type="radio" name="part[0]" value="2"> 당깁니다.</label></div>
-                                <div><label><input type="radio" name="part[0]" value="3"> 당기지 않고 건조해 보이지 않고 번들거리지 않습니다.</label></div>
-                                <div><label><input type="radio" name="part[0]" value="4"> 밝은 빛에 반사되는 듯이 번들거립니다.</label></div>
-                                <!-- <label><input type="checkbox" name="option" value="2"> </label> -->
-                            </div>
+                        <div class="title"><strong>
+                            2. 사진을 찍었을 때, 피부가 번들거립니까?</strong>
                         </div>
-                        <div id="section">
-                            <div id="title"><strong>
-                                2. 사진을 찍었을 때, 피부가 번들거립니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[1]" value="1"> 결코 그렇지 않습니다.</label></div>
-                                <div><label><input type="radio" name="part[1]" value="2"> 때때로 그렇습니다.</label></div>
-                                <div><label><input type="radio" name="part[1]" value="3"> 자주 그렇습니다.</label></div>
-                                <div><label><input type="radio" name="part[1]" value="4"> 항상 그렇습니다.</label></div>
-                                <!-- <label><input type="checkbox" name="option" value="2"> 당깁니다.</label> -->
-                            </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[1]" value="1"> 결코 그렇지 않습니다.</label></div>
+                            <div><label><input type="radio" name="part[1]" value="2"> 때때로 그렇습니다.</label></div>
+                            <div><label><input type="radio" name="part[1]" value="3"> 자주 그렇습니다.</label></div>
+                            <div><label><input type="radio" name="part[1]" value="4"> 항상 그렇습니다.</label></div>
+                            <!-- <label><input type="checkbox" name="option" value="2"> 당깁니다.</label> -->
                         </div>
-                        <div id="section">
-                            <div id="title"><strong>
-                                3. 메이크업 파운데이션(파우더는 안 바른 상태)을 바른 지 2~3시간 후에 메이크업 상태가 어떻습니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[2]" value="1"> 약간 들떠 보이고 주름진 부분이 나타납니다.</label></div>
-                                <div><label><input type="radio" name="part[2]" value="2"> 부드러워 보입니다.</label></div>
-                                <div><label><input type="radio" name="part[2]" value="3"> 번들거립니다.</label></div>
-                                <div><label><input type="radio" name="part[2]" value="4"> 고정이 안 되고 번들거립니다.</label></div>
-                                <div><label><input type="radio" name="part[2]" value="5"> 페이셜 파운데이션을 바르지 않습니다.</label></div>
-                            </div>
+                    </div>
+                    <div class="section">
+                        <div class="title"><strong>
+                            3. 메이크업 파운데이션(파우더는 안 바른 상태)을 바른 지 2~3시간 후에 메이크업 상태가 어떻습니까?</strong>
                         </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[2]" value="1"> 약간 들떠 보이고 주름진 부분이 나타납니다.</label></div>
+                            <div><label><input type="radio" name="part[2]" value="2"> 부드러워 보입니다.</label></div>
+                            <div><label><input type="radio" name="part[2]" value="3"> 번들거립니다.</label></div>
+                            <div><label><input type="radio" name="part[2]" value="4"> 고정이 안 되고 번들거립니다.</label></div>
+                            <div><label><input type="radio" name="part[2]" value="5"> 페이셜 파운데이션을 바르지 않습니다.</label></div>
+                        </div>
+                    </div>
 
-                        <div id="section">
-                            <div id="title"><strong>
-                                4. 건조할 때 모이스처라이저를 바르지 않으면 피부가 어떠합니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[3]" value="1"> 건조하고 갈라질 것 같습니다.</label></div>
-                                <div><label><input type="radio" name="part[3]" value="2"> 당김을 느낍니다.</label></div>
-                                <div><label><input type="radio" name="part[3]" value="3"> 정상적입니다.</label></div>
-                                <div><label><input type="radio" name="part[3]" value="4"> 번들거리고 모이스처라이저가 필요 없습니다.</label></div>
-                                <div><label><input type="radio" name="part[3]" value="5"> 잘 모르겠습니다.</label></div>
-                            </div>
+                    <div class="section">
+                        <div class="title"><strong>
+                            4. 건조할 때 모이스처라이저를 바르지 않으면 피부가 어떠합니까?</strong>
                         </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[3]" value="1"> 건조하고 갈라질 것 같습니다.</label></div>
+                            <div><label><input type="radio" name="part[3]" value="2"> 당김을 느낍니다.</label></div>
+                            <div><label><input type="radio" name="part[3]" value="3"> 정상적입니다.</label></div>
+                            <div><label><input type="radio" name="part[3]" value="4"> 번들거리고 모이스처라이저가 필요 없습니다.</label></div>
+                            <div><label><input type="radio" name="part[3]" value="5"> 잘 모르겠습니다.</label></div>
+                        </div>
+                    </div>
 
-                        <div id="section">
-                            <div id="title"><strong>
-                                5. 평소 당신의 피부 타입을 어떻게 생각하고 계십니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[4]" value="1"> 건성</label></div>
-                                <div><label><input type="radio" name="part[4]" value="2"> 중성</label></div>
-                                <div><label><input type="radio" name="part[4]" value="3"> 복합</label></div>
-                                <div><label><input type="radio" name="part[4]" value="4"> 지성</label></div>
-                            </div>
+                    <div class="section">
+                        <div class="title"><strong>
+                            5. 평소 당신의 피부 타입을 어떻게 생각하고 계십니까?</strong>
                         </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[4]" value="1"> 건성</label></div>
+                            <div><label><input type="radio" name="part[4]" value="2"> 중성</label></div>
+                            <div><label><input type="radio" name="part[4]" value="3"> 복합</label></div>
+                            <div><label><input type="radio" name="part[4]" value="4"> 지성</label></div>
+                        </div>
+                    </div>
 
-                        <div id="section">
-                            <div id="title"><strong>
-                                6. 거품이 많이 나는 비누를 사용할 때 피부의 상태는 어떠합니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[5]" value="1"> 건조하고 갈라집니다.</label></div>
-                                <div><label><input type="radio" name="part[5]" value="2"> 약간 건조하고 갈라지지는 않습니다.</label></div>
-                                <div><label><input type="radio" name="part[5]" value="3"> 정상입니다.</label></div>
-                                <div><label><input type="radio" name="part[5]" value="4"> 금방 유분기가 올라옵니다.</label></div>
-                                <div><label><input type="radio" name="part[5]" value="5"> 비누나 거품이 나는 클렌저를 사용하지 않습니다</label></div>
-                            </div>
+                    <div class="section">
+                        <div class="title"><strong>
+                            6. 거품이 많이 나는 비누를 사용할 때 피부의 상태는 어떠합니까?</strong>
                         </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[5]" value="1"> 건조하고 갈라집니다.</label></div>
+                            <div><label><input type="radio" name="part[5]" value="2"> 약간 건조하고 갈라지지는 않습니다.</label></div>
+                            <div><label><input type="radio" name="part[5]" value="3"> 정상입니다.</label></div>
+                            <div><label><input type="radio" name="part[5]" value="4"> 금방 유분기가 올라옵니다.</label></div>
+                            <div><label><input type="radio" name="part[5]" value="5"> 비누나 거품이 나는 클렌저를 사용하지 않습니다</label></div>
+                        </div>
+                    </div>
 
-                        <div id="section">
-                            <div id="title"><strong>
-                                7. 모이스처라이저를 안 발랐을 때 피부가 당기는 느낌이 있습니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[6]" value="1"> 항상 그렇습니다.</label></div>
-                                <div><label><input type="radio" name="part[6]" value="2"> 때때로 그렇습니다.</label></div>
-                                <div><label><input type="radio" name="part[6]" value="3"> 거의 그렇지 않습니다.</label></div>
-                                <div><label><input type="radio" name="part[6]" value="4"> 결코 그렇지 않습니다.</label></div>
-                            </div>
+                    <div class="section">
+                        <div class="title"><strong>
+                            7. 모이스처라이저를 안 발랐을 때 피부가 당기는 느낌이 있습니까?</strong>
                         </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[6]" value="1"> 항상 그렇습니다.</label></div>
+                            <div><label><input type="radio" name="part[6]" value="2"> 때때로 그렇습니다.</label></div>
+                            <div><label><input type="radio" name="part[6]" value="3"> 거의 그렇지 않습니다.</label></div>
+                            <div><label><input type="radio" name="part[6]" value="4"> 결코 그렇지 않습니다.</label></div>
+                        </div>
+                    </div>
 
-                        <div id="section">
-                            <div id="title"><strong>
-                                8. 화이트헤드나 블랙헤드가 있습니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[7]" value="1"> 결코 없습니다.</label></div>
-                                <div><label><input type="radio" name="part[7]" value="2"> 거의 그렇지 않습니다.</label></div>
-                                <div><label><input type="radio" name="part[7]" value="3"> 때때로 그렇습니다.</label></div>
-                                <div><label><input type="radio" name="part[7]" value="4"> 항상 그렇습니다.</label></div>
-                            </div>
+                    <div class="section">
+                        <div class="title"><strong>
+                            8. 화이트헤드나 블랙헤드가 있습니까?</strong>
                         </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[7]" value="1"> 결코 없습니다.</label></div>
+                            <div><label><input type="radio" name="part[7]" value="2"> 거의 그렇지 않습니다.</label></div>
+                            <div><label><input type="radio" name="part[7]" value="3"> 때때로 그렇습니다.</label></div>
+                            <div><label><input type="radio" name="part[7]" value="4"> 항상 그렇습니다.</label></div>
+                        </div>
+                    </div>
 
-                        <div id="section">
-                            <div id="title"><strong>
-                                9. 이마와 코 부위가 번들거리는 느낌이 있습니까?</strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[8]" value="1"> 결코 그렇지 않습니다.</label></div>
-                                <div><label><input type="radio" name="part[8]" value="2"> 때때로 그렇습니다.</label></div>
-                                <div><label><input type="radio" name="part[8]" value="3"> 자주 그렇습니다.</label></div>
-                                <div><label><input type="radio" name="part[8]" value="4"> 항상 그렇습니다.</label></div>
-                            </div>
+                    <div class="section">
+                        <div class="title"><strong>
+                            9. 이마와 코 부위가 번들거리는 느낌이 있습니까?</strong>
                         </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[8]" value="1"> 결코 그렇지 않습니다.</label></div>
+                            <div><label><input type="radio" name="part[8]" value="2"> 때때로 그렇습니다.</label></div>
+                            <div><label><input type="radio" name="part[8]" value="3"> 자주 그렇습니다.</label></div>
+                            <div><label><input type="radio" name="part[8]" value="4"> 항상 그렇습니다.</label></div>
+                        </div>
+                    </div>
 
-                        <div id="section">
-                            <div id="title"><strong>
-                                10. 모이스처라이저를 바르고 2~3시간 후 볼 부위의 피부 상태는 어떻습니까?
-                            </strong>
-                            </div>
-                            <div id="option">
-                                <div><label><input type="radio" name="part[9]" value="1"> 매우 거칠고, 각질이 일어나거나 또는 각질이 떨어집니다.</label></div>
-                                <div><label><input type="radio" name="part[9]" value="2"> 부드럽습니다.</label></div>
-                                <div><label><input type="radio" name="part[9]" value="3"> 조금 번들거림이 있습니다.</label></div>
-                                <div><label><input type="radio" name="part[9]" value="4"> 번들거리고 기름집니다.</label></div>
-                            </div>
+                    <div class="section">
+                        <div class="title"><strong>
+                            10. 모이스처라이저를 바르고 2~3시간 후 볼 부위의 피부 상태는 어떻습니까?
+                        </strong>
                         </div>
+                        <div class="option">
+                            <div><label><input type="radio" name="part[9]" value="1"> 매우 거칠고, 각질이 일어나거나 또는 각질이 떨어집니다.</label></div>
+                            <div><label><input type="radio" name="part[9]" value="2"> 부드럽습니다.</label></div>
+                            <div><label><input type="radio" name="part[9]" value="3"> 조금 번들거림이 있습니다.</label></div>
+                            <div><label><input type="radio" name="part[9]" value="4"> 번들거리고 기름집니다.</label></div>
+                        </div>
+                    </div>
 
-                        <div class="section">
-                            <button type="submit" onclick="reload" id="btnSubmit">
-                                <div><strong>NEXT</strong></div>
-                            </button>
-                        </div>
+                    <div class="b_section">
+                        <button type="submit" onclick="reload" id="btnSubmit">
+                            <div><strong>NEXT</strong></div>
+                        </button>
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
+        </div>
 
-</form>
-
+    </form>
 {{>layouts/footer}}

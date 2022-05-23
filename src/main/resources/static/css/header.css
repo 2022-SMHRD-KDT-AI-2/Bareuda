@@ -150,6 +150,7 @@ a {
 
 #header > div.logo > a {
     align-items: center;
+    color : red;
 }
 
 #header > div > div > a{
