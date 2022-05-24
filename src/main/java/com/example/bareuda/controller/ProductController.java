@@ -102,4 +102,12 @@ public class ProductController {
 
         return null;
     }
+
+    @RequestMapping("/product/comparison")
+    public String productComparison(Model model, HttpSession session, String search, HttpServletResponse response) throws IOException {
+        Member member = (Member) session.getAttribute("sessionMember");
+
+        return "productComparison";
+    }
 }
+

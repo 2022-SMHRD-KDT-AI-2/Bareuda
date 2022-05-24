@@ -5,6 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/productComparison.css">
+    <link rel="stylesheet" href="/css/productComparison1.css">
+    <link rel="stylesheet" href="/css/productComparison2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- CSS -->
     {{>layouts/header}}
     <!-- /content -->
@@ -18,27 +23,21 @@
                 <img src="" alt="제품">
               </div>
             </div>
-
             <div class="container2">
                 <div class="a1">
                     <h3>제품 비교</h3>
                 </div>
-
-
-
-
-
                     <input id="search1" type="hidden" value="">
                     <input id="search2" type="hidden" value="">
                 <div class="btn_area1">
-                    <button type="button" id="btnComparison" onclick=""><a>버튼이름</a></button>
+                    <button type="button" id="btnComparison" onclick=""><a>비교</a></button>
                 </div>
 
             </div>
 
             <div class="container3">
                 <div class="research2">
-                    <input  class="searchInput search2"  type="text" placeholder="비교 제품을 입력하세요.">
+                    <input class="searchInput search2"  type="text" placeholder="비교 제품을 입력하세요.">
                 </div>
                 <div class="img2">
                     <img src="" alt="제품">
@@ -46,9 +45,21 @@
             </div>
         </div>
 
-    {{>layouts/footer}}
-    </body>
-    <footer>
+        <div class="containers1">
+            <div class="container_1"></div>
+            <div class="container_2"></div>
+            <div class="container_3"></div>
 
-    </footer>
+        </div>
+        <div class="containers2">
+            <div class="container_4"></div>
+            <div class="container_5"></div>
+            <div class="container_6"></div>
+
+        </div>
+    </form>
+
+    {{>layouts/footer}}
+    <script type="text/javascript" src="/js/comparison.js"></script>
+    </body>
 </html>

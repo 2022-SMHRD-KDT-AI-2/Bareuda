@@ -2,6 +2,7 @@ package com.example.bareuda.service;
 
 import com.example.bareuda.dto.BaumannTestForm;
 import com.example.bareuda.entity.Answer;
+import com.example.bareuda.entity.Ingredients;
 import com.example.bareuda.entity.Member;
 import com.example.bareuda.entity.Result;
 import com.example.bareuda.mapper.BaumannMapper;
@@ -76,4 +77,11 @@ public class BaumannServiceImpl implements BaumannService{
         return answer;
     }
 
+    @Override
+    public Ingredients getRecommendedIngredients(String type) {
+        String type2 = ""+type.charAt(0);
+        Ingredients result = baumannMapper.getRecommendedIngredients(type2);
+        log.info(result.toString());
+        return result;
+    }
 }

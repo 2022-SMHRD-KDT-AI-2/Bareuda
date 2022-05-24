@@ -25,5 +25,9 @@
         INSERT INTO tbl_answer (A_NUM, MB_ID)
         values (TBL_ANSWER_SEQ.nextval, #{mb_id})
     </insert>
+    <select id="getRecommendedIngredients" parameterType="string" resultType="com.example.bareuda.entity.Ingredients">
+        select * from TBL_INGREDIENTS
+        where I_RESULT = #{type2}
+    </select>
 
 </mapper>
