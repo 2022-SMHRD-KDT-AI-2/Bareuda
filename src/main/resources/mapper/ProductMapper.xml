@@ -46,6 +46,11 @@
         FROM tbl_products
         WHERE p_name LIKE  '%'|| #{search} || '%'
     </select>
+    <select id="findProductById" parameterType="int" resultType="com.example.bareuda.entity.Product">
+        SELECT *
+        FROM tbl_products
+        WHERE p_id = #{p_id}
+    </select>
 
 
 

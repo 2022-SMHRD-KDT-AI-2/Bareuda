@@ -1,5 +1,6 @@
 package com.example.bareuda.service;
 
+import com.example.bareuda.entity.Answer;
 import com.example.bareuda.entity.Like;
 import com.example.bareuda.entity.Member;
 import com.example.bareuda.entity.Product;
@@ -12,5 +13,5 @@ public interface ProductService {
     public void productLike(Like like);
     public List<Product> autocomplete(String search);
     public List<Product> getlikeList(String mb_id);
-
+    public Product findById(int p_id);
 }

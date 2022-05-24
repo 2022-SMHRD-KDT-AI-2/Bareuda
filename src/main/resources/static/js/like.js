@@ -10,17 +10,17 @@ function generateClones(id){
 }
 */
 
-function generateClones(id){
+function like(p_id){
     $.ajax({
     url: "/product/like.do",
     type: "POST",
     cache: false,
     dataType: "json",
-    data: {"p_id":id},
+    data: {"p_id":p_id},
     success:
     function(data){
         //alert("like 성공");
-        $("#p"+data.p_id).toggleClass('liked');
+        $("likebtn").toggleClass('liked');
     },
     error:
     function (request, status, error){

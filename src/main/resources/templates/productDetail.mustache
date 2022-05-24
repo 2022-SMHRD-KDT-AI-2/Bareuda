@@ -44,19 +44,18 @@
             <div id="container"> <!--header,footer 제외 전체-->
                 <div id="content1"> <!--상세페이지1-->
                     <div class="prd">
-                        <div class="prd_img"><img src="/img/cosmetic.jpg"></div>
+                        <div class="prd_img"><img src="/img/{{product.p_img}}"></div>
                         <div class="prd_detail">
-                            <div class="p_brand">아비브</div>
-                            <div class="p_name">[괄사 증정 기획] 바이오힐보 프로바이오덤 리프팅 크림 X
-                                콜라겐 세럼 기획</div>
-                            <div class="p_price"><strong>18000원</strong></div>
-                            <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
+                            <div class="p_brand">{{product.p_brand}}</div>
+                            <div class="p_name">{{product.p_name}}</div>
+                            <div class="p_price"><strong>{{product.p_price}}원</strong></div>
+                            <div class="c_type"><p><span class="type_result">{{product.p_result}}</span></p></div>
                             <div class="heart-container">
-                                <div class="heart-like-button"  id="p1" onclick="generateClones(1)"></div>
+                                <div class="heart-like-button"  id="likebtn" onclick="like({{product.p_id}})"></div>
                             </div>
                             <hr><br>
                             <div class="p_use">
-                                <p>사용방법 세안 후, 피부에 얇게 매일 1-3회정도 혹은 필요 시마다 바릅니다. 만약 건조하거나 벗겨지면, 하루에 1번 사용하는 등 횟수를 줄여 사용합니다.</p>
+                                <p>{{product.p_method}}</p>
                             </div>
                         </div>
                     </div>
@@ -415,6 +414,7 @@
 </script>
 
     <script src="/js/like.js"></script>
+    <script src="/js/detail.js"></script>
     {{>layouts/footer}}
     </body>
 </html>

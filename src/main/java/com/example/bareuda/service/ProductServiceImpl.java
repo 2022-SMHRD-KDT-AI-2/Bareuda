@@ -66,4 +66,9 @@ public class ProductServiceImpl implements ProductService {
         List<Product> list = productMapper.getlikeList(mb_id);
         return list;
     }
+
+    @Override
+    public Product findById(int p_id) {
+        return productMapper.findProductById(p_id);
+    }
 }
