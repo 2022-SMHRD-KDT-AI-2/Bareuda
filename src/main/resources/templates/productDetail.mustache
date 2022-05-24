@@ -17,7 +17,7 @@
             <div id="container"> <!--header,footer 제외 전체-->
                 <div id="content1"> <!--상세페이지1-->
                     <div class="prd">
-                        <div class="prd_img"><img src="/img/{{product.p_img}}"></div>
+                        <div class="prd_img"><img src="/img/products/{{product.p_img}}"></div>
                         <div class="prd_detail">
                             <div class="p_brand">{{product.p_brand}}</div>
                             <div class="p_name">{{product.p_name}}</div>
@@ -51,35 +51,35 @@
                                 <div class="i_img"><img src="/img/face1.png"></div>
                                 <div class="i_txt">
                                     <div class="i_percent">지성</div>
-                                    <div class="i_percent">19%</div>
+                                    <div class="i_percent">{{detail.type_o}}%</div>
                                 </div>
                             </div>
                             <div class="user_icon">
                                 <div class="i_img"><img src="/img/face2.png"></div>
                                 <div class="i_txt">
                                     <div class="i_percent">건성</div>
-                                    <div class="i_percent">19%</div>
+                                    <div class="i_percent">{{detail.type_d}}%</div>
                                 </div>
                             </div>
                             <div class="user_icon">
                                 <div class="i_img"><img src="/img/face1.png"></div>
                                 <div class="i_txt">
                                     <div class="i_percent">중성</div>
-                                    <div class="i_percent">19%</div>
+                                    <div class="i_percent">{{detail.type_n}}%</div>
                                 </div>
                             </div>
                             <div class="user_icon">
                                 <div class="i_img"><img src="/img/face2.png"></div>
                                 <div class="i_txt">
                                     <div class="i_percent">민감성</div>
-                                    <div class="i_percent">19%</div>
+                                    <div class="i_percent">{{detail.type_t}}%</div>
                                 </div>
                             </div>
                             <div class="user_icon">
                                 <div class="i_img"><img src="/img/face1.png"></div>
                                 <div class="i_txt">
                                     <div class="i_percent">복합성</div>
-                                    <div class="i_percent">19%</div>
+                                    <div class="i_percent">{{detail.type_c}}%</div>
                                 </div>
                             </div>
                         </div>

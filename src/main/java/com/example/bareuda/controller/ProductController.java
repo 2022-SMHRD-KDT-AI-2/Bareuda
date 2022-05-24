@@ -1,6 +1,7 @@
 package com.example.bareuda.controller;
 
 import com.example.bareuda.dto.CategoryForm;
+import com.example.bareuda.dto.Detail;
 import com.example.bareuda.entity.Answer;
 import com.example.bareuda.entity.Like;
 import com.example.bareuda.entity.Member;
@@ -117,6 +118,9 @@ public class ProductController {
         Member member = (Member) session.getAttribute("sessionMember");
         Product product = productServiceImpl.findById(p_id);
         model.addAttribute("product", product);
+        String user_type_str = product.getP_usertype();
+        Detail detail = productServiceImpl.getDetail(product);
+        model.addAttribute("detail", detail);
         return "productDetail";
     }
 }
