@@ -16,14 +16,25 @@ body{
     height: 84%;
     background-color: orange;
 }
+.research1>input:focus{
+   outline: 2px solid #E5E5E5;
+}
+.research1>input:hover{
+
+   transition: 0.5s;
+}
 .research1>input{
    width: 11vw;
    height: 3vh;
+   font-size: 18px;
+   border:none;
+   border-radius: 11px;
+   text-align: center;
 
 }
 .research1{
     position: absolute;
-    top: 28%;
+    top: 10%;
     left: 18%;
 }
 .img1{
@@ -47,12 +58,12 @@ body{
     border-radius: 20px;
     margin-top: 7%;
     text-align: center;
-    margin-left: 27%;
+    margin-left: 28%;
 
 }
 .a1>h3{
     color: white;
-    font-size: 35px;
+    font-size: 26px;
     padding-top: 3%;
 
 }
@@ -61,26 +72,38 @@ body{
 }
 #btnComparison{
     width: 28%;
-    padding: 5px 0 17px;
+    padding: 11px;
     border: 0;
     cursor: pointer;
-    color: white;
-    background-color: #A2B7EB;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 8px;
+    border-radius: 53px;
     font-family: 'IBMPlexSansKR-Bold';
     margin-left: 34%;
     margin-top: 26%;
+    background-color: #E4EBF5;
+    /* 그림자 */
+    border-radius: 10px;
+    box-shadow:.8rem .5rem 1.4rem  #BEC5D0, -.3rem -.4rem .8rem #FBFBFB;
+    /* box-shadow:-.2rem -.2rem 1.8rem white, .8rem .8rem 1.4rem  #AAB7CB; */
+    /* 글씨 */
+    color: #A2B7EB;
+    font-size: 1.7em;
+    font-weight: bold;
+    animation-name: keybtn-language;
+    animation-duration: .2s;
 }
 #btnComparison div{
     text-align:center;
     margin-top: 7px;
 }
+#btnComparison:before{
+  height: 0%;
+  width: 2px;
+}
+#btnComparison:active {
 
-#btnComparison:hover{
-    opacity: 0.5;
-    transition: 0.5s;
+    box-shadow: inset -.3rem -.1rem 1.4rem  #B4C8FA, inset .3rem .4rem .8rem #AABEF2;
+    cursor: pointer;
+
 }
 .container3 {
     width: 34%;
@@ -91,7 +114,7 @@ body{
 }
 .research2{
     position: absolute;
-    top: 28%;
+    top: 10%;
     left: 72%;
 }
 .img2{
@@ -105,5 +128,11 @@ body{
 .research2>input{
    width: 11vw;
    height: 3vh;
-
+   font-size: 18px;
+   border:none;
+   border-radius: 11px;
+   text-align: center;
+}
+.research2>input:focus{
+   outline: 2px solid #E5E5E5;
 }
