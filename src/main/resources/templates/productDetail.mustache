@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{>layouts/header}}
+    <!-- /content -->
+    <div id="body_wrapper"> <!--footer를 포함하여 'body_content'까지 모두 감싸는 태그-->
+        <div id="body_content"> <!--footer를 제외하고 감싸는 태그-->
+            <header id="header">
+                <div class="h_cont">
+                    <ul class="h_menu">
+                        <li>
+                            <a href="">로그인</a>
+                        </li>
+                        <li>
+                            <a href="">마이페이지</a>
+                        </li>
+                    </ul>
+                    <div class="logo">
+                        <a>Bareuda</a>
+                    </div>
+                    <ul class="h_menu">
+                        <li>
+                            <a href="">추천제품</a>
+                        </li>
+                        <li>
+                            <a href="">제품비교</a>
+                        </li>
+                        <li>
+                            <a href="">설문조사</a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container"> <!--header,footer 제외 전체-->
+                <div id="content1"> <!--상세페이지1-->
+                    <div class="prd">
+                        <div class="prd_img"><img src="/img/cosmetic.jpg"></div>
+                        <div class="prd_detail">
+                            <div class="p_brand">아비브</div>
+                            <div class="p_name">[괄사 증정 기획] 바이오힐보 프로바이오덤 리프팅 크림 X
+                                콜라겐 세럼 기획</div>
+                            <div class="p_price"><strong>18000원</strong></div>
+                            <div class="c_type"><p><span class="type_result">D,W,P</span></p></div>
+                            <div class="heart-container">
+                                <div class="heart-like-button"  id="p1" onclick="generateClones(1)"></div>
+                            </div>
+                            <hr><br>
+                            <div class="p_use">
+                                <p>사용방법 세안 후, 피부에 얇게 매일 1-3회정도 혹은 필요 시마다 바릅니다. 만약 건조하거나 벗겨지면, 하루에 1번 사용하는 등 횟수를 줄여 사용합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content2"> <!--상세페이지2-->
+                    <div class="user_type_container">
+                        <div class="user_type1">
+                            <div class="user_txt">
+                                <div class="user_txt_2">구매자의 피부타입 분포도</div>
+                            </div>
+                            <div class="user_radar">
+                                <!--차트가 그려질 부분-->
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="user_type2">
+                            <div class="user_icon">
+                                <div class="i_img"><img src="/img/face1.png"></div>
+                                <div class="i_txt">
+                                    <div class="i_percent">지성</div>
+                                    <div class="i_percent">19%</div>
+                                </div>
+                            </div>
+                            <div class="user_icon">
+                                <div class="i_img"><img src="/img/face2.png"></div>
+                                <div class="i_txt">
+                                    <div class="i_percent">건성</div>
+                                    <div class="i_percent">19%</div>
+                                </div>
+                            </div>
+                            <div class="user_icon">
+                                <div class="i_img"><img src="/img/face1.png"></div>
+                                <div class="i_txt">
+                                    <div class="i_percent">중성</div>
+                                    <div class="i_percent">19%</div>
+                                </div>
+                            </div>
+                            <div class="user_icon">
+                                <div class="i_img"><img src="/img/face2.png"></div>
+                                <div class="i_txt">
+                                    <div class="i_percent">민감성</div>
+                                    <div class="i_percent">19%</div>
+                                </div>
+                            </div>
+                            <div class="user_icon">
+                                <div class="i_img"><img src="/img/face1.png"></div>
+                                <div class="i_txt">
+                                    <div class="i_percent">복합성</div>
+                                    <div class="i_percent">19%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="user_type3">
+                            <div class="skin_type">
+                                <div class="skin_type_title">
+                                    <div class="type_txt">피부타입</div>
+                                </div>
+                                <div class="user_doughnut"">
+                                <!--차트가 그려질 부분-->
+                                <canvas id="myChart2"></canvas>
+                            </div>
+                        </div>
+                        <div class="skin_type">
+                            <div class="skin_type_title">
+                                <div class="type_txt">피부고민</div>
+                            </div>
+                            <div class="user_doughnut"">
+                            <!--차트가 그려질 부분-->
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                    </div>
+                    <div class="skin_type">
+                        <div class="skin_type_title">
+                            <div class="type_txt">자극도</div>
+                        </div>
+                        <div class="user_doughnut" ">
+                        <!--차트가 그려질 부분-->
+                        <canvas id="myChart4"></canvas>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    </div> <!-- container-->
+
+
+    </div> <!--footer를 제외하고 감싸는 'body_content'태그 -->
+    <!-- /content -->
+    <!-- <footer class="footer">
+        <div id="f_content">
+            <p>&COPY; 2022 Bareuda(함정재 김재혁 박소연 이도연 이윤호)</p>
+        </div>
+    </footer> -->
+
+    </div><!--footer를 포함하여 'body_content'까지 모두 감싸는 태그-->
+    <script type="text/javascript">
+    var context = document
+        .getElementById('myChart')
+        .getContext('2d');
+    var myChart = new Chart(context, {
+        type: 'radar', // 차트의 형태
+        elements:{
+            point:{
+                radius:0
+            },
+        },
+        data: { // 차트에 들어갈 데이터
+            labels: [
+                //x 축
+                '지성','건성','중성','민감성','복합성'
+            ],
+            datasets: [
+                { //데이터
+                    label: '분포도', //차트 제목
+                    fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                    data: [
+                        41,27,15,7,10 //x축 label에 대응되는 데이터 값
+                    ],
+                    backgroundColor: [
+                        //색상
+                        'rgba(	116, 187, 235, 0.5)',
+
+                    ],
+                    borderColor: [
+                        //경계선 색상
+                        'rgba(	116, 187, 235, 1)',
+
+
+                    ],
+                    borderWidth: 5
+
+
+                }/* ,
+                {
+                    label: 'test2',
+                    fill: false,
+                    data: [
+                        8, 34, 12, 24
+                    ],
+                    backgroundColor: 'rgb(157, 109, 12)',
+                    borderColor: 'rgb(157, 109, 12)'
+                } */
+            ]
+        },
+        options: {
+            scale:{
+                ticks:{
+                    beginAtZero:true,
+                    display: false,
+                    min:0,
+                    max:50,
+                    stepSize:10
+                }
+            }
+        }
+    });
+</script>
+
+    <script type="text/javascript">
+    var context = document
+        .getElementById('myChart2')
+        .getContext('2d');
+    var myChart = new Chart(context, {
+        type: 'doughnut', // 차트의 형태
+        elements:{
+            point:{
+                radius:0
+            },
+        },
+        data: { // 차트에 들어갈 데이터
+            labels: [
+                //x 축
+                '건성에 좋아요','복합성에 좋아요','지성에 좋아요'
+            ],
+            datasets: [
+                { //데이터
+                    label: 'test1', //차트 제목
+                    fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                    data: [
+                        20,50,30 //x축 label에 대응되는 데이터 값
+                    ],
+                    backgroundColor: [
+                        //색상
+                        'rgba(	169,156,250, 0.8)',
+                        'rgba(	156,190,250, 0.8)',
+                        'rgba(	156,237,250, 0.8)'
+                    ],
+                    borderColor: [
+                        //경계선 색상
+                        'rgba(	169,156,250, 1)',
+                        'rgba(	156,190,250, 1)',
+                        'rgba(	156,237,250, 1)'
+                    ],
+                    borderWidth: 5
+
+
+                }/* ,
+                {
+                    label: 'test2',
+                    fill: false,
+                    data: [
+                        8, 34, 12, 24
+                    ],
+                    backgroundColor: 'rgb(157, 109, 12)',
+                    borderColor: 'rgb(157, 109, 12)'
+                } */
+            ]
+        },
+        options: {
+            scale:{
+                ticks:{
+                    beginAtZero:true,
+                    display: false,
+                    min:0,
+                    max:50,
+                    stepSize:10
+                }
+            }
+        }
+    });
+</script>
+
+    <script type="text/javascript">
+    var context = document
+        .getElementById('myChart3')
+        .getContext('2d');
+    var myChart = new Chart(context, {
+        type: 'doughnut', // 차트의 형태
+        elements:{
+            point:{
+                radius:0
+            },
+        },
+        data: { // 차트에 들어갈 데이터
+            labels: [
+                //x 축
+                '보습에 좋아요','진정에 좋아요','주름/미백에 좋아요'
+            ],
+            datasets: [
+                { //데이터
+                    label: 'test1', //차트 제목
+                    fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                    data: [
+                        30,20,50 //x축 label에 대응되는 데이터 값
+                    ],
+                    backgroundColor: [
+                        //색상
+                        'rgba(	202,236,236, 0.5)',
+                        'rgba(	202,219,236, 0.5)',
+                        'rgba(	202,202,236, 0.5)'
+                    ],
+                    borderColor: [
+                        //경계선 색상
+                        'rgba(	202,236,236, 1)',
+                        'rgba(	202,219,236, 1)',
+                        'rgba(	202,202,236, 1)'
+                    ],
+                    borderWidth: 5
+
+
+                }/* ,
+                {
+                    label: 'test2',
+                    fill: false,
+                    data: [
+                        8, 34, 12, 24
+                    ],
+                    backgroundColor: 'rgb(157, 109, 12)',
+                    borderColor: 'rgb(157, 109, 12)'
+                } */
+            ]
+        },
+        options: {
+            scale:{
+                ticks:{
+                    beginAtZero:true,
+                    display: false,
+                    min:0,
+                    max:50,
+                    stepSize:10
+                }
+            }
+        }
+    });
+</script>
+
+    <script type="text/javascript">
+    var context = document
+        .getElementById('myChart4')
+        .getContext('2d');
+    var myChart = new Chart(context, {
+        type: 'doughnut', // 차트의 형태
+        elements:{
+            point:{
+                radius:0
+            },
+        },
+        data: { // 차트에 들어갈 데이터
+            labels: [
+                //x 축
+                '자극없이 순해요','보통이에요','자극이 느껴져요'
+            ],
+            datasets: [
+                { //데이터
+                    label: 'test1', //차트 제목
+                    fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
+                    data: [
+                        50,20,30 //x축 label에 대응되는 데이터 값
+                    ],
+                    backgroundColor: [
+                        //색상
+                        'rgba(	202,236,236, 0.5)',
+                        'rgba(	202,219,236, 0.5)',
+                        'rgba(	202,202,236, 0.5)'
+                    ],
+                    borderColor: [
+                        //경계선 색상
+                        'rgba(	202,236,236, 1)',
+                        'rgba(	202,219,236, 1)',
+                        'rgba(	202,202,236, 1)'
+                    ],
+                    borderWidth: 5
+
+
+                }/* ,
+                {
+                    label: 'test2',
+                    fill: false,
+                    data: [
+                        8, 34, 12, 24
+                    ],
+                    backgroundColor: 'rgb(157, 109, 12)',
+                    borderColor: 'rgb(157, 109, 12)'
+                } */
+            ]
+        },
+        options: {
+            scale:{
+                ticks:{
+                    beginAtZero:true,
+                    display: false,
+                    min:0,
+                    max:50,
+                    stepSize:10
+                }
+            }
+        }
+    });
+</script>
+
+    <script src="/js/like.js"></script>
+    {{>layouts/footer}}
+    </body>
+</html>
