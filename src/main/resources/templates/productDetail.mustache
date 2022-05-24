@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
     <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     {{>layouts/header}}
     <!-- /content -->
     <div id="body_wrapper"> <!--footer를 포함하여 'body_content'까지 모두 감싸는 태그-->
@@ -134,7 +135,11 @@
 
     <script src="/js/like.js"></script>
     <script src="/js/detail.js"></script>
-    <script src="/js/radarChart.js"></script>
-    <script src="/js/doughnutChart.js"></script>
+    <script>
+        var myChart = drawRadar([{{detail.type_o}},{{detail.type_d}},{{detail.type_n}},{{detail.type_t}},{{detail.type_c}}], 'myChart');
+        var myChart2 = drawDoughnut(['건성에 좋아요','복합성에 좋아요','지성에 좋아요'],[{{detail.rskin_1}},{{detail.rskin_2}},{{detail.rskin_3}}], 'myChart2');
+        var myChart3 = drawDoughnut(['보습에 좋아요','진정에 좋아요','주름/미백에 좋아요'],[{{detail.rtrouble_1}},{{detail.rtrouble_2}},{{detail.rtrouble_3}}], 'myChart3');
+        var myChart4 = drawDoughnut(['자극없이 순해요','보통이에요','자극이 느껴져요'],[{{detail.rsti_1}},{{detail.rsti_1}},{{detail.rsti_1}}], 'myChart4');
+    </script>
 
     {{>layouts/footer}}
