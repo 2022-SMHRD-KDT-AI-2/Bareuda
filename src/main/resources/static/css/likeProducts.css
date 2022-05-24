@@ -53,10 +53,35 @@ font-size:21px;
 
 }
 .productsList{
-   width: 74%;
-       height: 74%;
-       background-color: whitesmoke;
-       position: absolute;
-       top: 21%;
-       left: 19%;
+width: 74%;
+    height: 30%;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 23%;
+    left: 19%;
+}
+.productsList>ul>{
+     list-style: none;
+
+}
+.productsList>ul>li{
+     float:left;
+}
+.productsList2{
+    width: 74%;
+    height: 30%;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 62%;
+    left: 19%;
+}
+.productsList2>ul>{
+     list-style: none;
+
+}
+.productsList2>ul>li{
+     float:left;
+}
+img{
+
 }
