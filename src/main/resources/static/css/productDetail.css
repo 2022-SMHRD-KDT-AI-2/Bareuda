@@ -45,7 +45,6 @@
     height: 70%;
     /* border: solid gray 3px; */
     margin-left: 16%;
-    margin-top:18%;
 }
 
 .prd{
@@ -319,4 +318,50 @@
     height: 320px;
     margin-top: 50px;
     margin-left: 25px;
+}
+
+/* 상세페이지3 */
+
+#content3{
+  width: 100%;
+  height: 1020px;
+}
+
+.review_container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 1020px;
+}
+
+.r_percentage{
+  width: 350px;
+  height: 350px;
+
+}
+
+.keyword_container{
+  width: 100px;
+  height: 100px;
+  display: flex;
+}
+
+.keyword_title{
+  text-align: center;
+}
+
+/* 워드 클라우드 */
+.cloud_container{
+  width: 900px;
+  height: 400px;
+  display: flex;
+  border: 1px black solid;
+  margin-top: 23%;
+  margin-left: -20%;
+}
+
+.word_cloud{
+  width: 50%;
+  height: 100%;
+  border: #f38b8b 1px solid;
 }
