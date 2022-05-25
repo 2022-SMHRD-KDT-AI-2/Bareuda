@@ -7,21 +7,31 @@ var p_id = getParameterByName('p_id');
 console.log(p_id);
 $(function() {
     $.ajax({
-    url: "http://211.227.114.104:5023/",
+    url: "http://222.102.43.36:5023/",
     type: "POST",
     cache: false,
     dataType: "json",
     data: {"p_id":p_id},
     success:
     function(data){
-        var pos_rate = data.pos_rate;
-        var neg_rate = data.neg_rate;
+        var pos_rate = parseInt(data.pos_rate);
+        var neg_rate = parseInt(data.neg_rate);
         var pos_words = data.pos_words;
         var neg_words = data.neg_words;
+        var pos_weights = data.pos_weights;
+        var neg_weights = data.neg_weights;
+
+        var myChart5 = drawPie([pos_rate,neg_rate], 'myChart5');
+
+        var myChart6 = drawHorizontal(pos_words,pos_weights, 'myChart6');
+        var myChart7 = drawHorizontal(neg_words,neg_weights, 'myChart7');
+
         console.log(pos_rate);
         console.log(neg_rate);
         console.log(pos_words);
         console.log(neg_words);
+        console.log(pos_weights);
+        console.log(neg_weights);
     },
     error:
     function (request, status, error){
@@ -128,7 +138,7 @@ function drawRadar(datalist, chartName) {
 /* 차트 추가 (pie, horizontal, word ) */
 
 /* pie */
-function drawRadar(reviewlist, chartName) {
+function drawPie(reviewlist, chartName) {
 
     var context = document
         .getElementById(chartName)
@@ -174,10 +184,6 @@ function drawRadar(reviewlist, chartName) {
     })
     return myChartP;
 };
-
-
-
-var myChart5 = drawRadar([80,20], 'myChart5');
 
 
 /* horizontal */
@@ -232,8 +238,7 @@ function drawHorizontal(keywordlist, datalist, chartName) {
     return myChartH;
 };
 
-var myChart6 = drawHorizontal(['가','나','다','라','마','바','사','아','자','차'],[10,9,8,7,6,5,4,3,2,1], 'myChart6');
-var myChart7 = drawHorizontal(['가','나','다','라','마','바','사','아','자','차'],[10,9,8,7,6,5,4,3,2,1], 'myChart7');
+
 
 
 /* word */
