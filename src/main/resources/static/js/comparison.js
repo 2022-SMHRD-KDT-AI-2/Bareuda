@@ -24,7 +24,7 @@ $(function() {    //화면 다 뜨면 시작
 //            console.log(ui);
 //            console.log(ui.item.label);
 //            console.log(ui.item.value);
-//            console.log(ui.item.p_id);
+            console.log(ui.item.p_id);
             if($(this).attr('class').match("search1")){
                 $("#search1").val(ui.item.p_id);
             }else{
@@ -45,7 +45,7 @@ function comparison(){
     type: "POST",
     cache: false,
     dataType: "json",
-    data: $('#form').serialize(),
+    data: {"search1":$('#search1').val(),"search2":$('#search2').val()},
     success:
     function(data){
         alert("like 성공");
@@ -53,18 +53,15 @@ function comparison(){
         // 브랜드, 이름, 가격, 타입
         var product1 = JSON.parse(data.product1);
         var product2 = JSON.parse(data.product2);
-        // $("elemetName").attr("src", "attributeValue");
-        console.log(product1);
-        console.log(data.product1);
-        console.log(product2);
-        console.log(data.product2);
+        $(".img1 img").attr("src", "/img/products/"+product1["p_img"]);
+        $(".img2 img").attr("src", "/img/products/"+product2["p_img"]);
 //        // ------ 2단 ajax ------
 //            $.ajax({
-//            url: "플라스크 주소",
+//            url: "http://222.102.43.36:5023/",
 //            type: "POST",
 //            cache: false,
 //            dataType: "json",
-//            data: {"p_id1": data.p_id1, "p_id2":data.p_id2},
+//            data: {"search1":$('#search1').val(),"search2":$('#search2').val()},
 //            success:
 //                function(data){
 //                    //alert("like 성공");
@@ -207,11 +204,11 @@ function drawWord(keylist,valuelist,chartName){
         chart.draw();
       });
 }
-var myChart5 = drawPie([pos_rate,neg_rate], 'myChart5');
-var myChart6 = drawHorizontal(pos_words,pos_weights, 'myChart6');
-var myChart7 = drawHorizontal(neg_words,neg_weights, 'myChart7');
-var myChart8 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart8' );
-var myChart9 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart9' );
-
+//var myChart5 = drawPie([pos_rate,neg_rate], 'myChart5');
+//var myChart6 = drawHorizontal(pos_words,pos_weights, 'myChart6');
+//var myChart7 = drawHorizontal(neg_words,neg_weights, 'myChart7');
+//var myChart8 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart8' );
+//var myChart9 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart9' );
+//
 
 
