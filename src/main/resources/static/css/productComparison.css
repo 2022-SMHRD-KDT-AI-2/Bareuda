@@ -8,7 +8,6 @@ body{
   background-color: green;
 
 }
-
 .container1 {
     margin-top: 8%;
     margin-left: 6%;
@@ -20,7 +19,6 @@ body{
    outline: 2px solid #E5E5E5;
 }
 .research1>input:hover{
-
    transition: 0.5s;
 }
 .research1>input{
@@ -30,19 +28,28 @@ body{
    border:none;
    border-radius: 11px;
    text-align: center;
-
 }
 .research1{
     position: absolute;
-    top: 10%;
+    top: 8%;
     left: 18%;
 }
 .img1{
     width: 55%;
-    height: 55%;
+    height: 50%;
     border: 2px solid;
-    margin-top: 42%;
+    margin-top: 32%;
     margin-left: 23%;
+}
+.ch_Product1{
+     width: 55%;
+     height: 10%;
+     border: 2px solid;
+     margin-left: 23%;
+     text-align: center;
+}
+ul>li{
+  list-style: none;
 
 }
 .container2 {
@@ -53,58 +60,48 @@ body{
 }
 .a1{
     background-color: #A2B7EB;
-    width: 42%;
+    width: 78%;
     height: 6%;
     border-radius: 20px;
     margin-top: 7%;
     text-align: center;
-    margin-left: 28%;
-
+    margin-left: 13%;
 }
 .a1>h3{
     color: white;
     font-size: 26px;
     padding-top: 3%;
-
 }
 .btn_area1{
-     margin: 11px 0 10px;
-}
+    margin-top: 21%;
+    margin-left: 21%;
+ }
+
 #btnComparison{
-    width: 28%;
-    padding: 11px;
+    width: 6%;
+    height: 2%;
     border: 0;
     cursor: pointer;
-    border-radius: 53px;
-    font-family: 'IBMPlexSansKR-Bold';
-    margin-left: 34%;
-    margin-top: 26%;
-    background-color: #E4EBF5;
-    /* 그림자 */
-    border-radius: 10px;
-    box-shadow:.8rem .5rem 1.4rem  #BEC5D0, -.3rem -.4rem .8rem #FBFBFB;
-    /* box-shadow:-.2rem -.2rem 1.8rem white, .8rem .8rem 1.4rem  #AAB7CB; */
-    /* 글씨 */
-    color: #A2B7EB;
-    font-size: 1.7em;
+    color: white;
+    background-color: #A2B7EB;
+    font-size: 34px;
     font-weight: bold;
-    animation-name: keybtn-language;
-    animation-duration: .2s;
+    border-radius: 8px;
+    font-family: 'IBMPlexSansKR-Bold';
+    margin-left: 70px;
+    position: absolute;
 }
+
 #btnComparison div{
     text-align:center;
-    margin-top: 7px;
+    margin-top: 3%;
 }
-#btnComparison:before{
-  height: 0%;
-  width: 2px;
-}
-#btnComparison:active {
 
-    box-shadow: inset -.3rem -.1rem 1.4rem  #B4C8FA, inset .3rem .4rem .8rem #AABEF2;
-    cursor: pointer;
-
+#btnComparison:hover{
+    opacity: 0.5;
+  transition: 0.5s;
 }
+
 .container3 {
     width: 34%;
     height: 84%;
@@ -114,16 +111,23 @@ body{
 }
 .research2{
     position: absolute;
-    top: 10%;
+    top: 8%;
     left: 72%;
 }
 .img2{
     width: 55%;
-    height: 55%;
+    height: 50%;
     border: 2px solid;
-    margin-top: 42%;
+    margin-top: 32%;
     margin-left: 23%;
 
+}
+.ch_Product2{
+     width: 55%;
+     height: 10%;
+     border: 2px solid;
+     margin-left: 23%;
+     text-align: center;
 }
 .research2>input{
    width: 11vw;

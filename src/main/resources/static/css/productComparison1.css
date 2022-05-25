@@ -18,10 +18,48 @@
     background-color: yellow;
 
 }
+.a2{
+    background-color: #A2B7EB;
+    width: 78%;
+    height: 6%;
+    border-radius: 20px;
+    margin-top: 38%;
+    text-align: center;
+    margin-left: 13%;
+}
+.a2>h3{
+    color: white;
+    font-size: 26px;
+    padding-top: 3%;
+}
+.a3{
+    background-color: #A2B7EB;
+    width: 78%;
+    height: 6%;
+    border-radius: 20px;
+    margin-top: 97%;
+    text-align: center;
+    margin-left: 13%;
+}
+.a3>h3{
+    color: white;
+    font-size: 26px;
+    padding-top: 3%;
+}
 .container_3 {
     width: 34%;
     height: 99%;
     background-color: yellowgreen;
-
-
+}
+#myChart{
+    margin-top: 10%;
+}
+#myPie{
+    margin-top: 19%;
+}
+#myChart1{
+    margin-top: 10%;
+}
+#myPie1{
+    margin-top: 19%;
 }
