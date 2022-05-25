@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
     <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
     <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
 <!--    <script src="https://unpkg.com/chart.js@3"></script>-->
@@ -172,6 +173,7 @@
 
     <script src="/js/like.js"></script>
     <script src="/js/detail.js"></script>
+    <script src="/js/cloud.js"></script>
     <script>
         var myChart = drawRadar([{{detail.type_o}},{{detail.type_d}},{{detail.type_n}},{{detail.type_t}},{{detail.type_c}}], 'myChart');
         var myChart2 = drawDoughnut(['건성에 좋아요','복합성에 좋아요','지성에 좋아요'],[{{detail.rskin_1}},{{detail.rskin_2}},{{detail.rskin_3}}], 'myChart2');
