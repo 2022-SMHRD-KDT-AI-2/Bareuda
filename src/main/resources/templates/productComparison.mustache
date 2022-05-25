@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="/css/myChart.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <!-- 워드클라우드 -->
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+
+
     <!-- CSS -->
     {{>layouts/header}}
     <!-- /content -->
@@ -88,11 +93,31 @@
 
         </div>
         <div class="containers2">
-            <div class="container_4"></div>
-            <div class="container_5"></div>
-            <div class="container_6"></div>
+            <div class="container_4">
+
+                <div class="chart-area">
+                    <div id="container" style="width:100%; height:100%;"></div>
+                </div>
+                <div class="chart-area1">
+                    <div id="container1" style="width:100%; height:100%;"></div>
+                </div>
+
+            </div>
+            <div class="container_5">
+                <div class="a4"><h3>긍정 워드 클라우드</h3></div>
+                <div class="a5"><h3>부정 워드 클라우드</h3></div>
+            </div>
+            <div class="container_6">
+                <div class="chart-area2">
+                    <div id="container2" style="width:100%; height:100%;"></div>
+                </div>
+                <div class="chart-area3">
+                    <div id="container3" style="width:100%; height:100%;"></div>
+                </div>
+            </div>
 
         </div>
+        <!--방사형 차트 오른쪽-->
         <script type="text/javascript">
     var context = document
       .getElementById('myChart')
@@ -130,8 +155,8 @@
             data: [
               14, 24, 12, 24, 20
             ],
-            backgroundColor: 'rgb(157, 109, 12)',
-            borderColor: 'rgb(157, 109, 12)'
+            backgroundColor:  'rgba(116, 187, 235, 0.5)',
+            borderColor: ' rgba(116, 187, 235, 0.5)'
           }
         ]
       },
@@ -152,6 +177,7 @@
       }
     });
   </script>
+        <!--방사형 차트 왼쪽-->
         <script type="text/javascript">
     var context = document
       .getElementById('myChart1')
@@ -189,8 +215,8 @@
             data: [
               14, 24, 12, 24, 20
             ],
-            backgroundColor: 'rgb(157, 109, 12)',
-            borderColor: 'rgb(157, 109, 12)'
+            backgroundColor:  'rgba(116, 187, 235, 0.5)',
+            borderColor:  'rgba(116, 187, 235, 0.5)'
           }
         ]
       },
@@ -212,7 +238,7 @@
     });
   </script>
 
-        <!--pie차트-->
+        <!--pie차트 오른쪽-->
         <script type="text/javascript">
     var context = document
       .getElementById('myPie')
@@ -248,7 +274,7 @@
             label: 'test2',
             fill: true,
             data: [
-              14, 24, 12, 24, 20
+
             ],
             backgroundColor: 'rgb(157, 109, 12)',
             borderColor: 'rgb(157, 109, 12)'
@@ -272,6 +298,7 @@
       }
     });
   </script>
+        <!--파이 차트 왼쪽-->
         <script type="text/javascript">
     var context = document
       .getElementById('myPie1')
@@ -294,7 +321,6 @@
               //색상
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
-
             ],
             borderColor: [
               //경계선 색상
@@ -303,11 +329,10 @@
             ],
             borderWidth: 1 //경계선 굵기
           },
-          {
-            label: 'test2',
+          { label: 'test2',
             fill: true,
             data: [
-              14, 24, 12, 24, 20
+
             ],
             backgroundColor: 'rgb(157, 109, 12)',
             borderColor: 'rgb(157, 109, 12)'
@@ -331,6 +356,167 @@
       }
     });
   </script>
+        <!--긍정 클라우드 오른쪽-->
+        <script>
+anychart.onDocumentReady(function () {
+    var data = [
+        {
+            "x": "촉촉",
+            "value": 590000000,
+            category: "Sino-Tibetan"
+        },
+        {
+            "x": "보습",
+            "value": 283000000,
+            category: "Indo-European"
+        },
+        {
+            "x": "보습력",
+            "value": 544000000,
+            category: "Indo-European"
+        },
+        {
+            "x": "좋아요",
+            "value": 527000000,
+            category: "Indo-European"
+        }, {
+            "x": "수분",
+            "value": 422000000,
+            category: "Afro-Asiatic"
+        }, {
+            "x": "흡수력",
+            "value": 620000000,
+            category: "Afro-Asiatic"
+        }
+    ];
+    var chart = anychart.tagCloud(data);
+    chart.angles([0]);
+    chart.container("container");
+    // chart.getCredits().setEnabled(false);
+    chart.draw();
+});
+</script>
+        <!--부정 클라우드 오른쪽-->
+        <script>
+anychart.onDocumentReady(function () {
+    var data = [
+        {
+            "x": "찐득",
+            "value": 590000000,
+            category: "Sino-Tibetan"
+        },
+        {
+            "x": "불쾌",
+            "value": 283000000,
+            category: "Indo-European"
+        },
+        {
+            "x": "냄새",
+            "value": 544000000,
+            category: "Indo-European"
+        },
+        {
+            "x": "기름",
+            "value": 527000000,
+            category: "Indo-European"
+        }, {
+            "x": "안좋아요",
+            "value": 422000000,
+            category: "Afro-Asiatic"
+        }, {
+            "x": "최악",
+            "value": 620000000,
+            category: "Afro-Asiatic"
+        }
+    ];
+    var chart = anychart.tagCloud(data);
+    chart.angles([0]);
+    chart.container("container1");
+    // chart.getCredits().setEnabled(false);
+    chart.draw();
+});
+</script>
+
+        <!--긍정 클라우드 왼쪽-->
+        <script>
+anychart.onDocumentReady(function () {
+    var data = [
+         {
+            "x": "촉촉",
+            "value": 590000000,
+            category: "Sino-Tibetan"
+        },
+        {
+            "x": "보습",
+            "value": 283000000,
+            category: "Indo-European"
+        },
+        {
+            "x": "보습력",
+            "value": 544000000,
+            category: "Indo-European"
+        },
+        {
+            "x": "좋아요",
+            "value": 527000000,
+            category: "Indo-European"
+        }, {
+            "x": "수분",
+            "value": 422000000,
+            category: "Afro-Asiatic"
+        }, {
+            "x": "흡수력",
+            "value": 620000000,
+            category: "Afro-Asiatic"
+        }
+    ];
+    var chart = anychart.tagCloud(data);
+    chart.angles([0]);
+    chart.container("container2");
+    // chart.getCredits().setEnabled(false);
+    chart.draw();
+});
+</script>
+        <!--부정 클라우드 오른쪽-->
+        <script>
+anychart.onDocumentReady(function () {
+    var data = [
+        {
+            "x": "찐득",
+            "value": 590000000,
+            category: "Sino-Tibetan"
+        },
+        {
+            "x": "불쾌",
+            "value": 283000000,
+            category: "Indo-European"
+        },
+        {
+            "x": "냄새",
+            "value": 544000000,
+            category: "Indo-European"
+        },
+        {
+            "x": "기름",
+            "value": 527000000,
+            category: "Indo-European"
+        }, {
+            "x": "안좋아요",
+            "value": 422000000,
+            category: "Afro-Asiatic"
+        }, {
+            "x": "최악",
+            "value": 620000000,
+            category: "Afro-Asiatic"
+        }
+    ];
+    var chart = anychart.tagCloud(data);
+    chart.angles([0]);
+    chart.container("container3");
+    // chart.getCredits().setEnabled(false);
+    chart.draw();
+});
+</script>
     </form>
 
     {{>layouts/footer}}
