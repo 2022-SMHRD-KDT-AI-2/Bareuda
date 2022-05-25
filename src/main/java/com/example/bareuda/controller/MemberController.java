@@ -67,6 +67,10 @@ public class MemberController {
         session.invalidate();
         return "index";
     }
+    @GetMapping("/mypage/result")
+    public String memberMypage(){
+        return "myPage";
+    }
     @GetMapping("/mypage/removeForm")
     public String memberRemoveForm(){
         return "memberRemove";
