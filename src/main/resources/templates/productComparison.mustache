@@ -17,10 +17,39 @@
     <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
 
 
+<style>
+     html, body {
+     margin: 0;
+     padding: 0%;
+     height: 180%;
+     background-color: #F8F8F8;
+}
+      html{
+            scroll-behavior: smooth;
+        }
+      section{
+            width:100vw
+            height: 100vh;
+        }
+       #s1{
+
+        }
+        #s2{
+
+        }
+         #s3{
+
+        }
+</style>
     <!-- CSS -->
     {{>layouts/header}}
+
     <!-- /content -->
-    <form action="" method="">
+
+        <section id="s1">
+            <h1> section 1</h1>
+            <a href="#s2">section 2로 이동</a>
+
         <div class="containers">
             <div class="container1">
                 <div class="research1">
@@ -41,11 +70,12 @@
                 <div class="a1">
                     <h3>제품 비교</h3>
                 </div>
+                <form>
                     <input id="search1" name="search1" type="hidden" value="">
                     <input id="search2" name="search2" type="hidden" value="">
                 <div class="btn_area1">
-                    <button type="button" id="btnComparison" onclick=""><a>비교</a></button>
-                </div>
+                    <button type="button" id="btnComparison" onclick="return comparison()"><a>비교</a></button>
+                </div></form>
 
             </div>
 
@@ -65,7 +95,11 @@
                 </div>
             </div>
         </div>
+        </section>
+        <section id="s2">
+            <a href="#">top</a>
 
+        <!-- 2페이지-->
         <div class="containers1">
             <div class="containers1">
                 <div class="container_1">
@@ -85,13 +119,21 @@
                     <div class="myChart1">
                         <canvas id="myChart1" style="height:70vh; width:90vw"></canvas>
                     </div>
+
                     <div class="myPie1">
                         <canvas id="myPie1" style="height:70vh; width:90vw"></canvas>
                     </div>
+
+
                 </div>
             </div>
-
         </div>
+        </section>
+
+        <section id="s3">
+            <a href="#">top</a>
+
+        <!-- 3페이지 -->
         <div class="containers2">
             <div class="container_4">
 
@@ -117,6 +159,8 @@
             </div>
 
         </div>
+        </section>
+
         <!--방사형 차트 오른쪽-->
         <script type="text/javascript">
     var context = document
@@ -397,45 +441,7 @@ anychart.onDocumentReady(function () {
 });
 </script>
         <!--부정 클라우드 오른쪽-->
-        <script>
-anychart.onDocumentReady(function () {
-    var data = [
-        {
-            "x": "찐득",
-            "value": 590000000,
-            category: "Sino-Tibetan"
-        },
-        {
-            "x": "불쾌",
-            "value": 283000000,
-            category: "Indo-European"
-        },
-        {
-            "x": "냄새",
-            "value": 544000000,
-            category: "Indo-European"
-        },
-        {
-            "x": "기름",
-            "value": 527000000,
-            category: "Indo-European"
-        }, {
-            "x": "안좋아요",
-            "value": 422000000,
-            category: "Afro-Asiatic"
-        }, {
-            "x": "최악",
-            "value": 620000000,
-            category: "Afro-Asiatic"
-        }
-    ];
-    var chart = anychart.tagCloud(data);
-    chart.angles([0]);
-    chart.container("container1");
-    // chart.getCredits().setEnabled(false);
-    chart.draw();
-});
-</script>
+
 
         <!--긍정 클라우드 왼쪽-->
         <script>
@@ -478,46 +484,8 @@ anychart.onDocumentReady(function () {
 });
 </script>
         <!--부정 클라우드 오른쪽-->
-        <script>
-anychart.onDocumentReady(function () {
-    var data = [
-        {
-            "x": "찐득",
-            "value": 590000000,
-            category: "Sino-Tibetan"
-        },
-        {
-            "x": "불쾌",
-            "value": 283000000,
-            category: "Indo-European"
-        },
-        {
-            "x": "냄새",
-            "value": 544000000,
-            category: "Indo-European"
-        },
-        {
-            "x": "기름",
-            "value": 527000000,
-            category: "Indo-European"
-        }, {
-            "x": "안좋아요",
-            "value": 422000000,
-            category: "Afro-Asiatic"
-        }, {
-            "x": "최악",
-            "value": 620000000,
-            category: "Afro-Asiatic"
-        }
-    ];
-    var chart = anychart.tagCloud(data);
-    chart.angles([0]);
-    chart.container("container3");
-    // chart.getCredits().setEnabled(false);
-    chart.draw();
-});
-</script>
-    </form>
+
+
 
     {{>layouts/footer}}
     <script type="text/javascript" src="/js/comparison.js"></script>

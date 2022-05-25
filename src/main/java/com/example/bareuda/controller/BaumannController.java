@@ -30,11 +30,6 @@ public class BaumannController {
         model.addAttribute("answer", answer);
         Ingredients ingredients = baumannService.getRecommendedIngredients(answer.getMb_result());
         model.addAttribute("Ingredients", ingredients);
-// 점수 계산된걸 총점으로 삼아야하니까 나중에.
-//        model.addAttribute("type1", answer);
-//        model.addAttribute("type2", answer);
-//        model.addAttribute("type3", answer);
-//        model.addAttribute("type4", answer);
         return "baumannResult";
     }
 

@@ -30,7 +30,7 @@ public class BaumannServiceImpl implements BaumannService{
 
         char type;
 
-        int[] parts = {26, 29, 30, 40};
+        int[] parts = {60, 40, 70, 60};
         char[] types1 = {'D', 'R', 'N', 'T'};
         char[] types2 = {'O', 'S', 'P', 'W'};
 
