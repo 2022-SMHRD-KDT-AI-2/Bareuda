@@ -5,7 +5,7 @@ body{
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: green;
+
 
 }
 .container1 {
@@ -13,7 +13,7 @@ body{
     margin-left: 6%;
     width: 34%;
     height: 84%;
-    background-color: orange;
+    background-color: white;
 }
 .research1>input:focus{
    outline: 2px solid #E5E5E5;
@@ -28,6 +28,7 @@ body{
    border:none;
    border-radius: 11px;
    text-align: center;
+   background-color: whitesmoke;
 }
 .research1{
     position: absolute;
@@ -55,7 +56,7 @@ ul>li{
 .container2 {
     width: 20%;
     height: 84%;
-    background-color: yellow;
+    background-color: white;
     margin-top: 8%;
 }
 .a1{
@@ -105,7 +106,7 @@ ul>li{
 .container3 {
     width: 34%;
     height: 84%;
-    background-color: yellowgreen;
+    background-color: white;
     margin-top: 8%;
 
 }
@@ -136,6 +137,7 @@ ul>li{
    border:none;
    border-radius: 11px;
    text-align: center;
+   background-color: whitesmoke;
 }
 .research2>input:focus{
    outline: 2px solid #E5E5E5;
