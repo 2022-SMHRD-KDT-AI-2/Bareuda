@@ -20,8 +20,8 @@ name="mem_pw"
             <div class="box1">
                 <div class="boxLeft">
                     <ul>
-                        <li><a href="#myPage"> My Page</a></li>
-                        <li><a href="">좋아요 제품</a></li>
+                        <li><a href="/mypage/result"> My Page</a></li>
+                        <li><a href="/mypage/likeList">좋아요 제품</a></li>
                         <li><a href="" id="memberRemove">회원 탈퇴</a></li>
                     </ul>
                 </div>
@@ -32,7 +32,7 @@ name="mem_pw"
                 <div class="delateBox">
                     <h3 class="join_title"><label for="pswd1"></label></h3>
                     <span class="box int_pass">
-                    <input type="hidden" name="mem_id" class="int" maxlength="20" value="{{sessiongMember.mb_id}}">
+                    <input type="hidden" name="mem_id" class="int" maxlength="20" value="{{sessionMember.mb_id}}">
                     <input type="password" name="mem_pw" class="int" maxlength="20" placeholder="비밀번호">
                     </span>
                 </div>

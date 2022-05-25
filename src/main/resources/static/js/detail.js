@@ -25,6 +25,8 @@ $(function() {
 
         var myChart6 = drawHorizontal(pos_words,pos_weights, 'myChart6');
         var myChart7 = drawHorizontal(neg_words,neg_weights, 'myChart7');
+        var myChart8 = drawWord(pos_words,pos_weights,'myChart8' );
+        var myChart9 = drawWord(neg_words,neg_weights,'myChart9' );
 
         console.log(pos_rate);
         console.log(neg_rate);
@@ -268,8 +270,7 @@ function drawWord(keylist,valuelist,chartName){
       });
 }
 
-var myChart8 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart8' );
-var myChart9 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart9' );
+
 
 
 
