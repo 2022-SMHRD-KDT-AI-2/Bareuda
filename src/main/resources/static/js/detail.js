@@ -238,35 +238,30 @@ var myChart7 = drawHorizontal(['가','나','다','라','마','바','사','아','
 
 /* word */
 
-function drawWord(keylist, valuelist, chartName) {
-    var context = document.getElementById(chartName).getContext('2d');
-    var myChartW = new Chart(context, {
-        type: 'wordCloud',
-        data: {
-            labels: [
-              keylist[0],keylist[1],keylist[2]
-            ],
-            datasets: [
-                {
-                label: '',
-                data: valuelist,
-                },
-            ],
-        },
-        options: {
-            title: {
-              display: false,
-              text: "Chart.js Word Cloud"
-            },
-            plugins: {
-              legend: {
-                display: false
-              }
-            }
+anychart.onDocumentReady(function() {
+    var data = [
+      {"x": "Mandarin chinese", "value": 200},
+      {"x": "English", "value": 100},
+      {"x": "Hindustani", "value": 300},
+    ];
 
-}})
-        return myChartW;
-  };
+   // create a tag (word) cloud chart
+    var chart = anychart.tagCloud(data);
 
-  var myChart8 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart8' );
-  var myChart9 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart9' );
+     // set a chart title
+    chart.title('긍정 워드클라우드')
+    // set an array of angles at which the words will be laid out
+    chart.angles([0])
+    // enable a color range
+    chart.colorRange(true);
+    // set the color range length
+    chart.colorRange().length('80%');
+
+    // display the word cloud chart
+    chart.container("container");
+    chart.draw();
+
+  });
+
+
+

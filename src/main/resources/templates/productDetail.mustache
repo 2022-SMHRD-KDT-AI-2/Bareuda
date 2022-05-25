@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
 <!--    <script src="https://unpkg.com/chart.js@3"></script>-->
 <!--    <script src="https://unpkg.com/chartjs-chart-wordcloud@3"></script>-->
 
@@ -18,7 +20,7 @@
     <div id="body_wrapper"> <!--footer를 포함하여 'body_content'까지 모두 감싸는 태그-->
         <div id="body_content"> <!--footer를 제외하고 감싸는 태그-->
 
-            <div id="container"> <!--header,footer 제외 전체-->
+            <div id="container1"> <!--header,footer 제외 전체-->
                 <div id="content1"> <!--상세페이지1-->
                     <div class="prd">
                         <div class="prd_img"><img src="/img/products/{{product.p_img}}"></div>
@@ -139,12 +141,15 @@
                         </div>
                         <div class="cloud_container">
                             <div class="word_cloud">[긍정 리뷰]
-                                <canvas id="myChart8" width="1000" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 1000px;"></canvas>
-                                </canvas>
+                                <div class="chart-area">
+                                    <div id="container" style="width:500px; height:500px;"></div>
+                                </div>
                             </div>
 
                             <div class="word_cloud">[부정 리뷰]
-                                <canvas id="myChart9" width="1000" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 1000px;"></canvas>
+                                <div class="chart-area">
+                                    <div id="container" style="width:500px; height:500px;"></div>
+                                </div>
                             </div>
 
                         </div>
