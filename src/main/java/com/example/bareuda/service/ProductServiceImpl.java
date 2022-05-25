@@ -58,6 +58,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public Like isLike(Like like) {
+        return productMapper.selectLike(like);
+    }
+
+    @Override
     public List<Product> autocomplete(String search) {
         List<Product> list = productMapper.autocomplete(search);
         return list;

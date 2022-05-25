@@ -16,4 +16,5 @@ public interface ProductService {
     public List<Product> getlikeList(String mb_id);
     public Product findById(int p_id);
     public Detail getDetail(Product product);
+    public Like isLike(Like like);
 }

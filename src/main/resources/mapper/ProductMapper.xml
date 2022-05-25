@@ -17,7 +17,7 @@
         <![CDATA[
         select distinct * from tbl_products
         where (P_RESULT LIKE #{type1} or P_RESULT LIKE #{type2} or P_RESULT LIKE #{type3} or P_RESULT LIKE #{type4})
-        and (ROWNUM <= 21)
+        and (ROWNUM <= 40)
         and (p_category = #{category})
         ]]>
     </select>

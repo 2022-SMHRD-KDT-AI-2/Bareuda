@@ -31,7 +31,8 @@
                             <div class="p_price"><strong>{{product.p_price}}원</strong></div>
                             <div class="c_type"><p><span class="type_result">{{product.p_result}}</span></p></div>
                             <div class="heart-container">
-                                <div class="heart-like-button"  id="likebtn" onclick="like({{product.p_id}})"></div>
+                                {{^isLike}}<div class="heart-like-button"  id="likebtn" onclick="like({{product.p_id}})"></div>{{/isLike}}
+                                {{#isLike}}<div class="heart-like-button liked"  id="likebtn" onclick="like({{product.p_id}})"></div>{{/isLike}}
                             </div>
                             <hr><br>
                             <div class="p_use">
