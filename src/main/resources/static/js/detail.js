@@ -89,6 +89,8 @@ function drawDoughnut(skinlist, datalist, chartName) {
     return myChartD;
 };
 
+
+
 function drawRadar(datalist, chartName) {
     var context = document
         .getElementById(chartName)

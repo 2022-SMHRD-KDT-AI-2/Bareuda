@@ -60,6 +60,9 @@
 }
 .myPie{
     margin-top: 19%;
+    width:500px;
+    height:500px;
+    border : 1px black solid;
 }
 .myChart1{
       margin-top: -23%;
