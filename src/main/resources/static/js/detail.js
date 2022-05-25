@@ -126,6 +126,8 @@ function drawRadar(datalist, chartName) {
 };
 
 /* 차트 추가 (pie, horizontal, word ) */
+
+/* pie */
 function drawRadar(reviewlist, chartName) {
 
     var context = document
