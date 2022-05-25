@@ -107,10 +107,29 @@ public class ProductController {
     }
 
     @RequestMapping("/product/comparison")
-    public String productComparison(Model model, HttpSession session, String search, HttpServletResponse response) throws IOException {
+    public String productComparison(Model model, HttpSession session, HttpServletResponse response) throws IOException {
         Member member = (Member) session.getAttribute("sessionMember");
-
         return "productComparison";
+    }
+
+    @RequestMapping("/product/comparison.do")
+    public String productComparison2(Model model, HttpSession session, String search1, String search2, HttpServletResponse response) throws IOException {
+        Member member = (Member) session.getAttribute("sessionMember");
+        JSONObject obj = new JSONObject();
+        Gson gson = new Gson();
+
+        Product product1 = productServiceImpl.findById(Integer.parseInt(search1));
+        Product product2 = productServiceImpl.findById(Integer.parseInt(search2));
+
+        String p1 = gson.toJson(product1);
+        obj.put("product1",p1);
+        String p2 = gson.toJson(product2);
+        obj.put("product2",p2);
+
+        response.setContentType("application/x-json; charset=UTF-8");
+        response.getWriter().print(obj);
+
+        return null;
     }
 
     @RequestMapping("/product/detail.do")

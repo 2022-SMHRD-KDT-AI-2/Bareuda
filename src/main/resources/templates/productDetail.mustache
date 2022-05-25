@@ -9,6 +9,10 @@
     <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
     <link rel="stylesheet" href="https://use.typekit.net/opg3wle.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<!--    <script src="https://unpkg.com/chart.js@3"></script>-->
+<!--    <script src="https://unpkg.com/chartjs-chart-wordcloud@3"></script>-->
+
     {{>layouts/header}}
     <!-- /content -->
     <div id="body_wrapper"> <!--footer를 포함하여 'body_content'까지 모두 감싸는 태그-->
@@ -118,8 +122,37 @@
         </div>
     </div>
 
+                <div id="content3">
+                    <div class="review_container">
+                        <div class="r_percentage">
+                            <canvas id="myChart5"></canvas>
+                        </div>
+                        <div class="keyword_container">
+                            <div class="keyword_box">
+                                <div class="keyword_title">[긍정 키워드]</div>
+                                <canvas id="myChart6"></canvas>
+                            </div>
+                            <div class="keyword_box">
+                                <div class="keyword_title">[부정 키워드]</div>
+                                <canvas id="myChart7"></canvas>
+                            </div>
+                        </div>
+                        <div class="cloud_container">
+                            <div class="word_cloud">[긍정 리뷰]
+                                <canvas id="myChart8" width="1000" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 1000px;"></canvas>
+                                </canvas>
+                            </div>
 
-    </div> <!-- container-->
+                            <div class="word_cloud">[부정 리뷰]
+                                <canvas id="myChart9" width="1000" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 1000px;"></canvas>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> <!-- container-->
 
 
     </div> <!--footer를 제외하고 감싸는 'body_content'태그 -->
@@ -131,263 +164,14 @@
     </footer> -->
 
     </div><!--footer를 포함하여 'body_content'까지 모두 감싸는 태그-->
-    <script type="text/javascript">
-    var context = document
-        .getElementById('myChart')
-        .getContext('2d');
-    var myChart = new Chart(context, {
-        type: 'radar', // 차트의 형태
-        elements:{
-            point:{
-                radius:0
-            },
-        },
-        data: { // 차트에 들어갈 데이터
-            labels: [
-                //x 축
-                '지성','건성','중성','민감성','복합성'
-            ],
-            datasets: [
-                { //데이터
-                    label: '분포도', //차트 제목
-                    fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                    data: [
-                        41,27,15,7,10 //x축 label에 대응되는 데이터 값
-                    ],
-                    backgroundColor: [
-                        //색상
-                        'rgba(	116, 187, 235, 0.5)',
-
-                    ],
-                    borderColor: [
-                        //경계선 색상
-                        'rgba(	116, 187, 235, 1)',
-
-
-                    ],
-                    borderWidth: 5
-
-
-                }/* ,
-                {
-                    label: 'test2',
-                    fill: false,
-                    data: [
-                        8, 34, 12, 24
-                    ],
-                    backgroundColor: 'rgb(157, 109, 12)',
-                    borderColor: 'rgb(157, 109, 12)'
-                } */
-            ]
-        },
-        options: {
-            scale:{
-                ticks:{
-                    beginAtZero:true,
-                    display: false,
-                    min:0,
-                    max:50,
-                    stepSize:10
-                }
-            }
-        }
-    });
-</script>
-
-    <script type="text/javascript">
-    var context = document
-        .getElementById('myChart2')
-        .getContext('2d');
-    var myChart = new Chart(context, {
-        type: 'doughnut', // 차트의 형태
-        elements:{
-            point:{
-                radius:0
-            },
-        },
-        data: { // 차트에 들어갈 데이터
-            labels: [
-                //x 축
-                '건성에 좋아요','복합성에 좋아요','지성에 좋아요'
-            ],
-            datasets: [
-                { //데이터
-                    label: 'test1', //차트 제목
-                    fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                    data: [
-                        20,50,30 //x축 label에 대응되는 데이터 값
-                    ],
-                    backgroundColor: [
-                        //색상
-                        'rgba(	169,156,250, 0.8)',
-                        'rgba(	156,190,250, 0.8)',
-                        'rgba(	156,237,250, 0.8)'
-                    ],
-                    borderColor: [
-                        //경계선 색상
-                        'rgba(	169,156,250, 1)',
-                        'rgba(	156,190,250, 1)',
-                        'rgba(	156,237,250, 1)'
-                    ],
-                    borderWidth: 5
-
-
-                }/* ,
-                {
-                    label: 'test2',
-                    fill: false,
-                    data: [
-                        8, 34, 12, 24
-                    ],
-                    backgroundColor: 'rgb(157, 109, 12)',
-                    borderColor: 'rgb(157, 109, 12)'
-                } */
-            ]
-        },
-        options: {
-            scale:{
-                ticks:{
-                    beginAtZero:true,
-                    display: false,
-                    min:0,
-                    max:50,
-                    stepSize:10
-                }
-            }
-        }
-    });
-</script>
-
-    <script type="text/javascript">
-    var context = document
-        .getElementById('myChart3')
-        .getContext('2d');
-    var myChart = new Chart(context, {
-        type: 'doughnut', // 차트의 형태
-        elements:{
-            point:{
-                radius:0
-            },
-        },
-        data: { // 차트에 들어갈 데이터
-            labels: [
-                //x 축
-                '보습에 좋아요','진정에 좋아요','주름/미백에 좋아요'
-            ],
-            datasets: [
-                { //데이터
-                    label: 'test1', //차트 제목
-                    fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                    data: [
-                        30,20,50 //x축 label에 대응되는 데이터 값
-                    ],
-                    backgroundColor: [
-                        //색상
-                        'rgba(	202,236,236, 0.5)',
-                        'rgba(	202,219,236, 0.5)',
-                        'rgba(	202,202,236, 0.5)'
-                    ],
-                    borderColor: [
-                        //경계선 색상
-                        'rgba(	202,236,236, 1)',
-                        'rgba(	202,219,236, 1)',
-                        'rgba(	202,202,236, 1)'
-                    ],
-                    borderWidth: 5
-
-
-                }/* ,
-                {
-                    label: 'test2',
-                    fill: false,
-                    data: [
-                        8, 34, 12, 24
-                    ],
-                    backgroundColor: 'rgb(157, 109, 12)',
-                    borderColor: 'rgb(157, 109, 12)'
-                } */
-            ]
-        },
-        options: {
-            scale:{
-                ticks:{
-                    beginAtZero:true,
-                    display: false,
-                    min:0,
-                    max:50,
-                    stepSize:10
-                }
-            }
-        }
-    });
-</script>
-
-    <script type="text/javascript">
-    var context = document
-        .getElementById('myChart4')
-        .getContext('2d');
-    var myChart = new Chart(context, {
-        type: 'doughnut', // 차트의 형태
-        elements:{
-            point:{
-                radius:0
-            },
-        },
-        data: { // 차트에 들어갈 데이터
-            labels: [
-                //x 축
-                '자극없이 순해요','보통이에요','자극이 느껴져요'
-            ],
-            datasets: [
-                { //데이터
-                    label: 'test1', //차트 제목
-                    fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                    data: [
-                        50,20,30 //x축 label에 대응되는 데이터 값
-                    ],
-                    backgroundColor: [
-                        //색상
-                        'rgba(	202,236,236, 0.5)',
-                        'rgba(	202,219,236, 0.5)',
-                        'rgba(	202,202,236, 0.5)'
-                    ],
-                    borderColor: [
-                        //경계선 색상
-                        'rgba(	202,236,236, 1)',
-                        'rgba(	202,219,236, 1)',
-                        'rgba(	202,202,236, 1)'
-                    ],
-                    borderWidth: 5
-
-
-                }/* ,
-                {
-                    label: 'test2',
-                    fill: false,
-                    data: [
-                        8, 34, 12, 24
-                    ],
-                    backgroundColor: 'rgb(157, 109, 12)',
-                    borderColor: 'rgb(157, 109, 12)'
-                } */
-            ]
-        },
-        options: {
-            scale:{
-                ticks:{
-                    beginAtZero:true,
-                    display: false,
-                    min:0,
-                    max:50,
-                    stepSize:10
-                }
-            }
-        }
-    });
-</script>
 
     <script src="/js/like.js"></script>
     <script src="/js/detail.js"></script>
+    <script>
+        var myChart = drawRadar([{{detail.type_o}},{{detail.type_d}},{{detail.type_n}},{{detail.type_t}},{{detail.type_c}}], 'myChart');
+        var myChart2 = drawDoughnut(['건성에 좋아요','복합성에 좋아요','지성에 좋아요'],[{{detail.rskin_1}},{{detail.rskin_2}},{{detail.rskin_3}}], 'myChart2');
+        var myChart3 = drawDoughnut(['보습에 좋아요','진정에 좋아요','주름/미백에 좋아요'],[{{detail.rtrouble_1}},{{detail.rtrouble_2}},{{detail.rtrouble_3}}], 'myChart3');
+        var myChart4 = drawDoughnut(['자극없이 순해요','보통이에요','자극이 느껴져요'],[{{detail.rsti_1}},{{detail.rsti_1}},{{detail.rsti_1}}], 'myChart4');
+    </script>
+
     {{>layouts/footer}}
-    </body>
-</html>

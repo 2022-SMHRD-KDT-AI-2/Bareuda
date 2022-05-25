@@ -1,4 +1,4 @@
-    $(function() {    //화면 다 뜨면 시작
+$(function() {    //화면 다 뜨면 시작
     $(".searchInput").autocomplete({
         source : function( request, response ) {
              $.ajax({
@@ -38,3 +38,46 @@
         minLength: 1
     });
 });
+
+function comparison(){
+    $.ajax({
+    url: "/product/comparison.do",
+    type: "POST",
+    cache: false,
+    dataType: "json",
+    data: $('#form').serialize(),
+    success:
+    function(data){
+        //alert("like 성공");
+        // 사진 변경
+        // 브랜드, 이름, 가격, 타입
+        var product1 = JSON.parse(data.product1);
+        var product2 = JSON.parse(data.product2);
+        console.log(product1);
+        console.log(product2);
+//        // ------ 2단 ajax ------
+//            $.ajax({
+//            url: "플라스크 주소",
+//            type: "POST",
+//            cache: false,
+//            dataType: "json",
+//            data: {"p_id1": data.p_id1, "p_id2":data.p_id2},
+//            success:
+//                function(data){
+//                    //alert("like 성공");
+//                    // 긍정률, 부정률
+//                    // 워드클라우드 (긍정+부정)
+//                },
+//                error:
+//                function (request, status, error){
+//                alert("ajax실패. code:"+request.status+"\n"+"message:"+request.reponseText+"\n"+"error:"+error);
+//                }
+//                });
+//            // ------ /2단 ajax ------
+    },
+    error:
+    function (request, status, error){
+    alert("ajax실패. code:"+request.status+"\n"+"message:"+request.reponseText+"\n"+"error:"+error);
+    }
+    });
+}
