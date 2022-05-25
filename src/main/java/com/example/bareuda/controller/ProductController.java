@@ -140,6 +140,8 @@ public class ProductController {
         String user_type_str = product.getP_usertype();
         Detail detail = productServiceImpl.getDetail(product);
         model.addAttribute("detail", detail);
+        Like like = productServiceImpl.isLike(new Like(-1, member.getMb_id(),p_id));
+        model.addAttribute("isLike", like);
         return "productDetail";
     }
 }

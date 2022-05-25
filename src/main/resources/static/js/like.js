@@ -19,8 +19,8 @@ function like(p_id){
     data: {"p_id":p_id},
     success:
     function(data){
-        //alert("like 성공");
-        $("likebtn").toggleClass('liked');
+//        alert("like 성공");
+        $("#likebtn").toggleClass('liked');
     },
     error:
     function (request, status, error){
