@@ -32,7 +32,7 @@
     font-style: normal;
 }
 
-#container1{
+#container{
     position:absolute;
     top: 20%;
     /* border: solid black 3px; */
@@ -364,4 +364,14 @@
   width: 50%;
   height: 100%;
   border: #f38b8b 1px solid;
+}
+
+#myChart8{
+  width: 500px;
+  height: 500px;
+}
+
+#myChart9{
+  width: 500px;
+  height: 500px;
 }
