@@ -248,20 +248,13 @@ function drawWord(keylist,valuelist,chartName){
         var data = [
             [keylist[0], valuelist[0]],
             [keylist[1], valuelist[1]],
-            [keylist[2], valuelist[2]],
-            [keylist[3], valuelist[3]],
-            [keylist[4], valuelist[4]],
-            [keylist[5], valuelist[5]],
-            [keylist[6], valuelist[6]],
-            [keylist[7], valuelist[7]],
-            [keylist[8], valuelist[8]],
-            [keylist[9], valuelist[9]]
+            [keylist[2], valuelist[2]]
           ];
 
        // create a tag (word) cloud chart
         var chart = anychart.tagCloud(data);
 
-//        chart.title('긍정 워드클라우드')
+        chart.title('긍정 워드클라우드')
         // set an array of angles at which the words will be laid out
         chart.angles([0])
         // enable a color range
@@ -275,8 +268,8 @@ function drawWord(keylist,valuelist,chartName){
       });
 }
 
-var myChart8 = drawWord(['Hello', 'world', 'normally','Hello', 'world', 'normally','Hello', 'world', 'normally','Yaho'],[90, 70, 60,50,40,30,20,10,5,1],'myChart8' );
-var myChart9 = drawWord(['Hello', 'world', 'normally','Hello', 'world', 'normally','Hello', 'world', 'normally','Yaho'],[90, 70, 60,50,40,30,20,10,5,1],'myChart9' );
+var myChart8 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart8' );
+var myChart9 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart9' );
 
 
 

@@ -28,7 +28,7 @@ public class MemberController {
         model.addAttribute("list", list);
         return "memberList";
     }
-    @GetMapping("/member/new")
+    @GetMapping("/member/createForm")
     public String newMemberForm(){
         return "memberInsert";
     }

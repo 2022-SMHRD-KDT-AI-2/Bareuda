@@ -10,6 +10,11 @@ name="mem_pw"
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
+    <script>
+        function goCreatForm(){
+		location.href="/member/createForm";
+	    }
+    </script>
     <link rel="stylesheet" href="/CSS/login.css">
     {{>layouts/header}}
     <!-- content -->
@@ -43,7 +48,7 @@ name="mem_pw"
                             </div>
                             <!-- 회원가입 BTN-->
                             <div class="btn_area1">
-                                <button type="button" id="btnJoin">
+                                <button type="button" id="btnJoin" onclick="goCreatForm()">
                                     <a>SignUp</a>
                                 </button>
                             </div>
