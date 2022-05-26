@@ -29,7 +29,7 @@ public class BaumannController {
         Answer answer = baumannService.getAnswer(member.getMb_id());
         model.addAttribute("answer", answer);
         Ingredients ingredients = baumannService.getRecommendedIngredients(answer.getMb_result());
-        model.addAttribute("Ingredients", ingredients);
+        model.addAttribute("Ingredients", ingredients.getI_name().replace("<br>", "\n"));
         return "baumannResult";
     }
 
