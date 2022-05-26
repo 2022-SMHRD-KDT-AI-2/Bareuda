@@ -56,14 +56,14 @@
     height: 90%;
     /* border: solid palevioletred 2px; */
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 12%;
 }
 
 .prd_img{
     border: 2px rgb(51, 150, 207);
     margin-top: 10%;
-    height: 71%;
-    width: 35.2%;
+    height: 450px;
+    width: 450px;
     /* border: 1px solid rgb(105, 105, 107); */
     display: flex;
     margin-left: 5%;
