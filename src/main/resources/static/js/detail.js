@@ -309,7 +309,7 @@ function drawWord(keylist,valuelist,chartName){
         // display the word cloud chart
         chart.container(chartName);
         chart.normal().fill("#609efa");
-        chart.getCredits().setEnabled(false);
+
         chart.draw();
       });
 }
