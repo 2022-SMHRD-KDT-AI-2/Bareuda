@@ -210,7 +210,7 @@ function drawHorizontal(keywordlist, datalist, chartName) {
             labels: [
                 //x 축
                 keywordlist[0],keywordlist[1],keywordlist[2],keywordlist[3],keywordlist[4],
-                keywordlist[5],keywordlist[6],keywordlist[7],keywordlist[8],keywordlist[9]
+                keywordlist[5],keywordlist[6],keywordlist[7],keywordlist[8],keywordlist[9],keywordlist[10]
             ],
             datasets: [
                 { //데이터
