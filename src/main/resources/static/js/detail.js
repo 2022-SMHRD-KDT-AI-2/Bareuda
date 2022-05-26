@@ -217,7 +217,7 @@ function drawHorizontal(keywordlist, datalist, chartName) {
 
                     label: '빈도수', //차트 제목
                     fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                    data: [datalist[0],datalist[1],datalist[2],datalist[3],datalist[4],
+                    data: [ datalist[0],datalist[1],datalist[2],datalist[3],datalist[4],
                            datalist[5],datalist[6],datalist[7],datalist[8],data[9]
                                       ],
                     backgroundColor: [
