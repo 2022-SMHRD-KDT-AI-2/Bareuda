@@ -120,11 +120,16 @@ public class ProductController {
         log.info("search1:"+search1);
         Product product1 = productServiceImpl.findById(Integer.parseInt(search1));
         Product product2 = productServiceImpl.findById(Integer.parseInt(search2));
-
+        Detail detail1 = productServiceImpl.getDetail(product1);
+        Detail detail2 = productServiceImpl.getDetail(product2);
         String p1 = gson.toJson(product1);
         obj.put("product1",p1);
         String p2 = gson.toJson(product2);
         obj.put("product2",p2);
+        String p3 = gson.toJson(detail1);
+        obj.put("detail1",p3);
+        String p4 = gson.toJson(detail2);
+        obj.put("detail2",p4);
 
         response.setContentType("application/x-json; charset=UTF-8");
         response.getWriter().print(obj);

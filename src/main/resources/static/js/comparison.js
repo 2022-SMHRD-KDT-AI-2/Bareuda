@@ -40,45 +40,74 @@ $(function() {    //화면 다 뜨면 시작
 });
 
 function comparison(){
-    $.ajax({
-    url: "/product/comparison.do",
-    type: "POST",
-    cache: false,
-    dataType: "json",
-    data: {"search1":$('#search1').val(),"search2":$('#search2').val()},
-    success:
-    function(data){
-        alert("like 성공");
-        // 사진 변경
-        // 브랜드, 이름, 가격, 타입
-        var product1 = JSON.parse(data.product1);
-        var product2 = JSON.parse(data.product2);
-        $(".img1 img").attr("src", "/img/products/"+product1["p_img"]);
-        $(".img2 img").attr("src", "/img/products/"+product2["p_img"]);
-//        // ------ 2단 ajax ------
-//            $.ajax({
-//            url: "http://222.102.43.36:5023/",
-//            type: "POST",
-//            cache: false,
-//            dataType: "json",
-//            data: {"search1":$('#search1').val(),"search2":$('#search2').val()},
-//            success:
-//                function(data){
-//                    //alert("like 성공");
-//                    // 긍정률, 부정률
-//                    // 워드클라우드 (긍정+부정)
-//                },
-//                error:
-//                function (request, status, error){
-//                alert("ajax실패. code:"+request.status+"\n"+"message:"+request.reponseText+"\n"+"error:"+error);
-//                }
-//                });
-//            // ------ /2단 ajax ------
-    },
-    error:
-    function (request, status, error){
-    alert("ajax실패. code:"+request.status+"\n"+"message:"+request.reponseText+"\n"+"error:"+error);
-    }
+    new Promise( (succ, fail)=>{
+
+        $.ajax({
+            url: "/product/comparison.do",
+            type: "POST",
+            cache: false,
+            dataType: "json",
+            data: {"search1":$('#search1').val(),"search2":$('#search2').val()},
+            success:
+            function(data){
+                succ(data);
+                alert("1단 ajax 성공-3");
+                // 사진 변경
+                // 브랜드, 이름, 가격, 타입
+                var product1 = JSON.parse(data.product1);
+                var product2 = JSON.parse(data.product2);
+                $(".img1 img").attr("src", "/img/products/"+product1["p_img"]);
+                $(".img2 img").attr("src", "/img/products/"+product2["p_img"]);
+                var detail1 = JSON.parse(data.detail1);
+                var detail2 = JSON.parse(data.detail2);
+                // var myChart1 = drawRadar([detail1["type_o"],detail1["type_d"],detail1["type_n"],detail1["type_t"],detail1["type_c"]], 'myChart1');
+                // var myChart2 = drawRadar([detail2["type_o"],detail2["type_d"],detail2["type_n"],detail2["type_t"],detail2["type_c"]], 'myChart2');
+            },
+            error:
+            function (request, status, error){
+            alert("ajax실패. code:"+request.status+"\n"+"message:"+request.reponseText+"\n"+"error:"+error);
+            }
+        });
+
+    }).then((arg) =>{    // 두번째 ajax를 실행한다.
+        $.ajax({
+            url: "http://222.102.43.36:5023/comparison",
+            type: "POST",
+            cache: false,
+            dataType: "json",
+            data: {"p_id1":$('#search1').val(),"p_id2":$('#search2').val()},
+            success:
+                function(data){
+                    alert("2단 ajax 성공");
+                    var pos_rate1 = parseInt(data.pos_rate1);
+                    var neg_rate1 = parseInt(data.neg_rate1);
+                    var pos_words1 = data.pos_words1;
+                    var neg_words1 = data.neg_words1;
+                    var pos_weights1 = data.pos_weights1;
+                    var neg_weights1 = data.neg_weights1;
+
+                    var pos_rate2 = parseInt(data.pos_rate2);
+                    var neg_rate2 = parseInt(data.neg_rate2);
+                    var pos_words2 = data.pos_words2;
+                    var neg_words2 = data.neg_words2;
+                    var pos_weights2 = data.pos_weights2;
+                    var neg_weights2 = data.neg_weights2;
+
+                    console.log(pos_rate1);
+                    console.log(neg_rate1);
+                    console.log(pos_rate2);
+                    console.log(neg_rate2);
+
+                    //var myPie1 = drawPie([pos_rate1,neg_rate1], 'myPie1'); // 왼쪽 긍부정
+                    //var myPie2 = drawPie([pos_rate2,neg_rate2], 'myPie2'); // 오른쪽 긍부정
+                    //var cloud1 = drawWord(words1, weights1,'cloud1'); // 왼쪽 워드 클라우드
+                    //var cloud2 = drawWord(words2, weights2,'cloud2'); // 오른쪽 워드 클라우드
+                },
+            error:
+            function (request, status, error){
+            alert("ajax실패. code:"+request.status+"\n"+"message:"+request.reponseText+"\n"+"error:"+error);
+            }
+        });
     });
 }
 
@@ -204,11 +233,7 @@ function drawWord(keylist,valuelist,chartName){
         chart.draw();
       });
 }
-//var myChart5 = drawPie([pos_rate,neg_rate], 'myChart5');
-//var myChart6 = drawHorizontal(pos_words,pos_weights, 'myChart6');
-//var myChart7 = drawHorizontal(neg_words,neg_weights, 'myChart7');
-//var myChart8 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart8' );
-//var myChart9 = drawWord(['Hello', 'world', 'normally'],[90, 70, 60],'myChart9' );
-//
+
+
 
 
