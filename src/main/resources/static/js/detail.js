@@ -210,7 +210,7 @@ function drawHorizontal(keywordlist, datalist, chartName) {
             labels: [
                 //x 축
                 keywordlist[0],keywordlist[1],keywordlist[2],keywordlist[3],keywordlist[4],
-                keywordlist[5],keywordlist[6],keywordlist[7],keywordlist[8],keywordlist[9],keywordlist[10]
+                keywordlist[5],keywordlist[6],keywordlist[7],keywordlist[8],keywordlist[9],
             ],
             datasets: [
                 { //데이터
@@ -228,7 +228,7 @@ function drawHorizontal(keywordlist, datalist, chartName) {
                                                 'rgba(	209,219,244, 0.5)',
                                                 'rgba(	213,222,245, 0.5)',
                                                 'rgba(	217,225,246, 0.5)',
-                                                'rgba(	220,228,246, 0.5)',
+                                                'rgba(	240,244,251, 0.5)',
                     ],
                     borderColor: [
                          'rgba(	162,183,235, 1)',
@@ -240,7 +240,7 @@ function drawHorizontal(keywordlist, datalist, chartName) {
                                                 'rgba(	209,219,244, 1)',
                                                 'rgba(	213,222,245, 1)',
                                                 'rgba(	217,225,246, 1)',
-                                                'rgba(	220,228,246, 1)',
+                                                'rgba(	240,244,251, 1)',
                     ],
                     borderWidth: 5,
                 }
