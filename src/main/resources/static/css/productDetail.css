@@ -115,11 +115,12 @@
     border-radius: 60px;
     background-color: #A2B7EB;
     color: white;
+    text-align: center;
 }
 
 #content1 > div > div.prd_detail > div.c_type > p > span{
     margin-top: 7%;
-    margin-left: 18%;
+
 }
 
 /* 하트 버튼 */
