@@ -27,20 +27,20 @@
         </div>
         <div class="container2">
             <div class="imgBox">
-                <img src="./img/face1.png" alt="이미지 사진">
+                <img src="/img/face1.png" alt="이미지 사진">
             </div>
             <div class="type">
-                <strong>DSPW</strong>
+                <strong>{{answer.mb_result}}</strong>
             </div>
             <div class="myBox">
-                <strong>uno</strong><strong>님</strong><br>
-                <p> DSPW 피부타입으로 경미한 건성과,심한 민감성, <br>비색소성, 탄력적인 피부입니다.</p>
+                <strong>{{sessionMember.mb_name}}</strong><strong>님</strong><br>
+                <p> {{answer.mb_result}} 피부타입으로 {{result.result_comment}}</p>
             </div>
             <div class="a1">
                 <h3>추천 성분</h3>
             </div>
             <div class="info">
-                <p><sapn>어린 쑥 <br> 피부진정/수분</sapn></p>
+                <p>{{Ingredients}}</p>
             </div>
         </div>
 
@@ -51,26 +51,26 @@
                 </div>
                 <div class="typImg1">
                     <div class="abcType1">
-                        <h2>D</h2>
+                        <h2>{{type1}}</h2>
                     </div>
                     <div class="abcType2">
-                        <h2>S</h2>
+                        <h2>{{type2}}</h2>
                     </div>
                     <ul>
-                        <li><img src="/img/dry.png"></li>
-                        <li><img src="/img/sensitive.png"></li>
+                        <li><img src="/img/type/{{type1}}.png"></li>
+                        <li><img src="/img/type/{{type2}}.png"></li>
                    </ul>
                 </div>
                 <div class="typImg2">
                     <div class="abcType3">
-                        <h2>P</h2>
+                        <h2>{{type3}}</h2>
                     </div>
                     <div class="abcType4">
-                        <h2>W</h2>
+                        <h2>{{type4}}</h2>
                     </div>
                     <ul>
-                        <li><img src="/img/pigment.png"></li>
-                        <li><img src="/img/wrinkle.png"></li>
+                        <li><img src="/img/type/{{type3}}.png"></li>
+                        <li><img src="/img/type/{{type4}}.png"></li>
                     </ul>
                 </div>
             </div>
@@ -79,30 +79,30 @@
                     <h3>바우만 설문 조사부 타입</h3>
                 </div>
                 <div class="graphType1">
-                    <h2>D</h2>
+                    <h2>{{type1}}</h2>
                 </div>
                 <div class="graphType2">
-                    <h2>S</h2>
+                    <h2>{{type2}}</h2>
                 </div>
                 <div class="graphType3">
-                    <h2>P</h2>
+                    <h2>{{type3}}</h2>
                 </div>
                 <div class="graphType4">
-                    <h2>W</h2>
+                    <h2>{{type4}}</h2>
                 </div>
                 <div class="graph2">
 
                     <div class="graph stack1">
-                        <span style="width: 75%;">75%</span>
+                        <span style="width: {{answer.a_part1}}%;">{{answer.a_part1}}%</span>
                     </div>
                     <div class="graph stack2">
-                        <span style="width: 60%;">60%</span>
+                        <span style="width: {{answer.a_part2}}%;">{{answer.a_part2}}%</span>
                     </div>
                     <div class="graph stack3">
-                        <span style="width: 25%;">25%</span>
+                        <span style="width: {{answer.a_part3}}%;">{{answer.a_part3}}%</span>
                     </div>
                     <div class="graph stack4">
-                        <span style="width: 55%;">55%</span>
+                        <span style="width: {{answer.a_part4}}%;">{{answer.a_part4}}%</span>
                     </div>
                 </div>
             </div>
