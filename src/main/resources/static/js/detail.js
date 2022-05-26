@@ -165,9 +165,11 @@ function drawPie(reviewlist, chartName) {
                     data: reviewlist,
                     backgroundColor: [
                         'rgba(	187,203,240, 0.5)',
+                        'rgba(	240, 239, 239, 0.5)'
                     ],
                     borderColor: [
                          'rgba(	187,203,240, 1)',
+                         'rgba(	240, 239, 239, 1)'
                     ],
                     borderWidth: 5
                 }
