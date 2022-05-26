@@ -64,10 +64,13 @@ function drawDoughnut(skinlist, datalist, chartName) {
                     fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                     data: datalist,
                     backgroundColor: [
-                        'rgba(	116, 187, 235, 0.5)',
-                    ],
+                        'rgba(153,167,203, 0.5)',
+                        'rgba(167,191,254,0.5)',
+                        'rgba(192,209,254,0.5)'],
                     borderColor: [
-                        'rgba(	116, 187, 235, 1)',
+                         'rgba(255,255,255, 1)',
+                         'rgba(255,255,255, 1)',
+                         'rgba(255,255,255, 1)',
                     ],
                     borderWidth: 5
                 }
@@ -111,10 +114,10 @@ function drawRadar(datalist, chartName) {
                     fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                     data: datalist,
                     backgroundColor: [
-                        'rgba(	116, 187, 235, 0.5)',
+                        'rgba(255, 99, 132, 0.5)',
                     ],
                     borderColor: [
-                        'rgba(	116, 187, 235, 1)',
+                         'rgba(255, 99, 132, 1)',
                     ],
                     borderWidth: 5
                 }
@@ -161,10 +164,10 @@ function drawPie(reviewlist, chartName) {
                     fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                     data: reviewlist,
                     backgroundColor: [
-                        'rgba(	116, 187, 235, 0.5)',
+                        'rgba(	187,203,240, 0.5)',
                     ],
                     borderColor: [
-                        'rgba(	116, 187, 235, 1)',
+                        'rgba(	187,203,240, 1)',
                     ],
                     borderWidth: 5
                 }
@@ -281,6 +284,7 @@ function drawWord(keylist,valuelist,chartName){
 
         // display the word cloud chart
         chart.container(chartName);
+        chart.normal().fill("#609efa");
         chart.draw();
       });
 }

@@ -32,7 +32,7 @@
     font-style: normal;
 }
 
-#container{
+#container1{
     position:absolute;
     top: 20%;
     /* border: solid black 3px; */
@@ -58,7 +58,7 @@
 .prd_img{
     border: 2px rgb(51, 150, 207);
     margin-top: 10%;
-    height: 70%;
+    height: 71%;
     width: 35.2%;
     /* border: 1px solid rgb(105, 105, 107); */
     display: flex;
@@ -199,43 +199,72 @@
       margin-top: 2%;
   }
 
+#content_all{
+  height: 2050px;
+  width: 75%;
+  background-color: white;
+  margin-left: 12.5%;
+}
+
+
 /* content2 */
 
 #content2{
-  width: 100%;
+  width: 80%;
   height: 1020px;
 }
 
+
+.user_type1{
+  margin-right: 10%;
+}
+
 #content2 > div > div > div.user_txt {
-    width: 280px;
+  width: 280px;
     height: 40px;
-    margin-left: 435px;
-    margin-top: -60px;
+    margin-left: 165px;
+    margin-top: 40px;
     margin-bottom: 50px;
-    color: white;
-    border-radius: 100px;
-    background-color: #74bbeb;
+    color: black;
+    float: left;
+    white-space: nowrap;
 }
 
 #content2 > div > div > div.user_txt > div.user_txt_2{
-  padding-left: 12%;
-  padding-top: 3%;
-  font-size: 18px;
+  font-size: 29px;
+  font-weight: bold;
+  margin-left: 10%;
+  margin-top: 5%;
+  color: #154183;;
 }
 
+#content2 > div > div > div.user_txt > div.user_txt_3{
+  margin-top: 10%;
+  margin-left: 10%;
+  font-size: 21px;
+}
+
+#myChart{
+  margin-top: 200px;
+  margin-left: 80px;
+  position: absolute;
+  height: 300px;
+  width: 350px;
+}
 /* 사용자 피부타입 아이콘 */
 
 .user_type2{
   margin-left: 180px;
-  width: 60%;
-  height: 100%;
-  /* border: 3px solid black; */
-  display: flex;
-  justify-content: center;
-  margin-left: 32%;
-  margin-top: -2%;
-  /* flex-wrap: wrap; */
+    width: 60%;
+    height: 100%;
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: center;
+    margin-left: 630px;
+    margin-top: 180px;
 }
+
+
 .user_icon{
   width: 160px;
     height: 230px;
@@ -279,8 +308,8 @@
   display: flex;
   width: 100%;
   height: 500px;
-  margin-top: 5%;
-  margin-left: 21%;
+  margin-top: 6%;
+    margin-left: 17%;
 }
 
 .skin_type{
@@ -290,7 +319,7 @@
 .skin_type_title{
   width: 300px;
     height: 10%;
-    background-color: #DBE8F4;
+    background-color: #74acff;
     border-radius: 3px;
     /* margin-right: 10%; */
     border-radius: 10px;
@@ -300,16 +329,17 @@
 }
 
 .type_txt{
-  font-size: 17px;
+  font-size: 21px;
   text-align: center;
   padding-top: 5%;
+  color: white;
 }
 
 /* 그래프 */
 .user_radar{
   width: 320px;
   height: 320px;
-  margin-left: 400px;
+  margin-left: 150px;
   margin-top: -15px;
 }
 
@@ -323,8 +353,9 @@
 /* 상세페이지3 */
 
 #content3{
-  width: 100%;
+  width: 80%;
   height: 1020px;
+  margin-top: 5%;
 }
 
 .review_container{
@@ -337,17 +368,28 @@
 .r_percentage{
   width: 350px;
   height: 350px;
-
+  margin-left: 7%;
+  margin-top: 3%;
 }
 
 .keyword_container{
   width: 100px;
   height: 100px;
   display: flex;
+  margin-right: -200px;
+  margin-left: 40px;
+}
+
+.keyword_box{
+  margin-left: 50px;
 }
 
 .keyword_title{
   text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #474444;
 }
 
 /* 워드 클라우드 */
@@ -355,23 +397,51 @@
   width: 900px;
   height: 400px;
   display: flex;
-  border: 1px black solid;
-  margin-top: 23%;
-  margin-left: -20%;
+  margin-top: 38%;
+  margin-left: -25%;
 }
 
 .word_cloud{
   width: 50%;
   height: 100%;
-  border: #f38b8b 1px solid;
+  padding-right: 150px;
+
+}
+
+.line1{
+ margin-left: 50px;
+ width: 530px;
+
+}
+
+.line2{
+  margin-left: 40px;
+  width: 530px;
+
+ }
+
+.word_txt{
+  margin-left: 35%;
+  text-align: center;
+    margin-bottom: 30px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #474444;
 }
 
 #myChart8{
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 380px;
+  margin-top: 10px;
 }
 
 #myChart9{
-  width: 500px;
-  height: 500px;
+  width:600px;
+  height: 380px;
+  margin-top: 10px;
+}
+
+#myChart5{
+  width: 250px;
+  height: 250px;
 }

@@ -42,15 +42,17 @@
                     </div>
                 </div>
 
+                <div id="content_all"> <!--상세페이지2,3-->
                 <div id="content2"> <!--상세페이지2-->
                     <div class="user_type_container">
                         <div class="user_type1">
                             <div class="user_txt">
-                                <div class="user_txt_2">구매자의 피부타입 분포도</div>
+                                <div class="user_txt_2">제품 리뷰어 분포</div>
+                                <div class="user_txt_3">구매자의 피부타입 및 제품의 긍정, 부정 리뷰를 키워드로 나타냅니다.</div>
                             </div>
                             <div class="user_radar">
                                 <!--차트가 그려질 부분-->
-                                <canvas id="myChart"></canvas>
+                                <canvas id="myChart" width="370" height="370" style="display: block"></canvas>
                             </div>
                         </div>
 
@@ -99,7 +101,7 @@
                                 </div>
                                 <div class="user_doughnut">
                                 <!--차트가 그려질 부분-->
-                                <canvas id="myChart2"></canvas>
+                                    <canvas id="myChart2" width="300" height="300" style="display: block; height: 150px; width: 300px;"></canvas>
                             </div>
                         </div>
                         <div class="skin_type">
@@ -129,36 +131,39 @@
                 <div id="content3">
                     <div class="review_container">
                         <div class="r_percentage">
-                            <canvas id="myChart5"></canvas>
+                            <canvas id="myChart5" width="300" height="300" style="display: block; height: 300px; width: 300px;"></canvas>
                         </div>
                         <div class="keyword_container">
                             <div class="keyword_box">
                                 <div class="keyword_title">[긍정 키워드]</div>
-                                <canvas id="myChart6"></canvas>
+                                <canvas id="myChart6" width="330" height="300" style="display: block"></canvas>
                             </div>
                             <div class="keyword_box">
                                 <div class="keyword_title">[부정 키워드]</div>
-                                <canvas id="myChart7"></canvas>
+                                <canvas id="myChart7" width="330" height="300" style="display: block"></canvas>
                             </div>
                         </div>
                         <div class="cloud_container">
-                            <div class="word_cloud">[긍정 리뷰]
+                            <div class="word_cloud">
+                                <div class="word_txt">긍정 리뷰 </div>
+                                <hr class="line1">
                                 <div class="chart-area">
                                     <div id="myChart8"></div>
                                 </div>
                             </div>
 
-                            <div class="word_cloud">[부정 리뷰]
+                            <div class="word_cloud">
+                                <div class="word_txt">부정 리뷰 </div>
+                                <hr class="line2">
                                 <div class="chart-area">
                                     <div id="myChart9"></div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
-
+                </div>
             </div> <!-- container-->
 
 
