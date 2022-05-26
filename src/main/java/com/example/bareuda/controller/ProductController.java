@@ -117,7 +117,7 @@ public class ProductController {
         Member member = (Member) session.getAttribute("sessionMember");
         JSONObject obj = new JSONObject();
         Gson gson = new Gson();
-
+        log.info("search1:"+search1);
         Product product1 = productServiceImpl.findById(Integer.parseInt(search1));
         Product product2 = productServiceImpl.findById(Integer.parseInt(search2));
 
