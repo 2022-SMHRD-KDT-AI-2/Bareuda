@@ -1,3 +1,6 @@
+body{
+display: flex;
+}
 .container{
     background-color: #E5E5E5;
     width: 100%;
@@ -6,11 +9,11 @@
     padding-top: 10%;
 }
 .container_1{
-    width: 100%;
-    height: 90%;
-    background-color: white;
-    margin-left: 6%;
-    margin-top: 1%;
+      width: 42%;
+      height: 90vh;
+      background-color: white;
+      margin-left: 5%;
+      margin-top: 1%;
 
 }
 .a1{
@@ -24,7 +27,7 @@
 }
 .a2{
     width: 10vw;
-    height: 7vh;
+    height: 8vh;
     background-color: #A2B7EB;
     border-radius: 20px;
     position: absolute;
@@ -33,7 +36,7 @@
 }
 .a3{
     width: 24vw;
-    height: 7vh;
+    height: 8vh;
     background-color: #A2B7EB;
     border-radius: 20px;
     position: absolute;
@@ -42,7 +45,7 @@
 }
 .a4{
     width: 21vw;
-    height: 7vh;
+    height: 8vh;
     background-color: #A2B7EB;
     border-radius: 20px;
     position: absolute;
@@ -52,13 +55,13 @@
 .type{
     position: absolute;
     top:41%;
-    left: 23%;
+    left: 22%;
     font-size: 3rem;
 
 }
 h1{
     text-align: center;
-    font-size: 3rem;
+
     color: white;
     padding-top: 28px;
 }
@@ -97,11 +100,14 @@ li{
     border: 2px solid;
     font-size:22px;
 }
+.info>ul>li{
+      margin-top:-3%;
+      margin-left: -5%;
+}
 .container_2{
-    width: 100vw;
+    width: 42%;
     height: 90vh;
     background-color: white;
-    margin-right: 6%;
     margin-left: 6%;
     margin-top: 1%;
 }
@@ -185,6 +191,10 @@ li{
         top:90%;
     }
 }
+
+
+
+
 body{
     overflow-x:hidden ;
     margin: 0px;
