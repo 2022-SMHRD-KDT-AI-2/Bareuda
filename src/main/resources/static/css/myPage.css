@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  display: flex;
 }
 .containers{
   display: flex;
@@ -25,7 +26,7 @@ body{
 }
 .boxLeft{
      text-align: center;
-     width: 64%;
+     width: 67%;
      height: 15vh;
      margin-left: 19%;
      padding-top: 15%;
@@ -41,19 +42,22 @@ font-weight: bold;
   height: 84%;
   background-color: orange;
   margin-top: 8%
-
-}.a1{
+}
+.info>p{
+     padding-top: 5%;
+}
+.a1{
        width: 15%;
       height: 7%;
       background-color: #A2B7EB;
       border-radius: 20px;
       position: absolute;
-      top: 66%;
+      top: 70%;
       left: 29%;
 }
 .a1>h3{
     padding-top: 5%;
-    font-size: 35px;
+    font-size: 30px;
 }
 .info{
     position: absolute;
@@ -62,25 +66,9 @@ font-weight: bold;
     width: 36%;
     height: 12vh;
     border: 2px solid;
+    text-align: center;
 }
-ul{
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
-li{
-  margin: 0px;
-  margin-right: 15px;
-  padding: 0px;
-}
-.info>ul>li{
-  float: left;
-  text-align: center;
-  font-size: 28px;
-  padding-left: 11px;
-  margin-left: 6%;
-  margin-top: 3%;
-}
+
 
 .container3{
   width: 40%;
@@ -94,12 +82,12 @@ li{
     background-color: #A2B7EB;
     border-radius: 20px;
     position: absolute;
-    left: 68%;
-    top: 23%;
+    left: 67%;
+    top: 21%;
 }
 .a2>h3{
     padding-top: 4%;
-    font-size: 35px;
+    font-size: 30px;
 }
 .a3{
     width: 19%;
@@ -108,11 +96,11 @@ li{
     border-radius: 20px;
     position: absolute;
     left: 67%;
-    top: 58%;
+    top: 55%;
 }
 .a3>h3{
-    padding-top: 4%;
-    font-size: 35px;
+    padding-top: 3%;
+    font-size: 30px;
 }
 h3{
   text-align: center;
@@ -121,28 +109,22 @@ h3{
 }
 a{
     text-decoration: none;
-    font-size: 21px;
+    font-size: 17px;
 }
 .myBox{
-    margin-top: 44%;
+    margin-top: 46%;
     margin-left: 3%;
     text-align: center;
     font-size: 28px;
 
 }
-.graph1{
-    width: 6%;
-    height: 46%;
-    border: 2px solid;
-    margin-top: 21%;
-    margin-left: 47%;
-}
 .graph2{
-    width: 6%;
-    height: 46%;
-    border: 2px solid;
-    margin-top: 52%;
-    margin-left: 47%;
+    width: 25%;
+    height: 32%;
+
+    position: absolute;
+    top: 66%;
+    left: 63%;
 }
 .type{
     position: absolute;
@@ -154,7 +136,134 @@ a{
 
 }
 .imgBox{
+     position: absolute;
+     top: 19%;
+     left: 31%;
+     border: 1px solid;
+     width: 12%;
+     height: 31%;
+     background-color: lightskyblue;
+}
+.imgBox>img{
+    width:12vw;
+}
+.typImg1>ul>li{
+      float: left;
+      margin-left: 19%;
+      margin-top: 20%;
+}
+
+.typImg1>ul>li>img{
+      width: 36%;
+      border-radius: 100%;
+}
+
+.typImg2>ul>li{
+     float: left;
+     margin-left:19%;
+}
+.typImg2>ul>li>img{
+      width: 36%;
+      border-radius: 100%;
+}
+h2{
+
+}
+.abcType1{
     position: absolute;
-    top: 31%;
-    left: 35%;
+    top: 33%;
+    left: 71%;
+    border: 1px solid;
+    border-radius: 100%;
+    width: 3%;
+    background-color: #A2B7EB;
+    color: white;
+
+    text-align: center;
+    height: 6%;
+    font-size: 27px;
+}
+.abcType2{
+    position: absolute;
+    top: 33%;
+    left: 77%;
+    width: 3%;
+    height: 6%;
+    text-align: center;
+    background-color: bisque;
+    border-radius: 100%;
+    font-size: 26px;
+    color: white;
+}
+.abcType3{
+    position: absolute;
+    width: 3%;
+    height: 6%;
+    background-color: aquamarine;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    top: 42%;
+    left: 71%;
+}
+.abcType4{
+    position: absolute;
+    width: 3%;
+    height: 6%;
+    background-color: coral;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    top: 42%;
+    left: 77%;
+}
+.graphType1{
+position: absolute;
+        width: 45px;
+        height: 42px;
+    background-color: coral;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    top: 66%;
+    left: 60%;
+}
+.graphType2{
+   position: absolute;
+       width: 45px;
+       height: 42px;
+    background-color: coral;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    top: 71%;
+    left: 60%;
+}
+.graphType3{
+    position: absolute;
+       width: 45px;
+       height: 42px;
+    background-color: aquamarine;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    top: 76%;
+    left: 60%;
+}
+.graphType4{
+    position: absolute;
+       width: 45px;
+       height: 42px;
+    background-color: aquamarine;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    top: 81%;
+    left: 60%;
 }

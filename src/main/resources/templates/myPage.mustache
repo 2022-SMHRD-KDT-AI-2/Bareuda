@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/myPage.css">
-
+    <link rel="stylesheet" href="/css/graph.css">
 
     <!-- CSS -->
 
@@ -27,39 +27,84 @@
         </div>
         <div class="container2">
             <div class="imgBox">
-                <img src="" alt="이미지 사진">
+                <img src="/img/face1.png" alt="이미지 사진">
             </div>
             <div class="type">
-                <strong>DSPW</strong>
+                <strong>{{answer.mb_result}}</strong>
             </div>
             <div class="myBox">
-                <strong>uno</strong><strong>님</strong><br>
-                <p> DSPW 피부타입으로 경미한 건성과,심한 민감성, <br>비색소성, 탄력적인 피부입니다.</p>
+                <strong>{{sessionMember.mb_name}}</strong><strong>님</strong><br>
+                <p> {{answer.mb_result}} 피부타입으로 {{result.result_comment}}</p>
             </div>
             <div class="a1">
                 <h3>추천 성분</h3>
             </div>
             <div class="info">
-                <ul>
-                    <li>어린 쑥 <br> 피부진정/수분</li>
-                    <li>히알루론산<br>수분 효과 </li>
-                    <li>트리플 리뉴 <br>피부활력/탄력공급</li>
-                </ul>
+                <p>{{Ingredients}}</p>
             </div>
         </div>
 
         <div class="container3">
             <div>
                 <div class="a2">
-                    <h3>모든 피부타입 분포</h3>
+                    <h3> 나의 피부 타입 </h3>
                 </div>
-                <div class="graph1">그래프 넣는 곳</div>
+                <div class="typImg1">
+                    <div class="abcType1">
+                        <h2>{{type1}}</h2>
+                    </div>
+                    <div class="abcType2">
+                        <h2>{{type2}}</h2>
+                    </div>
+                    <ul>
+                        <li><img src="/img/type/{{type1}}.png"></li>
+                        <li><img src="/img/type/{{type2}}.png"></li>
+                   </ul>
+                </div>
+                <div class="typImg2">
+                    <div class="abcType3">
+                        <h2>{{type3}}</h2>
+                    </div>
+                    <div class="abcType4">
+                        <h2>{{type4}}</h2>
+                    </div>
+                    <ul>
+                        <li><img src="/img/type/{{type3}}.png"></li>
+                        <li><img src="/img/type/{{type4}}.png"></li>
+                    </ul>
+                </div>
             </div>
             <div>
                 <div class="a3">
                     <h3>바우만 설문 조사부 타입</h3>
                 </div>
-                <div class="graph2">그래프</div>
+                <div class="graphType1">
+                    <h2>{{type1}}</h2>
+                </div>
+                <div class="graphType2">
+                    <h2>{{type2}}</h2>
+                </div>
+                <div class="graphType3">
+                    <h2>{{type3}}</h2>
+                </div>
+                <div class="graphType4">
+                    <h2>{{type4}}</h2>
+                </div>
+                <div class="graph2">
+
+                    <div class="graph stack1">
+                        <span style="width: {{answer.a_part1}}%;">{{answer.a_part1}}%</span>
+                    </div>
+                    <div class="graph stack2">
+                        <span style="width: {{answer.a_part2}}%;">{{answer.a_part2}}%</span>
+                    </div>
+                    <div class="graph stack3">
+                        <span style="width: {{answer.a_part3}}%;">{{answer.a_part3}}%</span>
+                    </div>
+                    <div class="graph stack4">
+                        <span style="width: {{answer.a_part4}}%;">{{answer.a_part4}}%</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
