@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/productComparison.css">
-    <link rel="stylesheet" href="/css/productComparison1.css">
-    <link rel="stylesheet" href="/css/productComparison2.css">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/css/myChart.css">
@@ -31,9 +30,7 @@
             width:100vw
             height: 100vh;
         }
-       #s1{
 
-        }
         #s2{
 
         }
@@ -46,9 +43,7 @@
 
     <!-- /content -->
 
-        <section id="s1">
-            <h1> section 1</h1>
-            <a href="#s2">section 2로 이동</a>
+
 
         <div class="containers">
             <div class="container1">
@@ -56,13 +51,14 @@
                 <input class="searchInput search1" type="text" placeholder="비교 제품을 입력하세요.">
                </div>
                <div class="img1">
-                <img src="" alt="제품">
+                <img src="./img/lotion2.png" alt="제품">
               </div>
                 <div class="ch_Product1">
+                    <img src="./img/free-icon.png" alt="">
                     <ul>
-                        <li><a href="">이름</a></li>
-                        <li><a href="">브랜드</a></li>
-                        <li><a href=""> 가격</a></li>
+                        <li><a href="" >이름</a></li>
+                        <li><a href="" >브랜드</a></li>
+                        <li><a href="" > 가격</a></li>
                     </ul>
                 </div>
             </div>
@@ -84,18 +80,19 @@
                     <input class="searchInput search2"  type="text" placeholder="비교 제품을 입력하세요.">
                 </div>
                 <div class="img2">
-                    <img src="" alt="제품">
+                    <img src="./img/lotion2.png" alt="제품">
                 </div>
                 <div class="ch_Product2">
+                    <img src="./img/free-icon.png" alt="">
                     <ul>
-                        <li><a href="">이름</a></li>
-                        <li><a href="">브랜드</a></li>
-                        <li><a href=""> 가격</a></li>
+                        <li><a href="" >이름</a></li>
+                        <li><a href="" >브랜드</a></li>
+                        <li><a href="" > 가격</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        </section>
+
         <section id="s2">
             <a href="#">top</a>
 
@@ -107,7 +104,7 @@
                         <canvas id="myChart" style="height:70vh; width:90vw"></canvas>
                     </div>
                     <div class="myPie">
-                        <canvas id="myPie" style="height:70vh; width:90vw"></canvas>
+                        <canvas id="myPie" ></canvas>
                     </div>
                 </div>
 
@@ -121,7 +118,7 @@
                     </div>
 
                     <div class="myPie1">
-                        <canvas id="myPie1" style="height:70vh; width:90vw"></canvas>
+                        <canvas id="myPie1" ></canvas>
                     </div>
 
 
@@ -137,355 +134,37 @@
         <div class="containers2">
             <div class="container_4">
 
-                <div class="chart-area">
-                    <div id="container" style="width:100%; height:100%;"></div>
-                </div>
-                <div class="chart-area1">
-                    <div id="container1" style="width:100%; height:100%;"></div>
+                <div class="a4">
+                    <h3>리뷰 긍정 워드 클라우드</h3>
                 </div>
 
-            </div>
-            <div class="container_5">
-                <div class="a4"><h3>긍정 워드 클라우드</h3></div>
-                <div class="a5"><h3>부정 워드 클라우드</h3></div>
-            </div>
-            <div class="container_6">
-                <div class="chart-area2">
-                    <div id="container2" style="width:100%; height:100%;"></div>
+                <div class="chart-area">
+                    <div id="container" ></div>
                 </div>
-                <div class="chart-area3">
-                    <div id="container3" style="width:100%; height:100%;"></div>
+            </div>
+
+            <div class="container_6">
+                <div class="a5">
+                    <h3>리뷰 부정 워드 클라우드</h3>
+                </div>
+                <div class="chart-area2">
+                    <div id="container2" ></div>
                 </div>
             </div>
 
         </div>
         </section>
-
-        <!--방사형 차트 오른쪽-->
-        <script type="text/javascript">
-    var context = document
-      .getElementById('myChart')
-      .getContext('2d');
-    var myChart = new Chart(context, {
-      type: 'radar', // 차트의 형태
-      data: { // 차트에 들어갈 데이터
-        labels: [
-          //x 축
-          '지성', '건성', '중성', '민감성', '복합성'
-        ],
-        datasets: [
-          { //데이터
-            label: '나의 피부타입', //차트 제목
-            fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-            data: [
-              21, 19, 25, 20, 23//x축 label에 대응되는 데이터 값
-            ],
-            backgroundColor: [
-              //색상
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-
-            ],
-            borderColor: [
-              //경계선 색상
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-            ],
-            borderWidth: 1 //경계선 굵기
-          },
-          {
-            label: '제품 리뷰 타입',
-            fill: true,
-            data: [
-              14, 24, 12, 24, 20
-            ],
-            backgroundColor:  'rgba(116, 187, 235, 0.5)',
-            borderColor: ' rgba(116, 187, 235, 0.5)'
-          }
-        ]
-      },
-      options: {
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                display: false,
-                min: 0,
-                max: 0,
-                stepSize: 10,
-                beginAtZero: true
-              }
-            }
-          ]
-        }
-      }
-    });
-  </script>
-        <!--방사형 차트 왼쪽-->
-        <script type="text/javascript">
-    var context = document
-      .getElementById('myChart1')
-      .getContext('2d');
-    var myChart = new Chart(context, {
-      type: 'radar', // 차트의 형태
-      data: { // 차트에 들어갈 데이터
-        labels: [
-          //x 축
-          '지성', '건성', '중성', '민감성', '복합성'
-        ],
-        datasets: [
-          { //데이터
-            label: '나의 피부타입', //차트 제목
-            fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-            data: [
-              21, 19, 25, 20, 23//x축 label에 대응되는 데이터 값
-            ],
-            backgroundColor: [
-              //색상
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-
-            ],
-            borderColor: [
-              //경계선 색상
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-            ],
-            borderWidth: 1 //경계선 굵기
-          },
-          {
-            label: '제품 리뷰 타입',
-            fill: true,
-            data: [
-              14, 24, 12, 24, 20
-            ],
-            backgroundColor:  'rgba(116, 187, 235, 0.5)',
-            borderColor:  'rgba(116, 187, 235, 0.5)'
-          }
-        ]
-      },
-      options: {
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                display: false,
-                min: 0,
-                max: 0,
-                stepSize: 10,
-                beginAtZero: true
-              }
-            }
-          ]
-        }
-      }
-    });
-  </script>
-
-        <!--pie차트 오른쪽-->
-        <script type="text/javascript">
-    var context = document
-      .getElementById('myPie')
-      .getContext('2d');
-    var myChart = new Chart(context, {
-      type: 'pie', // 차트의 형태
-      data: { // 차트에 들어갈 데이터
-        labels: [
-          //x 축
-          '긍정', '부정'
-        ],
-        datasets: [
-          { //데이터
-            label: 'test1', //차트 제목
-            fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-            data: [
-              80, 19, //x축 label에 대응되는 데이터 값
-            ],
-            backgroundColor: [
-              //색상
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-
-            ],
-            borderColor: [
-              //경계선 색상
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-            ],
-            borderWidth: 1 //경계선 굵기
-          },
-          {
-            label: 'test2',
-            fill: true,
-            data: [
-
-            ],
-            backgroundColor: 'rgb(157, 109, 12)',
-            borderColor: 'rgb(157, 109, 12)'
-          }
-        ]
-      },
-      options: {
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                display: false,
-                min: 0,
-                max: 0,
-                stepSize: 10,
-                beginAtZero: true
-              }
-            }
-          ]
-        }
-      }
-    });
-  </script>
-        <!--파이 차트 왼쪽-->
-        <script type="text/javascript">
-    var context = document
-      .getElementById('myPie1')
-      .getContext('2d');
-    var myChart = new Chart(context, {
-      type: 'pie', // 차트의 형태
-      data: { // 차트에 들어갈 데이터
-        labels: [
-          //x 축
-          '긍정', '부정'
-        ],
-        datasets: [
-          { //데이터
-            label: 'test1', //차트 제목
-            fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-            data: [
-              21, 19//x축 label에 대응되는 데이터 값
-            ],
-            backgroundColor: [
-              //색상
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-            ],
-            borderColor: [
-              //경계선 색상
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-            ],
-            borderWidth: 1 //경계선 굵기
-          },
-          { label: 'test2',
-            fill: true,
-            data: [
-
-            ],
-            backgroundColor: 'rgb(157, 109, 12)',
-            borderColor: 'rgb(157, 109, 12)'
-          }
-        ]
-      },
-      options: {
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                display: false,
-                min: 0,
-                max: 0,
-                stepSize: 10,
-                beginAtZero: true
-              }
-            }
-          ]
-        }
-      }
-    });
-  </script>
-        <!--긍정 클라우드 오른쪽-->
-        <script>
-anychart.onDocumentReady(function () {
-    var data = [
-        {
-            "x": "촉촉",
-            "value": 590000000,
-            category: "Sino-Tibetan"
-        },
-        {
-            "x": "보습",
-            "value": 283000000,
-            category: "Indo-European"
-        },
-        {
-            "x": "보습력",
-            "value": 544000000,
-            category: "Indo-European"
-        },
-        {
-            "x": "좋아요",
-            "value": 527000000,
-            category: "Indo-European"
-        }, {
-            "x": "수분",
-            "value": 422000000,
-            category: "Afro-Asiatic"
-        }, {
-            "x": "흡수력",
-            "value": 620000000,
-            category: "Afro-Asiatic"
-        }
-    ];
-    var chart = anychart.tagCloud(data);
-    chart.angles([0]);
-    chart.container("container");
-    // chart.getCredits().setEnabled(false);
-    chart.draw();
-});
-</script>
-        <!--부정 클라우드 오른쪽-->
+    <script src="/js/comparison.js"></script>
+    <script>
+var myPie = drawPie([50,50], 'myPie');
+var myPie1 = drawPie([50,50], 'myPie1');
+var myChart = drawRadar([34,13,34,21,12], 'myChart');
+var myChart1 = drawRadar([34,13,34,21,12], 'myChart1');
+var container = drawWord(['좋아요','촉촉','수분감','산듯함','가성비'],[30,60,40,37,70], 'container');
+var container2 = drawWord(['냄새','트러블','여드름','별로','민감','자극적','고민'],[30,60,45,67,43,23], 'container2');
+    </script>
 
 
-        <!--긍정 클라우드 왼쪽-->
-        <script>
-anychart.onDocumentReady(function () {
-    var data = [
-         {
-            "x": "촉촉",
-            "value": 590000000,
-            category: "Sino-Tibetan"
-        },
-        {
-            "x": "보습",
-            "value": 283000000,
-            category: "Indo-European"
-        },
-        {
-            "x": "보습력",
-            "value": 544000000,
-            category: "Indo-European"
-        },
-        {
-            "x": "좋아요",
-            "value": 527000000,
-            category: "Indo-European"
-        }, {
-            "x": "수분",
-            "value": 422000000,
-            category: "Afro-Asiatic"
-        }, {
-            "x": "흡수력",
-            "value": 620000000,
-            category: "Afro-Asiatic"
-        }
-    ];
-    var chart = anychart.tagCloud(data);
-    chart.angles([0]);
-    chart.container("container2");
-    // chart.getCredits().setEnabled(false);
-    chart.draw();
-});
-</script>
-        <!--부정 클라우드 오른쪽-->
-
-
-
-    {{>layouts/footer}}
     <script type="text/javascript" src="/js/comparison.js"></script>
+    {{>layouts/footer}}
+

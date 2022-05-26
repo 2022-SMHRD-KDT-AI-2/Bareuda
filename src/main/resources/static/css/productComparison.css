@@ -37,18 +37,28 @@ body{
     left: 18%;
 }
 .img1{
-    width: 55%;
-    height: 50%;
-    border: 2px solid;
-    margin-top: 32%;
-    margin-left: 23%;
+     width: 55%;
+     height: 50%;
+     border: 1px solid whitesmoke;
+     margin-top: 32%;
+     margin-left: 23%;
+}
+.img1>img{
+    width: 99%;
+    height: 100%;
 }
 .ch_Product1{
-     width: 55%;
-     height: 10%;
-     border: 2px solid;
-     margin-left: 23%;
-     text-align: center;
+    width: 55%;
+    height: 19%;
+    border: 1px solid whitesmoke;
+    margin-left: 23%;
+    text-align: center;
+}
+.ch_Product1>img{
+    width: 3%;
+    position: absolute;
+    top: 83%;
+    left: 18%;
 }
 ul>li{
   list-style: none;
@@ -117,19 +127,29 @@ ul>li{
     left: 72%;
 }
 .img2{
-    width: 55%;
-    height: 50%;
-    border: 2px solid;
-    margin-top: 32%;
-    margin-left: 23%;
+     width: 55%;
+     height: 50%;
+     border: 1px solid whitesmoke;
+     margin-top: 32%;
+     margin-left: 23%;
 
 }
+.img2>img{
+      width: 99%;
+      height: 100%;
+}
 .ch_Product2{
-     width: 55%;
-     height: 10%;
-     border: 2px solid;
-     margin-left: 23%;
-     text-align: center;
+    width: 55%;
+    height: 19%;
+    border: 1px solid whitesmoke;
+    margin-left: 23%;
+    text-align: center;
+}
+.ch_Product2>img{
+    width: 3%;
+    position: absolute;
+    top: 83%;
+    left: 72%;
 }
 .research2>input{
    width: 11vw;
@@ -142,4 +162,173 @@ ul>li{
 }
 .research2>input:focus{
    outline: 2px solid #E5E5E5;
+}
+
+
+
+
+
+.containers1 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: yellow;
+    margin-top: 5%;
+}
+.container_1{
+
+    margin-left: 6%;
+     width: 33%;
+     height: 107%;
+     background-color: white;
+     margin-top: -4%;
+}
+.container_2 {
+    width: 20%;
+   height: 107%;
+    background-color: white;
+     margin-top: -4%;
+
+}
+.a2{
+    background-color: #A2B7EB;
+    width: 78%;
+    height: 6%;
+    border-radius: 20px;
+    margin-top: 38%;
+    text-align: center;
+    margin-left: 13%;
+}
+.a2>h3{
+    color: white;
+    font-size: 26px;
+    padding-top: 3%;
+}
+.a3{
+    background-color: #A2B7EB;
+    width: 78%;
+    height: 6%;
+    border-radius: 20px;
+    margin-top: 97%;
+    text-align: center;
+    margin-left: 13%;
+}
+.a3>h3{
+    color: white;
+    font-size: 26px;
+    padding-top: 3%;
+}
+.container_3 {
+    width: 34%;
+    height: 107%;
+    background-color: white;
+    margin-top: -4%;
+}
+.myChart{
+    margin-top: -23%;
+    position: relative;
+    width: 390%;
+    margin-left: -138%;
+}
+.myPie{
+    margin-top: 12%;
+    width: 500px;
+    height: 500px;
+    margin-left: 14%;
+}
+.myChart1{
+     margin-top: -23%;
+     position: relative;
+     width: 390%;
+     margin-left: -159%;
+}
+.myPie1{
+    margin-top: 8%;
+    width: 500px;
+    height: 500px;
+}
+#myChart{
+    margin-top: 6%;
+}
+#myPie{
+    margin-top: 9%;
+}
+#myChart1{
+    margin-top: 6%;
+}
+#myPie1{
+    margin-top: 9%;
+}
+
+
+.containers2 {
+     display: flex;
+     width: 100vw;
+     height: 100vh;
+     margin-top:4%;
+     background-color: orange;
+
+}
+.container_4{
+        margin-left: 6%;
+        width: 44%;
+        height: 93%;
+        background-color: white;
+        margin-top: 3%;
+}
+.chart-area{
+    width: 82%;
+    height: 60%;
+    margin-top: 38%;
+    margin-left: 10%;
+
+}
+
+.a4{
+     width: 12%;
+     height: 4%;
+     position: absolute;
+     border-radius: 4%;
+     left: 23%;
+     top: 243%;
+     background-color: #A2B7EB;
+     padding-left: 1%;
+     padding-top: 1%;
+     font-size: 16px;
+     color: white;
+}
+.a5{
+       width: 12%;
+       height: 4%;
+       position: absolute;
+       border-radius: 4%;
+       left: 65%;
+       top: 243%;
+       background-color: #A2B7EB;
+           padding-left: 1%;
+           padding-top: 1%;
+           font-size: 16px;
+           color: white;
+}
+.container_6 {
+    width: 44%;
+    height: 93%;
+    background-color: white;
+    margin-top: 3%;
+
+}
+.chart-area2{
+    width: 82%;
+    height: 60%;
+    margin-top: 38%;
+    margin-left: 8%;
+
+}
+#container{
+      width: 36vw;
+      height: 55vh;
+}
+#container2{
+      width: 36vw;
+      height: 55vh;
 }

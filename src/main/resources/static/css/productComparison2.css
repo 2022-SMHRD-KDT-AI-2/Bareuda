@@ -8,70 +8,55 @@
 }
 .container_4{
     margin-left: 6%;
-    width: 34%;
+    width: 44%;
     height: 100%;
     background-color: white;
 }
 .chart-area{
-    width: 60%;
-    height: 29%;
-    margin-top: 18%;
-    margin-left: 18%;
+    width: 82%;
+    height: 60%;
+    margin-top: 38%;
+    margin-left: 10%;
+    border: 2px solid;
 }
-.chart-area1{
-    width: 60%;
-    height: 29%;
-    margin-top: 24%;
-    margin-left: 18%;
-}
-.container_5 {
-    width: 20%;
-    height: 100%;
-    background-color: white;
-}
+
 .a4{
-    background-color: #A2B7EB;
-    width: 78%;
-    height: 6%;
-    border-radius: 20px;
-    margin-top: 58%;
-    text-align: center;
-    margin-left: 13%;
-}
-.a4>h3{
-    color: white;
-    font-size: 26px;
-    padding-top: 3%;
+     width: 12%;
+     height: 4%;
+     position: absolute;
+     border-radius: 4%;
+     left: 23%;
+     top: 243%;
+     background-color: #A2B7EB;
+     padding-left: 1%;
+     padding-top: 1%;
+     font-size: 16px;
+     color: white;
 }
 .a5{
-    background-color: #A2B7EB;
-    width: 78%;
-    height: 6%;
-    border-radius: 20px;
-    margin-top: 97%;
-    text-align: center;
-    margin-left: 13%;
-}
-.a5>h3{
-    color: white;
-    font-size: 26px;
-    padding-top: 3%;
+       width: 12%;
+       height: 4%;
+       position: absolute;
+       border-radius: 4%;
+       left: 65%;
+       top: 243%;
+       background-color: #A2B7EB;
+           padding-left: 1%;
+           padding-top: 1%;
+           font-size: 16px;
+           color: white;
 }
 .container_6 {
-    width: 34%;
+    width: 44%;
     height: 100%;
     background-color: white;
 
 }
 .chart-area2{
-    width: 60%;
-    height: 29%;
-    margin-top: 18%;
-    margin-left: 18%;
+    width: 82%;
+    height: 60%;
+    margin-top: 38%;
+    margin-left: 8%;
+     border: 2px solid;
 }
-.chart-area3{
-    width: 60%;
-    height: 29%;
-    margin-top: 24%;
-    margin-left: 18%;
-}
+
