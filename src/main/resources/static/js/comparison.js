@@ -58,10 +58,16 @@ function comparison(){
                 var product2 = JSON.parse(data.product2);
                 $(".img1 img").attr("src", "/img/products/"+product1["p_img"]);
                 $(".img2 img").attr("src", "/img/products/"+product2["p_img"]);
+                $(".p_name1").text(product1["p_name"]);
+                $(".p_name2").text(product2["p_name"]);
+                $(".p_brand1").text(product1["p_brand"]);
+                $(".p_brand2").text(product2["p_brand"]);
+                $(".p_price1").text(product1["p_price"]);
+                $(".p_price2").text(product2["p_price"]);
                 var detail1 = JSON.parse(data.detail1);
                 var detail2 = JSON.parse(data.detail2);
-                // var myChart1 = drawRadar([detail1["type_o"],detail1["type_d"],detail1["type_n"],detail1["type_t"],detail1["type_c"]], 'myChart1');
-                // var myChart2 = drawRadar([detail2["type_o"],detail2["type_d"],detail2["type_n"],detail2["type_t"],detail2["type_c"]], 'myChart2');
+                var myChart = drawRadar([detail1["type_o"],detail1["type_d"],detail1["type_n"],detail1["type_t"],detail1["type_c"]], 'myChart');
+                var myChart1 = drawRadar([detail2["type_o"],detail2["type_d"],detail2["type_n"],detail2["type_t"],detail2["type_c"]], 'myChart1');
             },
             error:
             function (request, status, error){
@@ -81,27 +87,24 @@ function comparison(){
                     alert("2단 ajax 성공");
                     var pos_rate1 = parseInt(data.pos_rate1);
                     var neg_rate1 = parseInt(data.neg_rate1);
-                    var pos_words1 = data.pos_words1;
-                    var neg_words1 = data.neg_words1;
-                    var pos_weights1 = data.pos_weights1;
-                    var neg_weights1 = data.neg_weights1;
+                    var words1 = data.words1;
+                    var weights1 = data.weights1;
+                    var words2 = data.words2;
+                    var weights2 = data.weights2;
 
                     var pos_rate2 = parseInt(data.pos_rate2);
                     var neg_rate2 = parseInt(data.neg_rate2);
-                    var pos_words2 = data.pos_words2;
-                    var neg_words2 = data.neg_words2;
-                    var pos_weights2 = data.pos_weights2;
-                    var neg_weights2 = data.neg_weights2;
+
 
                     console.log(pos_rate1);
                     console.log(neg_rate1);
                     console.log(pos_rate2);
                     console.log(neg_rate2);
 
-                    //var myPie1 = drawPie([pos_rate1,neg_rate1], 'myPie1'); // 왼쪽 긍부정
-                    //var myPie2 = drawPie([pos_rate2,neg_rate2], 'myPie2'); // 오른쪽 긍부정
-                    //var cloud1 = drawWord(words1, weights1,'cloud1'); // 왼쪽 워드 클라우드
-                    //var cloud2 = drawWord(words2, weights2,'cloud2'); // 오른쪽 워드 클라우드
+                    var myPie = drawPie([pos_rate1,neg_rate1], 'myPie'); // 왼쪽 긍부정
+                    var myPie1 = drawPie([pos_rate2,neg_rate2], 'myPie1'); // 오른쪽 긍부정
+                    var container = drawWord(words1, weights1,'container'); // 왼쪽 워드 클라우드
+                    var container2 = drawWord(words2, weights2,'container2'); // 오른쪽 워드 클라우드
                 },
             error:
             function (request, status, error){
