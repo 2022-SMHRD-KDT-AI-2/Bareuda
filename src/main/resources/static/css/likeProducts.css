@@ -6,13 +6,13 @@ body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: green;
+
 }
 
 .container1 {
     width: 13%;
     height: 84%;
-    background-color: orange;
+    background-color: white;
     margin-top: 8%;
     margin-left: 3%;
 
@@ -22,7 +22,7 @@ body {
     width: 65%;
     height: 72vh;
     border-right: 3px solid black;
-    background-color: yellowgreen;
+    background-color: white;
     margin-top: 20%;
     margin-left: 34%;
 }
@@ -48,17 +48,17 @@ font-size:17px;
 .container2 {
     width: 80%;
     height: 84%;
-    background-color: yellow;
+    background-color: white;
     margin-top: 8%;
 
 }
 .productsList{
-width: 74%;
-    height: 30%;
-    background-color: whitesmoke;
-    position: absolute;
-    top: 23%;
-    left: 19%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 .productsList>ul>{
      list-style: none;
@@ -67,7 +67,45 @@ width: 74%;
 .productsList>ul>li{
      float:left;
 }
-
 img{
+        width: 12%;
+        margin-top: 2%;
+        border: 1px solid #A2B7BB;
+        height:28%;
+}
+.p_brand2{
+    color: #807D7D;
+    margin-bottom: 4%;
+    font-size: 25px;
+}
+.p_name2{
+      margin-bottom: 8%;
+      font-size: 18px;
+      padding-top: 4%;
+      font-weight: 100;
+}
+.p_price2{
+    font-weight: bold;
+    color: #A2B7EB;
+    font-size: 18px;
+}
+.likeInfo{
+    width: 10%;
+    height: 10%;
+    margin-left: 1%;
+    margin-top: 0%;
+    display: inline-block;
+}
+.proWrap{
+   width 99%;
+   margin-top: 3%;
+   height:87%;
+  text-align: center;
+    margin-left: 1%;
+    display: inline-block;
 
+}
+strong{
+  color: #A2B7EB;
+  font-size: 18px;
 }
