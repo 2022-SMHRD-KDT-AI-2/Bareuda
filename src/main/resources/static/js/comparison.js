@@ -51,7 +51,7 @@ function comparison(){
             success:
             function(data){
                 succ(data);
-                alert("1단 ajax 성공-3");
+                //alert("1단 ajax 성공-3");
                 // 사진 변경
                 // 브랜드, 이름, 가격, 타입
                 var product1 = JSON.parse(data.product1);
@@ -84,7 +84,7 @@ function comparison(){
             data: {"p_id1":$('#search1').val(),"p_id2":$('#search2').val()},
             success:
                 function(data){
-                    alert("2단 ajax 성공");
+                    //alert("2단 ajax 성공");
                     var pos_rate1 = parseInt(data.pos_rate1);
                     var neg_rate1 = parseInt(data.neg_rate1);
                     var words1 = data.words1;
