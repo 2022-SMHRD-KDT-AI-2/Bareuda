@@ -23,27 +23,28 @@
      height: 180%;
      background-color: #F8F8F8;
 }
-      html{
+        html{
             scroll-behavior: smooth;
         }
-      section{
-            width:100vw
-            height: 100vh;
-        }
+        section{
 
+        }
+        #s1{
+
+        }
         #s2{
-
-        }
-         #s3{
-
+              /* margin-top: 1%; */
+    position: absolute;
+    /* margin-left: 49%; */
+    top: 306%;
+    left: 49%;
+    font-size: 25px;
         }
 </style>
     <!-- CSS -->
     {{>layouts/header}}
 
     <!-- /content -->
-
-
 
         <div class="containers">
             <div class="container1">
@@ -54,11 +55,10 @@
                 <img src="/img/lotion2.png" alt="제품">
               </div>
                 <div class="ch_Product1">
-                    <img src="/img/free-icon.png" alt="">
                     <ul>
-                        <li><a href="" class="p_name1">이름</a></li>
-                        <li><a href="" class="p_brand1">브랜드</a></li>
-                        <li><a href="" class="p_price1"> 가격</a></li>
+                        <li><a href="" class="p_name1">브랜드</a></li>
+                        <li><a href="" class="p_brand1">이름</a></li>
+                        <li><a href="" class="p_price1">가격 :</a>원</li>
                     </ul>
                 </div>
             </div>
@@ -83,18 +83,15 @@
                     <img src="/img/lotion2.png" alt="제품">
                 </div>
                 <div class="ch_Product2">
-                    <img src="/img/free-icon.png" alt="">
+
                     <ul>
-                        <li><a href="" class="p_name2">이름</a></li>
-                        <li><a href="" class="p_brand2">브랜드</a></li>
-                        <li><a href="" class="p_price2"> 가격</a></li>
+                        <li><a href="" class="p_name2">브랜드</a></li>
+                        <li><a href="" class="p_brand2">이름</a></li>
+                        <li><a href="" class="p_price2"> 가격 :</a>원</li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <section id="s2">
-            <a href="#">top</a>
 
         <!-- 2페이지-->
         <div class="containers1">
@@ -120,15 +117,9 @@
                     <div class="myPie1">
                         <canvas id="myPie1" ></canvas>
                     </div>
-
-
                 </div>
             </div>
         </div>
-        </section>
-
-        <section id="s3">
-            <a href="#">top</a>
 
         <!-- 3페이지 -->
         <div class="containers2">
@@ -143,6 +134,7 @@
                 </div>
             </div>
 
+
             <div class="container_6">
                 <div class="a5">
                     <h3>리뷰 부정 워드 클라우드</h3>
@@ -153,13 +145,19 @@
             </div>
 
         </div>
+    <section id="s2">
+        <a href="#">top</a>
         </section>
     <script src="/js/comparison.js"></script>
     <script>
 
     </script>
-
-
     <script type="text/javascript" src="/js/comparison.js"></script>
-    {{>layouts/footer}}
+    </body>
+    <footer>
+        <div class="end">
+            <p>&COPY; 2022 Bareuda(함정재 김재혁 박소연 이도연 이윤호)</p>
+        </div>
+    </footer>
+</html>
 

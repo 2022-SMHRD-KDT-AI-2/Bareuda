@@ -5,15 +5,14 @@ body{
      display: flex;
       width: 100vw;
       height: 100vh;
-      background-color: green;
-      top: 12vh;
+      top: 10%;
       position: relative;;
 }
 .container1 {
-    margin-top: 8%;
+    margin-top: 7%;
     margin-left: 6%;
     width: 34%;
-    height: 84%;
+    height: 95%;
     background-color: white;
 }
 .research1>input:focus{
@@ -23,8 +22,8 @@ body{
    transition: 0.5s;
 }
 .research1>input{
-   width: 11vw;
-   height: 3vh;
+   width: 28vw;
+   height: 4vh;
    font-size: 18px;
    border:none;
    border-radius: 11px;
@@ -34,7 +33,7 @@ body{
 .research1{
     position: absolute;
     top: 26%;
-    left: 18%;
+    left: 10%;
 }
 .img1{
      width: 55%;
@@ -48,11 +47,12 @@ body{
     height: 100%;
 }
 .ch_Product1{
-    width: 55%;
-    height: 19%;
-    border: 1px solid whitesmoke;
-    margin-left: 23%;
-    text-align: center;
+        width: 55%;
+        height: 13%;
+        border: 1px solid whitesmoke;
+        margin-left: 23%;
+        text-align: center;
+        padding-top: 5%;
 }
 .ch_Product1>img{
     width: 3%;
@@ -64,11 +64,14 @@ ul>li{
   list-style: none;
 
 }
+ul>li>a{
+
+}
 .container2 {
     width: 20%;
-    height: 84%;
+    height: 95%;
     background-color: white;
-    margin-top: 8%;
+    margin-top: 7%;
 }
 .a1{
     background-color: #A2B7EB;
@@ -82,7 +85,7 @@ ul>li{
 .a1>h3{
     color: white;
     font-size: 26px;
-    padding-top: 3%;
+    padding-top: 5%;
 }
 .btn_area1{
     margin-top: 21%;
@@ -116,15 +119,15 @@ ul>li{
 
 .container3 {
     width: 34%;
-    height: 84%;
+    height: 95%;
     background-color: white;
-    margin-top: 8%;
+    margin-top: 7%;
 
 }
 .research2{
     position: absolute;
     top: 26%;
-    left: 72%;
+    left: 63%;
 }
 .img2{
      width: 55%;
@@ -140,10 +143,11 @@ ul>li{
 }
 .ch_Product2{
     width: 55%;
-    height: 19%;
+    height: 13%;
     border: 1px solid whitesmoke;
     margin-left: 23%;
     text-align: center;
+    padding-top: 5%;
 }
 .ch_Product2>img{
     width: 3%;
@@ -152,8 +156,8 @@ ul>li{
     left: 72%;
 }
 .research2>input{
-   width: 11vw;
-   height: 3vh;
+   width: 28vw;
+   height: 4vh;
    font-size: 18px;
    border:none;
    border-radius: 11px;
@@ -166,13 +170,13 @@ ul>li{
 
 
 
-
+/**2페이지**/
 
 .containers1 {
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: yellow;
+
     margin-top: 5%;
 }
 .container_1{
@@ -202,7 +206,7 @@ ul>li{
 .a2>h3{
     color: white;
     font-size: 26px;
-    padding-top: 3%;
+    padding-top: 4%;
 }
 .a3{
     background-color: #A2B7EB;
@@ -216,10 +220,10 @@ ul>li{
 .a3>h3{
     color: white;
     font-size: 26px;
-    padding-top: 3%;
+    padding-top: 4%;
 }
 .container_3 {
-    width: 34%;
+    width: 35%;
     height: 107%;
     background-color: white;
     margin-top: -4%;
@@ -260,28 +264,26 @@ ul>li{
     margin-top: 9%;
 }
 
-
+/**3페이지**/
 .containers2 {
      display: flex;
      width: 100vw;
      height: 100vh;
      margin-top:4%;
-     background-color: orange;
 
 }
 .container_4{
-        margin-left: 6%;
-        width: 44%;
-        height: 93%;
-        background-color: white;
-        margin-top: 3%;
+    margin-left: 6%;
+    width: 44%;
+    height: 95%;
+    background-color: white;
+    margin-top: 2%;
 }
 .chart-area{
     width: 82%;
-    height: 60%;
-    margin-top: 38%;
+    height: 61%;
+    margin-top: 31%;
     margin-left: 10%;
-
 }
 
 .a4{
@@ -290,7 +292,7 @@ ul>li{
      position: absolute;
      border-radius: 4%;
      left: 23%;
-     top: 243%;
+     top: 234%;
      background-color: #A2B7EB;
      padding-left: 1%;
      padding-top: 1%;
@@ -303,32 +305,37 @@ ul>li{
        position: absolute;
        border-radius: 4%;
        left: 65%;
-       top: 243%;
+       top: 234%;
        background-color: #A2B7EB;
-           padding-left: 1%;
-           padding-top: 1%;
-           font-size: 16px;
-           color: white;
+       padding-left: 1%;
+       padding-top: 1%;
+       font-size: 16px;
+       color: white;
 }
 .container_6 {
     width: 44%;
-    height: 93%;
+    height: 95%;
     background-color: white;
-    margin-top: 3%;
-
+    margin-top: 2%;
 }
 .chart-area2{
     width: 82%;
-    height: 60%;
-    margin-top: 38%;
+    height: 61%;
+    margin-top: 31%;
     margin-left: 8%;
-
 }
 #container{
-      width: 36vw;
-      height: 55vh;
+     width: 36vw;
+         height: 57vh;
 }
 #container2{
       width: 36vw;
-      height: 55vh;
+      height: 57vh;
+}
+.end{
+        text-align: center;
+        width: 100%;
+        height: 49px;
+        position: absolute;
+        margin-top: 0%;
 }
