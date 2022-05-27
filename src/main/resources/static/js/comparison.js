@@ -136,10 +136,10 @@ function drawRadar(datalist, chartName) {
                     fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                     data: datalist,
                     backgroundColor: [
-                        'rgba(	116, 187, 235, 0.5)',
+                         'rgba(	171,190,237, 0.5)',
                     ],
                     borderColor: [
-                        'rgba(	116, 187, 235, 1)',
+                         'rgba(	171,190,237, 1)',
                     ],
                     borderWidth: 5
                 }
@@ -186,10 +186,12 @@ function drawPie(reviewlist, chartName) {
                     fill: true, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                     data: reviewlist,
                     backgroundColor: [
-                        'rgba(	116, 187, 235, 0.5)',
+                         'rgba(	187,203,240, 0.5)',
+                         'rgba(	240, 239, 239, 0.5)'
                     ],
                     borderColor: [
-                        'rgba(	116, 187, 235, 1)',
+                        'rgba(	187,203,240, 1)',
+                         'rgba(	240, 239, 239, 1)'
                     ],
                     borderWidth: 5
                 }
@@ -217,7 +219,24 @@ function drawWord(keylist,valuelist,chartName){
         var data = [
             [keylist[0], valuelist[0]],
             [keylist[1], valuelist[1]],
-            [keylist[2], valuelist[2]]
+            [keylist[2], valuelist[2]],
+            [keylist[3], valuelist[3]],
+            [keylist[4], valuelist[4]],
+            [keylist[5], valuelist[5]],
+            [keylist[6], valuelist[6]],
+            [keylist[7], valuelist[7]],
+            [keylist[8], valuelist[8]],
+            [keylist[9], valuelist[9]],
+            [keylist[10], valuelist[10]],
+            [keylist[11], valuelist[11]],
+            [keylist[12], valuelist[12]],
+            [keylist[13], valuelist[13]],
+            [keylist[14], valuelist[14]],
+            [keylist[15], valuelist[15]],
+            [keylist[16], valuelist[16]],
+            [keylist[17], valuelist[17]],
+            [keylist[18], valuelist[18]],
+            [keylist[19], valuelist[19]],
           ];
 
        // create a tag (word) cloud chart
@@ -236,7 +255,6 @@ function drawWord(keylist,valuelist,chartName){
         chart.draw();
       });
 }
-
 
 
 
