@@ -6,13 +6,13 @@ body{
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: green;
+  background-color: white;
 }
 
 .container1{
      width: 13%;
      height: 84%;
-     background-color: skyblue;
+     background-color: white;
      margin-top: 8%;
      margin-left: 3%;
 }
@@ -20,7 +20,7 @@ body{
     width: 65%;
     height: 72vh;
     border-right: 3px solid black;
-    background-color: yellowgreen;
+    background-color: white;
     margin-top: 20%;
     margin-left: 34%;
 }
@@ -40,7 +40,7 @@ font-weight: bold;
 .container2{
   width: 40%;
   height: 84%;
-  background-color: orange;
+  background-color: white;
   margin-top: 8%
 }
 .info>p{
@@ -65,7 +65,7 @@ font-weight: bold;
     left: 18%;
     width: 36%;
     height: 12vh;
-    border: 2px solid;
+    border: 2px solid whitesmoke;
     text-align: center;
 }
 
@@ -73,7 +73,7 @@ font-weight: bold;
 .container3{
   width: 40%;
   height: 84%;
-  background-color: yellow;
+  background-color: white;
   margin-top: 8%
 }
 .a2{
@@ -138,10 +138,10 @@ a{
      position: absolute;
      top: 19%;
      left: 31%;
-     border: 1px solid;
+     border: 1px solid whitesmoke;
      width: 12%;
      height: 31%;
-     background-color: lightskyblue;
+     background-color: rgba(168, 209, 245, 0.158);
 }
 .imgBox>img{
     width:12vw;
