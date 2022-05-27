@@ -97,7 +97,7 @@ li{
     left: 9%;
     width: 35vw;
     height: 12vh;
-    border: 2px solid;
+    border: 2px solid whitesmoke;
     font-size:22px;
 }
 .info>ul>li{
@@ -191,10 +191,141 @@ li{
         top:90%;
     }
 }
+/** 그래프 타입**/
+.grphType1{
+    width: 46px;
+    height: 42px;
+    border-radius: 100%;
+    position: absolute;
+    top: 41%;
+    left: 54%;
+     background-color: burlywood;
 
+}
+.grphType1>h2{
+   padding-left: 11px;
+   font-size: 29px;
+}
+.grphType2{
+    width: 46px;
+    height: 42px;
+    border-radius: 100%;
+    position: absolute;
+    top: 46%;
+    left: 54%;
+    background-color: aqua;
+}
+.grphType2>h2{
+   padding-left: 11px;
+    font-size: 29px;
+}
 
+.grphType3{
+   width: 46px;
+    height: 42px;
+    border-radius: 100%;
+    position: absolute;
+    top: 51%;
+    left: 54%;
+    background-color: aqua;
+}
 
+.grphType3>h2{
+    padding-left: 11px;
+    font-size: 29px;
+}
+.grphType4{
+   width: 46px;
+    height: 42px;
+    border-radius: 100%;
+    position: absolute;
+    top: 56%;
+     left: 54%;
+    background-color: aqua;
+}
+.grphType4>h2{
+   padding-left: 11px;
+   font-size: 29px;
+}
 
+/** 나의 피부 타입 **/
+.myTypeImg{
+
+}
+.myTypeImg>ul>li{
+  float:left;
+}
+.myTypeImg>ul>li>img{
+    margin-top: 542%;
+    margin-left: -39%;
+}
+.skinType1{
+    width: 56px;
+    height: 54px;
+
+    border-radius: 100%;
+    background-color: aqua;
+    position: absolute;
+    top: 93%;
+    left:59%
+}
+.skinType1>h2{
+     padding-left: 16px;
+     font-size: 36px;
+}
+.skinType2{
+      width: 56px;
+      height: 54px;
+
+      border-radius: 100%;
+      background-color: aqua;
+      position: absolute;
+      top: 93%;
+      left:67%
+}
+.skinType2>h2{
+   padding-left: 16px;
+    font-size: 36px;
+}
+.myTypeImg1{
+
+}
+.myTypeImg1>ul>li{
+  float:left;
+}
+.myTypeImg1>ul>li>img{
+   margin-top: 542%;
+   margin-left: -41%;
+}
+.skinType3{
+      width: 56px;
+      height: 54px;
+
+      border-radius: 100%;
+      background-color: aqua;
+      position: absolute;
+      top: 93%;
+      left:76%
+}
+.skinType3>h2{
+    padding-left: 16px;
+    font-size: 36px;
+}
+.skinType4{
+    width: 56px;
+    height: 54px;
+
+    border-radius: 100%;
+    background-color: aqua;
+    position: absolute;
+    top: 93%;
+    left: 84%;
+}
+.skinType4>h2{
+   padding-left: 16px;
+    font-size: 36px;
+}
+/** 2page **/
 body{
     overflow-x:hidden ;
     margin: 0px;
@@ -254,15 +385,80 @@ img{
     margin-top: 5%
 
 }
- .conInfo1>p{
+.conInfo1>p{
     padding-top: 0%;
     font-size: 26px;
     margin-top: 8%;
     margin-left: -1%;
-    }
+}
 .conInfo2>p{
     margin-top: 6%;
     margin-left: -4%;
     font-size: 26px;
     padding-top:3%
+}
+.graph{
+    background: #ccc;
+    height: 40px;
+    border-radius: 40px;
+    margin: 2px 2px 6px;
+}
+.graph span {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    border-radius: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: #fff;
+}
+.graph.stack1 span{
+    animation: stack 2s 1;
+    background:pink;}
+.graph.stack2 span{
+    animation: stack2 2s 1;
+    background:violet;}
+.graph.stack3 span{
+    animation: stack3 2s 1;
+    background:orange;}
+.graph.stack4 span{
+    animation: stack4 2s 1;
+    background:rgb(0, 255, 47);}
+.graph_containers{
+    position: absolute;
+    width: 37%;
+    height: 4vh;
+    top: 41%;
+    left: 55%;}
+@keyframes stack{
+    0%{ width: 0;
+        color: rgba(255, 255, 255, 0);}
+    40%{color: rgba(255, 255, 255, 1);}
+    100%{width: 75%;}
+}
+@keyframes stack2{
+    0%{ width: 0;
+        color: rgba(255, 255, 255, 0);}
+    40%{color: rgba(255, 255, 255, 1);}
+    100%{width: 60%;}
+}
+@keyframes stack3{
+    0%{ width: 0;
+        color: rgba(255, 255, 255, 0);}
+    40%{color: rgba(255, 255, 255, 1);}
+    100%{width: 25%;}
+}
+@keyframes stack4{
+    0%{ width: 0;
+        color: rgba(255, 255, 255, 0);}
+    40%{color: rgba(255, 255, 255, 1);}
+    100%{width: 55%;}
+}
+.end{
+       text-align: center;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+
 }

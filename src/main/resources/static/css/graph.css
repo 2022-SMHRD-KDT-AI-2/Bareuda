@@ -31,11 +31,11 @@
     animation: stack4 2s 1;
     background:rgb(0, 255, 47);}
 .graph_containers{
-    position: absolute;
-    width: 37%;
-    height: 4vh;
-    top: 41%;
-    left: 55%;
+     position: absolute;
+     width: 35%;
+     height: 4vh;
+     top: 41%;
+     left: 57%;
 }
 @keyframes stack{
     0%{ width: 0;
