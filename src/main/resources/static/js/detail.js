@@ -26,6 +26,9 @@ $(function() {
         var myChart6 = drawHorizontal(pos_words,pos_weights, 'myChart6');
         var myChart7 = drawHorizontal(neg_words,neg_weights, 'myChart7');
 
+        var myChart8 = drawWord(pos_words,pos_weights,'myChart8');
+        var myChart9 = drawWord(neg_words,neg_weights,'myChart9');
+
         console.log(pos_rate);
         console.log(neg_rate);
         console.log(pos_words);
