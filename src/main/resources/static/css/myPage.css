@@ -1,3 +1,9 @@
+html{
+    margin: 0px;
+    padding: 0;
+    margin-left: 0%;
+}
+
 body{
   margin: 0;
   display: flex;
@@ -6,9 +12,8 @@ body{
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: white;
-}
 
+}
 .container1{
      width: 13%;
      height: 84%;
@@ -19,17 +24,17 @@ body{
 .box1{
     width: 65%;
     height: 72vh;
-    border-right: 3px solid black;
+    border-right: 2px solid black;
     background-color: white;
     margin-top: 20%;
     margin-left: 34%;
 }
 .boxLeft{
-     text-align: center;
-     width: 67%;
+     /**text-align: center;**/
+     width: 64%;
      height: 15vh;
      margin-left: 19%;
-     padding-top: 15%;
+     /**padding-top: 1%;**/
 }
 .boxLeft>ul>li{
  padding-top:14%
@@ -42,6 +47,7 @@ font-weight: bold;
   height: 84%;
   background-color: white;
   margin-top: 8%
+
 }
 .info>p{
      padding-top: 5%;
