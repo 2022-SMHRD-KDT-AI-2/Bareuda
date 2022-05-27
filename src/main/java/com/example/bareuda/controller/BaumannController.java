@@ -30,6 +30,11 @@ public class BaumannController {
         model.addAttribute("answer", answer);
         Ingredients ingredients = baumannService.getRecommendedIngredients(answer.getMb_result());
         model.addAttribute("Ingredients", ingredients.getI_name().replace("<br>", "\n"));
+
+        model.addAttribute("type1", answer.getMb_result().charAt(0));
+        model.addAttribute("type2", answer.getMb_result().charAt(1));
+        model.addAttribute("type3", answer.getMb_result().charAt(2));
+        model.addAttribute("type4", answer.getMb_result().charAt(3));
         return "baumannResult";
     }
 
