@@ -21,10 +21,7 @@ $(function() {    //화면 다 뜨면 시작
                });
             }, // source를 ajax로 받아온 거임. source 끝.
         select : function(event, ui) {
-//            console.log(ui);
-//            console.log(ui.item.label);
-//            console.log(ui.item.value);
-            console.log(ui.item.p_id);
+            //console.log(ui.item.p_id);
             if($(this).attr('class').match("search1")){
                 $("#search1").val(ui.item.p_id);
             }else{
@@ -95,11 +92,10 @@ function comparison(){
                     var pos_rate2 = parseInt(data.pos_rate2);
                     var neg_rate2 = parseInt(data.neg_rate2);
 
-
-                    console.log(pos_rate1);
-                    console.log(neg_rate1);
-                    console.log(pos_rate2);
-                    console.log(neg_rate2);
+//                    console.log(pos_rate1);
+//                    console.log(neg_rate1);
+//                    console.log(pos_rate2);
+//                    console.log(neg_rate2);
 
                     var myPie = drawPie([pos_rate1,neg_rate1], 'myPie'); // 왼쪽 긍부정
                     var myPie1 = drawPie([pos_rate2,neg_rate2], 'myPie1'); // 오른쪽 긍부정

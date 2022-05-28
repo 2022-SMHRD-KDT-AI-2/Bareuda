@@ -4,7 +4,6 @@ function getParameterByName(name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 var p_id = getParameterByName('p_id');
-console.log(p_id);
 $(function() {
     $.ajax({
     url: "http://222.102.43.36:5023/",
@@ -29,12 +28,12 @@ $(function() {
         var myChart8 = drawWord(pos_words,pos_weights,'myChart8');
         var myChart9 = drawWord(neg_words,neg_weights,'myChart9');
 
-        console.log(pos_rate);
-        console.log(neg_rate);
-        console.log(pos_words);
-        console.log(neg_words);
-        console.log(pos_weights);
-        console.log(neg_weights);
+//        console.log(pos_rate);
+//        console.log(neg_rate);
+//        console.log(pos_words);
+//        console.log(neg_words);
+//        console.log(pos_weights);
+//        console.log(neg_weights);
     },
     error:
     function (request, status, error){
