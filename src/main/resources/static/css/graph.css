@@ -1,5 +1,5 @@
 .graph{
-    background: #ccc;
+    background: #CCCCCC2B;
     height: 40px;
     border-radius: 40px;
     margin: 2px 2px 6px;
@@ -9,8 +9,6 @@
     height: 40px;
     line-height: 40px;
     text-align: right;
-
-
     border-radius: 40px;
     padding: 0 10px;
     box-sizing:  border-box;
@@ -18,18 +16,18 @@
 
 }
 .graph.stack1 span{
-    animation: stack 2s 1;
-    background:pink;
+    animation: stack 1s;
+    background:rgb(187 203 240 / 50%);
 }
 .graph.stack2 span{
-    animation: stack2 2s 1;
-    background:violet;}
+    animation: stack2 1s;
+    background:rgb(167 186 237);}
 .graph.stack3 span{
-    animation: stack3 2s 1;
-    background:orange;}
+    animation: stack3 1s;
+    background:rgb(157 178 234 / 68%);}
 .graph.stack4 span{
-    animation: stack4 2s 1;
-    background:rgb(0, 255, 47);}
+    animation: stack4 1s;
+    background:rgb(167 188 237 / 81%);}
 .graph_containers{
      position: absolute;
      width: 35%;
@@ -39,26 +37,26 @@
 }
 @keyframes stack{
     0%{ width: 0;
-        color: rgba(255, 255, 255, 0);}
-    40%{color: rgba(255, 255, 255, 1);}
+        color: rgba(187,203,240, 0.5);}
+    40%{color: rgba(240, 239, 239, 0.5);}
     100%{width: 75%;}
 }
 @keyframes stack2{
     0%{ width: 0;
-        color: rgba(255, 255, 255, 0);}
-    40%{color: rgba(255, 255, 255, 1);}
+        color: rgba(187,203,240, 0.5);}
+    40%{color: rgba(240, 239, 239, 0.5);}
     100%{width: 60%;}
 }
 @keyframes stack3{
     0%{ width: 0;
-        color: rgba(255, 255, 255, 0);}
-    40%{color: rgba(255, 255, 255, 1);}
+        color: rgba(187,203,240, 0.5);}
+    40%{color: rgba(240, 239, 239, 0.5);}
     100%{width: 25%;}
 }
 @keyframes stack4{
     0%{ width: 0;
-        color: rgba(255, 255, 255, 0);}
-    40%{color: rgba(255, 255, 255, 1);}
+        color: rgba(187,203,240, 0.5);}
+    40%{color: rgba(240, 239, 239, 0.5);}
     100%{width: 55%;}
 }
 

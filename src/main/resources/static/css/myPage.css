@@ -29,6 +29,7 @@ body{
     margin-top: 20%;
     margin-left: 34%;
 }
+
 .boxLeft{
      /**text-align: center;**/
      width: 64%;
@@ -48,6 +49,10 @@ body{
   background-color: white;
   margin-top: 8%
 
+}
+
+.myBox>p{
+ font-size: 18px;
 }
 .info>p{
      padding-top: 5%;
@@ -134,10 +139,24 @@ a{
     position: absolute;
     top: 42%;
     left: 32%;
+    padding-left: 4px;
 }
 .type>strong{
-    font-size: 57px;
+    font-size: 61px;
+    color: #4976e5;
 
+}
+#mem_name{
+   font-weight: bold;
+    color: #4976e5;
+}
+#nim{
+   font-weight: bold;
+}
+#my_type{
+    font-weight: bold;
+    color: #4976e575;
+    font-size: 20px;
 }
 .imgBox{
     position: absolute;
@@ -181,7 +200,7 @@ h2{
     border: 1px solid;
     border-radius: 100%;
     width: 3%;
-    background-color: #A2B7EB;
+    background-color: #a2b7ebbd;
     color: white;
 
     text-align: center;
@@ -195,7 +214,7 @@ h2{
     width: 3%;
     height: 6%;
     text-align: center;
-    background-color: bisque;
+    background-color: #7a97e3a8;
     border-radius: 100%;
     font-size: 26px;
     color: white;
@@ -204,7 +223,7 @@ h2{
     position: absolute;
     width: 3%;
     height: 6%;
-    background-color: aquamarine;
+    background-color: #2555d173;
     border-radius: 100%;
     text-align: center;
     color: white;
@@ -216,7 +235,7 @@ h2{
     position: absolute;
     width: 3%;
     height: 6%;
-    background-color: coral;
+    background-color: #bacaf0e3;
     border-radius: 100%;
     text-align: center;
     color: white;
@@ -225,10 +244,10 @@ h2{
     left: 77%;
 }
 .graphType1{
-position: absolute;
-        width: 45px;
-        height: 42px;
-    background-color: coral;
+    position: absolute;
+    width: 45px;
+    height: 42px;
+    background-color: #a2b7ebbd;
     border-radius: 100%;
     text-align: center;
     color: white;
@@ -238,9 +257,9 @@ position: absolute;
 }
 .graphType2{
    position: absolute;
-       width: 45px;
-       height: 42px;
-    background-color: coral;
+    width: 45px;
+    height: 42px;
+    background-color:  #7a97e3a8;
     border-radius: 100%;
     text-align: center;
     color: white;
@@ -252,7 +271,7 @@ position: absolute;
     position: absolute;
        width: 45px;
        height: 42px;
-    background-color: aquamarine;
+    background-color: #2555d173;
     border-radius: 100%;
     text-align: center;
     color: white;
@@ -264,7 +283,7 @@ position: absolute;
     position: absolute;
        width: 45px;
        height: 42px;
-    background-color: aquamarine;
+    background-color:  #bacaf0e3;
     border-radius: 100%;
     text-align: center;
     color: white;

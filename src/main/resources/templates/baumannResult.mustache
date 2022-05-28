@@ -19,11 +19,11 @@
                 <div class="a1">
                     <h1> 분석 안내표 </h1>
                 </div>
-                <div class="type"><strong>{{answer.mb_result}}</strong></div>
+                <div class="type"><strong id="re_type">{{answer.mb_result}}</strong></div>
                 <div>
                     <span class="p1">
-                        <strong>{{sessionMember.mb_name}}님</strong> <br>
-                        {{answer.mb_result}} 피부타입으로 {{result.result_comment}}
+                        <strong id="mem_name">{{sessionMember.mb_name}}</strong><strong id="nim">님</strong> <br>
+                       <strong id="my_type"> {{answer.mb_result}}</strong> 피부타입으로 {{result.result_comment}}
                     </span>
                     <div>
                         <div class="a2">
