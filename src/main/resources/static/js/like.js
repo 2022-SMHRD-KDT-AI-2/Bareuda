@@ -28,3 +28,12 @@ function like(p_id){
     }
     });
 }
+
+function categorySort2(category){
+    if(category != '전체'){
+        $('.item').hide();
+        $('.'+category).show();
+    }else{
+        $('.item').show();
+    }
+}

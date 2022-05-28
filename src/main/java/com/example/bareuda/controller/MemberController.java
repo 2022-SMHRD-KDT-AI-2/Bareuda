@@ -1,17 +1,23 @@
 package com.example.bareuda.controller;
 
+import com.example.bareuda.dto.Detail;
 import com.example.bareuda.dto.MemberForm;
 import com.example.bareuda.entity.Member;
+import com.example.bareuda.entity.Product;
 import com.example.bareuda.mapper.MemberMapper;
 import com.example.bareuda.service.MemberServiceImpl;
+import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 @Slf4j
 @Controller
@@ -84,5 +90,18 @@ public class MemberController {
             // 비번 다름
             return "redirect:/mypage/removeForm";
         }
+    }
+    @RequestMapping("/member/idCheck.do")
+    public String idCheck(Model model, HttpSession session, String mb_id, HttpServletResponse response) throws IOException {
+        JSONObject obj = new JSONObject();
+        Gson gson = new Gson();
+        log.info("mb_id:"+mb_id);
+        int idCheck = memberServiceImpl.idCheck(mb_id);
+        obj.put("idCheck",idCheck);
+        log.info("체크 : "+idCheck);
+        response.setContentType("application/x-json; charset=UTF-8");
+        response.getWriter().print(obj);
+
+        return null;
     }
 }

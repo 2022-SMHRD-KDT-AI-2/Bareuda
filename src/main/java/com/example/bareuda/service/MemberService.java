@@ -8,4 +8,5 @@ public interface MemberService {
     public void memberInsert(Member member);
     public Member memberLogin(Member member);
     public int memberRemove(Member member);
+    public int idCheck(String mb_id);
 }

@@ -45,4 +45,16 @@ public class MemberServiceImpl implements MemberService{
             return 0;
         }
     }
+
+    @Override
+    public int idCheck(String mb_id) {
+        int idCheck;
+        Member member = memberMapper.findById(mb_id);
+        if(member == null){
+            idCheck = 0;
+        }else{
+            idCheck = 1;
+        }
+        return idCheck;
+    }
 }
