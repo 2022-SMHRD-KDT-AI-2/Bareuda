@@ -9,7 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     {{>layouts/header}}
     <!-- content -->
-    <form action="/member/create" method="post">
+    <form name="signUp" action="/member/create" method="post" onsubmit="return checkForm()">
                 <div id="wrapper_signUp">
                     <div id="content">
                         <!-- ID -->

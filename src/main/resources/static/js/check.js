@@ -23,3 +23,26 @@ $('#mem_id').focusout(function() {
         }
     })
 })
+
+function checkForm(){
+    if($('#mem_id').val() == ""){
+        alert("아이디를 입력하세요");
+        $('#mem_id').focus();
+        return false;
+    }else if($('#mem_pw').val() == ""){
+        alert("비밀번호를 입력하세요");
+        $('#mem_pw').focus();
+        return false;
+    }else if($('#mem_name').val() == ""){
+        alert("이름을 입력하세요");
+        $('#mem_name').focus();
+        return false;
+    }
+     else if($('#mem_eamil').val() == ""){
+        alert("이메일을 입력하세요");
+        $('#mem_eamil').focus();
+        return false;
+    }else{
+        return true;
+    }
+}
