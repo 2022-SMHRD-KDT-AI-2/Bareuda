@@ -95,7 +95,7 @@ body{
     font-size: 30px;
 }
 .a3{
-    width: 19%;
+    width: 18%;
     height: 7%;
     background-color: #A2B7EB;
     border-radius: 20px;
@@ -133,21 +133,21 @@ a{
 .type{
     position: absolute;
     top: 42%;
-    left: 33%;
+    left: 32%;
 }
 .type>strong{
     font-size: 57px;
 
 }
 .imgBox{
-     position: absolute;
-     top: 19%;
-     left: 31%;
-     border: 2px solid whitesmoke;
-     width: 12%;
-     height: 31%;
-     background-color: rgba(168, 209, 245, 0.158);
-     border-radius: 8%;
+    position: absolute;
+    top: 19%;
+    left: 31%;
+    border: 1px solid whitesmoke;
+    width: 12%;
+    height: 31%;
+    background-color: rgba(168, 209, 245, 0.158);
+    border-radius: 7%;
 }
 .imgBox>img{
     width:12vw;
