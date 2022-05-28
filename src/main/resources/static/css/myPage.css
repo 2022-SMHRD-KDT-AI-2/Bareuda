@@ -37,10 +37,10 @@ body{
      /**padding-top: 1%;**/
 }
 .boxLeft>ul>li{
- padding-top:14%
+   padding-top:14%
 }
 #myPage{
-font-weight: bold;
+  font-weight: bold;
 }
 .container2{
   width: 40%;
@@ -71,10 +71,9 @@ font-weight: bold;
     left: 18%;
     width: 36%;
     height: 12vh;
-    border: 2px solid whitesmoke;
+    border: 3px solid whitesmoke;
     text-align: center;
 }
-
 
 .container3{
   width: 40%;
@@ -144,10 +143,11 @@ a{
      position: absolute;
      top: 19%;
      left: 31%;
-     border: 1px solid whitesmoke;
+     border: 2px solid whitesmoke;
      width: 12%;
      height: 31%;
      background-color: rgba(168, 209, 245, 0.158);
+     border-radius: 8%;
 }
 .imgBox>img{
     width:12vw;
