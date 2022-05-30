@@ -40,7 +40,7 @@ body{
     left: 13%;
 }
 .img1{
-    width: 79%;
+    width: 78%;
     height: 50%;
     border: 1px solid whitesmoke;
     margin-top: 32%;
@@ -51,7 +51,7 @@ body{
     height: 100%;
 }
 .ch_Product1{
-    width: 79%;
+    width: 78%;
     height: 19%;
     border: 1px solid whitesmoke;
     margin-left: 21%;
@@ -83,6 +83,20 @@ ul>li{
     color: #A2B7EB;
     font-size: 27px;
 }
+.productsType1{
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    border: 1px solid;
+    border-radius: 100%;
+    width: 3%;
+    background-color: #a2b7ebbd;
+    color: white;
+    text-align: center;
+    height: 6%;
+    font-size: 27px;
+}
+
 .container2 {
     width: 20%;
     height: 95%;
@@ -187,6 +201,19 @@ ul>li{
     color: #A2B7EB;
     font-size: 27px;
 }
+.productsType2{
+    position: absolute;
+    top: 80%;
+    left: 73%;
+    border: 1px solid;
+    border-radius: 100%;
+    width: 3%;
+    background-color: #a2b7ebbd;
+    color: white;
+    text-align: center;
+    height: 6%;
+    font-size: 27px;
+}
 strong{
   color: #A2B7EB;
   font-size: 27px;
@@ -289,14 +316,18 @@ strong{
     width: 500px;
     height: 500px;
 }
+.mypie1>canvas{
+ width:450px;
+
+}
 #myChart{
-    margin-top: 6%;
+    margin-top: 7%;
 }
 #myPie{
     margin-top: 9%;
 }
 #myChart1{
-    margin-top: 6%;
+    margin-top: 7%;
 }
 #myPie1{
     margin-top: 9%;
