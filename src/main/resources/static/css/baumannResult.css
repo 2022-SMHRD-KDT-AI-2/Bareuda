@@ -2,7 +2,7 @@ body{
 display: flex;
 }
 .container{
-    background-color: #E5E5E5;
+    background-color: #F8F8F8;
     width: 100%;
     height: 100%;
     display: flex;
@@ -418,6 +418,34 @@ img{
     font-size: 26px;
     padding-top:3%
 }
+.oily{
+   color:#6666FF;
+}
+.dry{
+   color:#6699FF;
+}
+.non-pigment{
+  color:#6666FF;
+}
+.pigment{
+   color:#6699FF;
+}
+.wrinkle{
+   color:#6699FF;
+}
+.tight{
+   color:#6666FF;
+}
+.resistant{
+   color:#6666FF;
+}
+.sensitive{
+   color:#6699FF;
+}
+
+
+
+
 .graph{
     background: #CCCCCC2B;
     height: 40px;

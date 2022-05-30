@@ -25,22 +25,21 @@
         </div>
 
         <div class="container2">
-           <div class="productsList">
-             <div class="proWrap">
+            <div class="productsList">
+                <div class="proWrap">
                     {{#list}}
-                   <span> <a href="/product/detail.do?p_id={{p_id}}"><img src="/img/products/{{p_img}}" alt="제품 이미지"></a>
+                        <span> <a href="/product/detail.do?p_id={{p_id}}"><img src="/img/products/{{p_img}}" alt="제품 이미지"></a>
                    </span>
-                       <div class="likeInfo">
-                        <ul>
-                            <li><span class="p_brand2">{{p_brand}}</span></li>
-                            <li><span class="p_name2">{{p_name}}</span></li>
-                            <li><span class="p_price2">{{p_price}}</span><strong>원</strong></li>
-                        </ul>
-                       </div>
+                        <div class="likeInfo">
+                            <ul>
+                                <li><span class="p_brand2">{{p_brand}}</span></li>
+                                <li><span class="p_name2">{{p_name}}</span></li>
+                                <li><span class="p_price2">{{p_price}}</span><strong>원</strong></li>
+                            </ul>
+                        </div>
                     {{/list}}
-             </div>
-           </div>
+                </div>
+            </div>
         </div>
     </div>
     {{>layouts/footer}}
-

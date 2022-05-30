@@ -44,6 +44,7 @@ body {
 }
 a{
 font-size:17px;
+color: black;
 }
 .container2 {
     width: 80%;
@@ -97,7 +98,7 @@ img{
     display: inline-block;
 }
 .proWrap{
-   width 99%;
+   width: 99%;
    margin-top: 3%;
    height:87%;
   text-align: center;
