@@ -248,7 +248,7 @@ function drawWord(keylist,valuelist,chartName){
        // create a tag (word) cloud chart
         var chart = anychart.tagCloud(data);
 
-        chart.title('전체 워드클라우드')
+        chart.title()
         // set an array of angles at which the words will be laid out
         chart.angles([0])
         // enable a color range
