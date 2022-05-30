@@ -37,6 +37,13 @@ $(function() {    //화면 다 뜨면 시작
 });
 
 function comparison(){
+    if($('#search2').val() == ""){
+        alert("상품을 선택하세요.");
+        return false;
+    }else if($('#search1').val() == ""){
+        alert("상품을 선택하세요.");
+        return false;
+    }else{
     new Promise( (succ, fail)=>{
 
         $.ajax({
@@ -59,8 +66,10 @@ function comparison(){
                 $(".p_name2").text(product2["p_name"]);
                 $(".p_brand1").text(product1["p_brand"]);
                 $(".p_brand2").text(product2["p_brand"]);
-                $(".p_price1").text(product1["p_price"]);
-                $(".p_price2").text(product2["p_price"]);
+                $(".p_price1").text(product1["p_price"]+"원");
+                $(".p_price2").text(product2["p_price"]+"원");
+                $(".productsType1").text(product1["p_result"]);
+                $(".productsType2").text(product2["p_result"]);
                 var detail1 = JSON.parse(data.detail1);
                 var detail2 = JSON.parse(data.detail2);
                 var myChart = drawRadar([detail1["type_o"],detail1["type_d"],detail1["type_n"],detail1["type_t"],detail1["type_c"]], 'myChart');
@@ -107,7 +116,8 @@ function comparison(){
             alert("ajax실패. code:"+request.status+"\n"+"message:"+request.reponseText+"\n"+"error:"+error);
             }
         });
-    });
+    }); }
+
 }
 
 function drawRadar(datalist, chartName) {
@@ -252,6 +262,5 @@ function drawWord(keylist,valuelist,chartName){
         chart.draw();
       });
 }
-
 
 
