@@ -82,6 +82,7 @@ public class MemberController {
     public String memberRemove(Model model, MemberForm form, HttpSession session){
         Member member = form.toLogin();
         int isRemoved = memberServiceImpl.memberRemove(member);
+        System.out.println("isRemoved:"+isRemoved);
         if (isRemoved == 1){
             // 성공
             session.invalidate();

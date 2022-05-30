@@ -37,6 +37,7 @@ public class MemberServiceImpl implements MemberService{
     @Override
     public int memberRemove(Member member) {
         int isMember = memberMapper.memberLogin(member);
+        System.out.println("isMember:"+isMember);
         if(isMember == 1){
             String mb_id = member.getMb_id();
             memberMapper.memberRemove(mb_id);
