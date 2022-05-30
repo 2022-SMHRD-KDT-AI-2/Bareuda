@@ -9,21 +9,21 @@ display: flex;
     padding-top: 10%;
 }
 .container_1{
-      width: 42%;
+      width: 38%;
       height: 90vh;
       background-color: white;
-      margin-left: 5%;
+      margin-left: 10%;
       margin-top: 1%;
 
 }
 .a1{
-    width: 24%;
-    height: 10%;
+    width: 15%;
+    height: 8%;
     background-color: #A2B7EB;
     border-radius: 86px;
     position: absolute;
     top: 27%;
-    left: 14%;
+    left: 22%;
 }
 .a2{
     width: 10vw;
@@ -32,7 +32,7 @@ display: flex;
     border-radius: 20px;
     position: absolute;
     top: 78%;
-    left: 21%;
+    left: 24%;
 }
 .a3{
     width: 24vw;
@@ -41,29 +41,27 @@ display: flex;
     border-radius: 20px;
     position: absolute;
     top: 65%;
-    left: 62%;
+    left: 60%;
 }
 .a4{
-    width: 21vw;
+    width: 15%;
     height: 8vh;
     background-color: #A2B7EB;
-    border-radius: 20px;
+    border-radius: 86px;
     position: absolute;
-    left: 63%;
+    left: 65%;
     top: 27%;
 }
 .type{
     position: absolute;
-    top:41%;
-    left: 22%;
+    top: 39%;
+    left: 25%;
     font-size: 3rem;
-
 }
 h1{
-    text-align: center;
-
-    color: white;
-    padding-top: 28px;
+       text-align: center;
+       color: white;
+       padding-top: 16px;
 }
 h3{
     text-align: center;
@@ -83,12 +81,13 @@ li{
 }
 .p1{
     position: absolute;
-    top: 54%;
+    top: 51%;
     text-align: center;
-    left: 10%;
+    left: 12%;
     font-size: 18xp;
-    width: 31%;
+    width: 34%;
     height: 22%;
+
 
 }
 #re_type{
@@ -111,21 +110,21 @@ li{
 .info{
     position: absolute;
     top: 92%;
-    left: 9%;
+    left: 11%;
     width: 35vw;
-    height: 12vh;
+    height: 14vh;
     border: 2px solid whitesmoke;
-    font-size:22px;
+    font-size: 22px;
 }
 .info>ul>li{
       margin-top:-3%;
       margin-left: -5%;
 }
 .container_2{
-    width: 42%;
+    width: 38%;
     height: 90vh;
     background-color: white;
-    margin-left: 6%;
+    margin-left: 5%;
     margin-top: 1%;
 }
 .containers_2{
@@ -140,30 +139,31 @@ li{
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-color: #E5E5E5;
+    background-color: #F8F8F8;
 }
 
 .container1{
 
-    width: 39%;
+width: 40%;
     height: 70vh;
-    border-top-left-radius:20px;
-    border-bottom-left-radius:20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     margin-top: 14%;
     background-color: white;
     font-size: 2rem;
     display: flex;
-    margin-left: 6%;
+    margin-left: 11%;
 }
 .container2{
 
-    width: 48vw;
+    width: 39%;
     height: 70vh;
-    border-top-right-radius:20px;
-    border-bottom-right-radius:20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     margin-top: 14%;
     background-color: white;
     font-size: 2rem;
+    padding-right: 1%;
     display: flex;
 }
 
@@ -287,7 +287,7 @@ li{
     background-color: #a2b7ebbd;
     position: absolute;
     top: 93%;
-    left:59%;
+    left:58%;
     color: white;
 }
 .skinType1>h2{
@@ -301,7 +301,7 @@ li{
       background-color: #7a97e3a8;
       position: absolute;
       top: 93%;
-      left:67%;
+      left:66%;
       color: white;
 }
 .skinType2>h2{
@@ -325,7 +325,7 @@ li{
       background-color:#2555d173;
       position: absolute;
       top: 93%;
-      left:76%;
+      left:75%;
       color: white;
 }
 .skinType3>h2{
@@ -339,7 +339,7 @@ li{
     background-color: #bacaf0e3;
     position: absolute;
     top: 93%;
-    left: 84%;
+    left: 83%;
     color: white;
 }
 .skinType4>h2{
@@ -361,13 +361,13 @@ li{
     margin-left: 7%;
 }
 .pageTitle2{
-    width: 24%;
-    height: 11%;
+    width: 16%;
+    height: 8%;
     background-color: #A2B7EB;
     border-radius: 20px;
     position: absolute;
-    top: 123%;
-    left: 38%;
+    top: 125%;
+    left: 41%;
 }
 
 
@@ -403,7 +403,8 @@ img{
     height: 51vh;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    margin-top: 5%
+    margin-top: 5%;
+    padding-left: 2%;
 
 }
 .conInfo1>p{
