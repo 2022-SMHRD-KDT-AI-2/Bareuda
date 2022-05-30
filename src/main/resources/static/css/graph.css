@@ -39,24 +39,24 @@
     0%{ width: 0;
         color: rgba(187,203,240, 0.5);}
     40%{color: rgba(240, 239, 239, 0.5);}
-    100%{width: 0%;}
+
 }
 @keyframes stack2{
     0%{ width: 0;
         color: rgba(187,203,240, 0.5);}
     40%{color: rgba(240, 239, 239, 0.5);}
-    100%{width: 0%;}
+
 }
 @keyframes stack3{
     0%{ width: 0;
         color: rgba(187,203,240, 0.5);}
     40%{color: rgba(240, 239, 239, 0.5);}
-    100%{width: 0%;}
+
 }
 @keyframes stack4{
     0%{ width: 0;
         color: rgba(187,203,240, 0.5);}
     40%{color: rgba(240, 239, 239, 0.5);}
-    100%{width: 0%;}
+
 }
 

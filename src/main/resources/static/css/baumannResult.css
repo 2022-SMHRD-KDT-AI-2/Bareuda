@@ -456,25 +456,25 @@ img{
     0%{ width: 0;
         color: rgba(187,203,240, 0.5);}
     40%{color: rgba(240, 239, 239, 0.5);}
-    100%{width: 75%;}
+
 }
 @keyframes stack2{
     0%{ width: 0;
         color: rgba(187,203,240, 0.5);}
     40%{color: rgba(240, 239, 239, 0.5);}
-    100%{width: 60%;}
+
 }
 @keyframes stack3{
     0%{ width: 0;
         color: rgba(187,203,240, 0.5);}
     40%{color: rgba(240, 239, 239, 0.5);}
-    100%{width: 25%;}
+
 }
 @keyframes stack4{
     0%{ width: 0;
         color: rgba(187,203,240, 0.5);}
     40%{color: rgba(240, 239, 239, 0.5);}
-    100%{width: 55%;}
+
 }
 .end{
        text-align: center;
